@@ -12,7 +12,8 @@
         "README.md",
         "main.blocks",
         "main.ts",
-        "tuto_1.md"
+        "tuto_1.md",
+        "tuto_1_rec.md"
     ],
     "testFiles": [
         "test.ts"
