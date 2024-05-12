@@ -1,10 +1,21 @@
 # Tutoriel 1
 
-## Étape #
+## Étape #1
 
 Ajoute deux blocs ``||continuousservo:turn off motor||`` (trad. : fermer le moteur) dans le bloc ``||basic:au démarrage||``.
 
 Remplace les valeurs ``||continuousservo:P0||`` par ``||continuousservo:P13||`` et ``||continuousservo:P14||``.
+
+```blocks
+
+ContinuousServo.turn_off_motor(DigitalPin.P13)
+ContinuousServo.turn_off_motor(DigitalPin.P14)
+
+```
+
+## Étape 2
+
+Crée une variable et nomme-là
 
 ```blocks
 
