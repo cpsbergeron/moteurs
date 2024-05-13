@@ -2,7 +2,7 @@
 
 ## Étape #1
 
-Ajoute le bloc ``||continuousservo:spin one way||`` (trad. : tourner dans un sens) dans le bloc ``||basic:au démarrage||``.
+Ajoute le bloc ``||continuousservo:spin other way||`` (trad. : tourner dans l'autre sens) dans le bloc ``||basic:au démarrage||``.
 
 Remplace la valeur ``||continuousservo:P0||`` par ``||continuousservo:P13||``.
 
@@ -10,13 +10,14 @@ Remplace la valeur ``||continuousservo:0||`` par ``||continuousservo:25||``.
 
 ```blocks
 
-ContinuousServo.spin_one_way_with_speed(AnalogPin.P13, 25)
+ContinuousServo.spin_other_way_with_speed(AnalogPin.P13, 25)
+
 
 ```
 
 ## Étape 2
 
-Ajoute le bloc ``||continuousservo:spin other way||`` (trad. : tourner dans l'autre sens) sous le bloc ``||continuousservo:spin one way||``.
+Ajoute le bloc ``||continuousservo:spin one way||`` (trad. : tourner dans l'autre sens) sous le bloc ``||continuousservo:spin one way||``.
 
 Remplace la valeur ``||continuousservo:P0||`` par ``||continuousservo:P14||``.
 
