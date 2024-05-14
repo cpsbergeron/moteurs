@@ -160,6 +160,42 @@ function Arreter () {
 }
 
 ```
+## Étape 12
+
+Ajoute le bloc ``||functions:appel Demarrage||`` dans le bloc ``||basic:au démarrage||``.
+
+Ajoute le bloc ``||functions:appel Avancer||`` sous le bloc ``||functions:appel Demarrage||``.
+
+Ajoute le bloc ``||basic:pause||`` sous le bloc ``||functions:appel Avancer||``.
+
+Remplace la valeur ``||basic:100||`` par ``||basic:2000||``.
+
+Ajoute le bloc ``||functions:appel Arreter||`` sous le bloc ``||basic:pause||``.
+
+```blocks
+
+function Avancer () {
+    ContinuousServo.spin_one_way_with_speed(AnalogPin.P13, vitesse)
+    ContinuousServo.spin_other_way_with_speed(AnalogPin.P14, vitesse)
+}
+function Demarrage () {
+    ContinuousServo.turn_off_motor(DigitalPin.P13)
+    ContinuousServo.turn_off_motor(DigitalPin.P14)
+    basic.showIcon(IconNames.Yes)
+    vitesse = 50
+}
+function Arreter () {
+    ContinuousServo.turn_off_motor(DigitalPin.P13)
+    ContinuousServo.turn_off_motor(DigitalPin.P14)
+    basic.showIcon(IconNames.No)
+}
+let vitesse = 0
+Demarrage()
+Avancer()
+basic.pause(2000)
+Arreter()
+
+```
 
 ## Étape 13
 
