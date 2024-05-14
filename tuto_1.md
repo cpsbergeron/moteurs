@@ -8,11 +8,6 @@ Programme le Bit Board Rover pour qu'il avance de quelques cm.
 
 Supprime le bloc ``||basic:toujours||``.
 
-```package
-
-continuous-servo=github:tinkertanker/pxt-continuous-servo
-
-```
 
 ## Étape 2
 
@@ -72,8 +67,14 @@ basic.pause(2000)
 ContinuousServo.turn_off_motor(DigitalPin.P13)
 ContinuousServo.turn_off_motor(DigitalPin.P14)
 
+```
+
+```package
+
+continuous-servo=github:tinkertanker/pxt-continuous-servo
 
 ```
+
 ## Étape 6
 
 Bravo !
