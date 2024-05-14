@@ -71,7 +71,7 @@ ContinuousServo.turn_off_motor(DigitalPin.P14)
 
 ```package
 
-continuous-servo=github:tinkertanker/pxt-continuous-servo
+tinkertanker/pxt-continuous-servo
 
 ```
 
