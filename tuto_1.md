@@ -54,7 +54,7 @@ basic.pause(2000)
 
 ## Étape 5
 
-Ajoute deux blocs ``||continuousservo:turn off motor||`` (trad. : fermer les moteurs) sous le bloc ``||basic:pause||``.
+Ajoute deux blocs ``||continuousservo:turn off motor||`` (trad. : éteindre les moteurs) sous le bloc ``||basic:pause||``.
 
 Remplace les valeurs ``||continuousservo:P0||`` par ``||continuousservo:P13||`` et ``||continuousservo:P14||``.
 
