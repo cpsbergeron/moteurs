@@ -8,6 +8,12 @@ Programme le Bit Board Rover pour qu'il avance de quelques cm.
 
 Supprime le bloc ``||basic:toujours||``.
 
+```package
+
+continuous-servo=github:tinkertanker/pxt-continuous-servo
+
+```
+
 ## Étape 2
 
 Ajoute le bloc ``||continuousservo:spin one way||`` (trad. : tourner dans un sens) dans le bloc ``||basic:au démarrage||``.
@@ -74,8 +80,3 @@ Bravo !
 
 Tu as terminé le tutoriel. Télécharge et teste le programme.
 
-```package
-
-continuous-servo=github:tinkertanker/pxt-continuous-servo
-
-```
