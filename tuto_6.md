@@ -1,8 +1,10 @@
-# Tutoriel 2
+# Tutoriel 6
 
 ## @showdialog
 
 Programme le Bit Board Rover à l'aide de fonctions déterminées.
+
+Le robot doit avancer de quelques cm.
 
 
 ## Étape 1
@@ -79,9 +81,17 @@ Crée une ``||functions: fonction||`` et donne-lui le nom ``||functions:Avancer|
 
 ```blocks
 
+let vitesse = 0
 function Avancer () {
 	
 }
+function Demarrage () {
+    basic.showIcon(IconNames.Yes)
+    vitesse = 25
+    ContinuousServo.turn_off_motor(DigitalPin.P13)
+    ContinuousServo.turn_off_motor(DigitalPin.P14)
+}
+
 
 ```
 
@@ -99,6 +109,13 @@ let vitesse = 0
 function Avancer () {
     ContinuousServo.spin_one_way_with_speed(AnalogPin.P13, vitesse)
 }
+function Demarrage () {
+    basic.showIcon(IconNames.Yes)
+    vitesse = 25
+    ContinuousServo.turn_off_motor(DigitalPin.P13)
+    ContinuousServo.turn_off_motor(DigitalPin.P14)
+}
+
 
 ```
 
@@ -117,8 +134,16 @@ function Avancer () {
     ContinuousServo.spin_one_way_with_speed(AnalogPin.P13, vitesse)
     ContinuousServo.spin_other_way_with_speed(AnalogPin.P14, vitesse)
 }
+function Demarrage () {
+    basic.showIcon(IconNames.Yes)
+    vitesse = 25
+    ContinuousServo.turn_off_motor(DigitalPin.P13)
+    ContinuousServo.turn_off_motor(DigitalPin.P14)
+}
+
 
 ```
+
 
 ## Étape 9
 
@@ -126,9 +151,21 @@ Crée une ``||functions: fonction||`` et donne-lui le nom ``||functions:Arreter|
 
 ```blocks
 
+let vitesse = 0
+function Avancer () {
+    ContinuousServo.spin_one_way_with_speed(AnalogPin.P13, vitesse)
+    ContinuousServo.spin_other_way_with_speed(AnalogPin.P14, vitesse)
+}
+function Demarrage () {
+    basic.showIcon(IconNames.Yes)
+    vitesse = 25
+    ContinuousServo.turn_off_motor(DigitalPin.P13)
+    ContinuousServo.turn_off_motor(DigitalPin.P14)
+}
 function Arreter () {
 	
 }
+
 
 ```
 
@@ -140,10 +177,22 @@ Remplace les valeurs ``||continuousservo:P0||`` par ``||continuousservo:P13||`` 
 
 ```blocks
 
+let vitesse = 0
+function Avancer () {
+    ContinuousServo.spin_one_way_with_speed(AnalogPin.P13, vitesse)
+    ContinuousServo.spin_other_way_with_speed(AnalogPin.P14, vitesse)
+}
+function Demarrage () {
+    basic.showIcon(IconNames.Yes)
+    vitesse = 25
+    ContinuousServo.turn_off_motor(DigitalPin.P13)
+    ContinuousServo.turn_off_motor(DigitalPin.P14)
+}
 function Arreter () {
     ContinuousServo.turn_off_motor(DigitalPin.P13)
     ContinuousServo.turn_off_motor(DigitalPin.P14)
 }
+
 
 ```
 
@@ -155,6 +204,17 @@ Choisis le X comme icône.
 
 ```blocks
 
+let vitesse = 0
+function Avancer () {
+    ContinuousServo.spin_one_way_with_speed(AnalogPin.P13, vitesse)
+    ContinuousServo.spin_other_way_with_speed(AnalogPin.P14, vitesse)
+}
+function Demarrage () {
+    basic.showIcon(IconNames.Yes)
+    vitesse = 25
+    ContinuousServo.turn_off_motor(DigitalPin.P13)
+    ContinuousServo.turn_off_motor(DigitalPin.P14)
+}
 function Arreter () {
     ContinuousServo.turn_off_motor(DigitalPin.P13)
     ContinuousServo.turn_off_motor(DigitalPin.P14)
@@ -163,52 +223,6 @@ function Arreter () {
 
 ```
 
-## Étape 12
-
-Crée une ``||functions: fonction||`` et donne-lui le nom ``||functions:Reculer||``.
-
-```blocks
-
-function Reculer () {
-	
-}
-
-```
-
-## Étape 13
-
-Ajoute le bloc  ``||continuousservo:spin other way||`` (trad. : tourner dans l'autre sens) dans le bloc `` sous le bloc ``||functions:Reculer||``.
-
-Remplace la valeur ``||continuousservo:P0||`` par ``||continuousservo:P13||``.
-
-Remplace la valeur ``||continuousservo:0||`` par le bloc ``||variables: vitesse ||``.
-
-```blocks
-
-let vitesse = 0
-function Avancer () {
-    ContinuousServo.spin_one_way_with_speed(AnalogPin.P13, vitesse)
-}
-
-```
-
-## Étape 8
-
-Ajoute le bloc ``||continuousservo:spin other way||`` (trad. : tourner dans l'autre sens) sous le bloc ``||continuousservo:spin one way||``.
-
-Remplace la valeur ``||continuousservo:P0||`` par ``||continuousservo:P14||``.
-
-Remplace la valeur ``||continuousservo:0||`` par le bloc ``||variables: vitesse ||``.
-
-```blocks
-
-let vitesse = 0
-function Avancer () {
-    ContinuousServo.spin_one_way_with_speed(AnalogPin.P13, vitesse)
-    ContinuousServo.spin_other_way_with_speed(AnalogPin.P14, vitesse)
-}
-
-```
 
 ## Étape 12
 
@@ -229,10 +243,10 @@ function Avancer () {
     ContinuousServo.spin_other_way_with_speed(AnalogPin.P14, vitesse)
 }
 function Demarrage () {
+    basic.showIcon(IconNames.Yes)
+    vitesse = 25
     ContinuousServo.turn_off_motor(DigitalPin.P13)
     ContinuousServo.turn_off_motor(DigitalPin.P14)
-    basic.showIcon(IconNames.Yes)
-    vitesse = 50
 }
 function Arreter () {
     ContinuousServo.turn_off_motor(DigitalPin.P13)
@@ -244,6 +258,7 @@ Demarrage()
 Avancer()
 basic.pause(2000)
 Arreter()
+
 
 ```
 
