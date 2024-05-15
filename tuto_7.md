@@ -1,4 +1,4 @@
-# Tutoriel 2
+# Tutoriel 7
 
 ## @showdialog
 
@@ -62,14 +62,12 @@ Remplace la valeur ``||variables:0||`` par ``||variables:25||``.
 
 ```blocks
 
-let vitesse = 0
 function Demarrage () {
     ContinuousServo.turn_off_motor(DigitalPin.P13)
     ContinuousServo.turn_off_motor(DigitalPin.P14)
     basic.showIcon(IconNames.Yes)
     vitesse = 25
 }
-
 
 ```
 
@@ -162,54 +160,6 @@ function Arreter () {
 }
 
 ```
-
-## Étape 12
-
-Crée une ``||functions: fonction||`` et donne-lui le nom ``||functions:Reculer||``.
-
-```blocks
-
-function Reculer () {
-	
-}
-
-```
-
-## Étape 13
-
-Ajoute le bloc  ``||continuousservo:spin other way||`` (trad. : tourner dans l'autre sens) dans le bloc `` sous le bloc ``||functions:Reculer||``.
-
-Remplace la valeur ``||continuousservo:P0||`` par ``||continuousservo:P13||``.
-
-Remplace la valeur ``||continuousservo:0||`` par le bloc ``||variables: vitesse ||``.
-
-```blocks
-
-let vitesse = 0
-function Avancer () {
-    ContinuousServo.spin_one_way_with_speed(AnalogPin.P13, vitesse)
-}
-
-```
-
-## Étape 8
-
-Ajoute le bloc ``||continuousservo:spin other way||`` (trad. : tourner dans l'autre sens) sous le bloc ``||continuousservo:spin one way||``.
-
-Remplace la valeur ``||continuousservo:P0||`` par ``||continuousservo:P14||``.
-
-Remplace la valeur ``||continuousservo:0||`` par le bloc ``||variables: vitesse ||``.
-
-```blocks
-
-let vitesse = 0
-function Avancer () {
-    ContinuousServo.spin_one_way_with_speed(AnalogPin.P13, vitesse)
-    ContinuousServo.spin_other_way_with_speed(AnalogPin.P14, vitesse)
-}
-
-```
-
 ## Étape 12
 
 Ajoute le bloc ``||functions:appel Demarrage||`` dans le bloc ``||basic:au démarrage||``.
