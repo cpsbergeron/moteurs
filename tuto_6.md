@@ -15,7 +15,7 @@ Crée une ``||functions: fonction||`` et donne-lui le nom ``||functions:Demarrag
 
 ```blocks
 
-function Avancer () {
+function Demarrage () {
 	
 }
 
@@ -197,14 +197,16 @@ Arreter()
 
 ```
 
+```package
+
+tinkertanker/pxt-continuous-servo
+
+```
+
 ## Étape 13
 
 Bravo !
 
 Tu as terminé le tutoriel. Télécharge et teste le programme.
 
-```package
 
-tinkertanker/pxt-continuous-servo
-
-```
