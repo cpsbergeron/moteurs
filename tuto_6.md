@@ -97,7 +97,7 @@ function Demarrage () {
 
 ## Étape 7
 
-Ajoute le bloc ``||continuousservo:spin one way||`` (trad. : tourner dans un sens) sous le bloc ``||variables: définir vitesse ||``.
+Ajoute le bloc ``||continuousservo:spin one way||`` (trad. : tourner dans un sens) dans le bloc ``||functions: Avancer ||``.
 
 Remplace la valeur ``||continuousservo:P0||`` par ``||continuousservo:P13||``.
 

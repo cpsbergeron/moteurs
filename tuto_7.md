@@ -77,7 +77,7 @@ function Demarrage () {
 
 ## Étape 6
 
-Crée une ``||functions: fonction||`` et donne-lui le nom ``||functions:Droite||``.
+Crée une ``||functions: fonction||`` et donne-lui le nom ``||functions:Droite||``. **(Pivoter vers la droite)**
 
 ```blocks
 
@@ -122,7 +122,7 @@ function Demarrage () {
 
 ## Étape 8
 
-Ajoute le bloc ``||continuousservo:spin one way||`` (trad. : tourner dans un sens) dans le bloc ``||functions:Droite||``.
+Ajoute le bloc ``||continuousservo:spin one way||`` (trad. : tourner dans un sens) sous le bloc ``||basic:montrer LEDs||``.
 
 Remplace la valeur ``||continuousservo:P0||`` par ``||continuousservo:P13||``.
 
@@ -283,7 +283,7 @@ function Demarrage () {
 
 Ajoute le bloc ``||functions:appel Demarrage||`` dans le bloc ``||basic:au démarrage||``.
 
-Ajoute le bloc ``||functions:appel Pivoter vers la droite||`` sous le bloc ``||functions:appel Demarrage||``.
+Ajoute le bloc ``||functions:appel Droite||`` sous le bloc ``||functions:appel Demarrage||``.
 
 ```blocks
 
