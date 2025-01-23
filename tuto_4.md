@@ -19,7 +19,7 @@ Remplace la valeur ``||continuousservo:0||`` par ``||continuousservo:50||``.
 ```blocks
 
 input.onButtonPressed(Button.A, function () {
-    ContinuousServo.spin_one_way_with_speed(AnalogPin.P14, 0)
+    ContinuousServo.spin_one_way_with_speed(AnalogPin.P14, 50)
 })
 
 ```
@@ -30,7 +30,7 @@ Ajoute le bloc ``||continuousservo:spin other way||`` (trad. : tourner dans un a
 
 Remplace la valeur ``||continuousservo:P0||`` par ``||continuousservo:P13||``.
 
-Remplace la valeur ``||continuousservo:0||`` par ``||continuousservo:50||``.
+La valeur ``||continuousservo:0||`` par ``||continuousservo:50||``.
 
 ```blocks
 
