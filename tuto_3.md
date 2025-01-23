@@ -30,7 +30,7 @@ Ajoute le bloc ``||continuousservo:spin one way||`` (trad. : tourner dans un sen
 
 Remplace la valeur ``||continuousservo:P0||`` par ``||continuousservo:P14||``.
 
-Remplace la valeur ``||continuousservo:0||`` par ``||continuousservo:0||``.
+La valeur ``||continuousservo:0||`` demeure la même.
 
 ```blocks
 
