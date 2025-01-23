@@ -2,9 +2,7 @@
 
 ## @showdialog
 
-Programme le Bit Board Rover pour qu'il avance de quelques cm.
-
-Détermine la vitesse du robot à l'aide d'une variable.
+Programme le Bit Board Rover.
 
 ## Étape 1
 
@@ -31,24 +29,6 @@ input.onButtonPressed(Button.A, function () {
 
 Ajoute le bloc ``||continuousservo:spin one way||`` (trad. : tourner dans un sens) sous le bloc ``||variables: définir vitesse ||``.
 
-Remplace la valeur ``||continuousservo:P0||`` par ``||continuousservo:P13||``.
-
-Remplace la valeur ``||continuousservo:0||`` par le bloc ``||variables: vitesse ||``.
-
-```blocks
-
-let vitesse = 0
-input.onButtonPressed(Button.A, function () {
-    vitesse = 50
-    ContinuousServo.spin_one_way_with_speed(AnalogPin.P13, vitesse)
-})
-
-
-```
-## Étape 4
-
-Ajoute le bloc ``||continuousservo:spin the other way||`` (trad. : tourner dans un autre sens) sous le bloc ``||continuousservo:spin one way||``.
-
 Remplace la valeur ``||continuousservo:P0||`` par ``||continuousservo:P14||``.
 
 Remplace la valeur ``||continuousservo:0||`` par le bloc ``||variables: vitesse ||``.
@@ -58,8 +38,26 @@ Remplace la valeur ``||continuousservo:0||`` par le bloc ``||variables: vitesse 
 let vitesse = 0
 input.onButtonPressed(Button.A, function () {
     vitesse = 50
-    ContinuousServo.spin_one_way_with_speed(AnalogPin.P13, vitesse)
-    ContinuousServo.spin_other_way_with_speed(AnalogPin.P14, vitesse)
+    ContinuousServo.spin_one_way_with_speed(AnalogPin.P14, vitesse)
+})
+
+
+```
+## Étape 4
+
+Ajoute le bloc ``||continuousservo:spin the other way||`` (trad. : tourner dans un autre sens) sous le bloc ``||continuousservo:spin one way||``.
+
+Remplace la valeur ``||continuousservo:P0||`` par ``||continuousservo:P13||``.
+
+Remplace la valeur ``||continuousservo:0||`` par le bloc ``||variables: vitesse ||``.
+
+```blocks
+
+let vitesse = 0
+input.onButtonPressed(Button.A, function () {
+    vitesse = 50
+    ContinuousServo.spin_one_way_with_speed(AnalogPin.P14, vitesse)
+    ContinuousServo.spin_other_way_with_speed(AnalogPin.P13, vitesse)
 })
 
 ```
@@ -75,8 +73,8 @@ Remplace la valeur ``||basic:100||`` par ``||basic:2000||``.
 let vitesse = 0
 input.onButtonPressed(Button.A, function () {
     vitesse = 50
-    ContinuousServo.spin_one_way_with_speed(AnalogPin.P13, vitesse)
-    ContinuousServo.spin_other_way_with_speed(AnalogPin.P14, vitesse)
+    ContinuousServo.spin_one_way_with_speed(AnalogPin.P14, vitesse)
+    ContinuousServo.spin_other_way_with_speed(AnalogPin.P13, vitesse)
 basic.pause(2000)
 })
 
@@ -93,11 +91,11 @@ Remplace les valeurs ``||continuousservo:P0||`` par ``||continuousservo:P13||`` 
 let vitesse = 0
 input.onButtonPressed(Button.A, function () {
     vitesse = 50
-    ContinuousServo.spin_one_way_with_speed(AnalogPin.P13, vitesse)
-    ContinuousServo.spin_other_way_with_speed(AnalogPin.P14, vitesse)
+    ContinuousServo.spin_one_way_with_speed(AnalogPin.P14, vitesse)
+    ContinuousServo.spin_other_way_with_speed(AnalogPin.P13, vitesse)
 basic.pause(2000)
-ContinuousServo.turn_off_motor(DigitalPin.P13)
 ContinuousServo.turn_off_motor(DigitalPin.P14)
+ContinuousServo.turn_off_motor(DigitalPin.P13)
 
 })
 
