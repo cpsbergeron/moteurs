@@ -2,7 +2,7 @@
 
 ## @showdialog
 
-Programme le Bit Board Rover pour qu'il pivote vers la gauche.
+Programme le Bit Board Rover.
 
 ## Étape 1
 

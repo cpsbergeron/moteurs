@@ -2,7 +2,7 @@
 
 ## @showdialog
 
-Programme le Bit Board Rover pour qu'il avance de quelques cm.
+Programme le Bit Board Rover.
 
 ## Étape 1
 
