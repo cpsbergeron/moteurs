@@ -12,6 +12,22 @@ Supprime les blocs ``||basic:au démarrage||`` et ``||basic:toujours||``.
 
 Ajoute un bloc ``||continuousservo:spin one way||`` (trad. : tourner dans un sens) dans le bloc ``||input:lorsque le bouton A est pressé||``.
 
+Remplace la valeur ``||continuousservo:P0||`` par ``||continuousservo:P14||``.
+
+La valeur ``||continuousservo:0||`` demeure la même`.
+
+```blocks
+
+input.onButtonPressed(Button.A, function () {
+    ContinuousServo.spin_one_way_with_speed(AnalogPin.P14, 0)
+})
+
+```
+
+## Étape 3
+
+Ajoute le bloc ``||continuousservo:spin other way||`` (trad. : tourner dans un autre sens) sous le bloc ``||continuousservo:spin one way||``.
+
 Remplace la valeur ``||continuousservo:P0||`` par ``||continuousservo:P13||``.
 
 Remplace la valeur ``||continuousservo:0||`` par ``||continuousservo:50||``.
@@ -19,39 +35,23 @@ Remplace la valeur ``||continuousservo:0||`` par ``||continuousservo:50||``.
 ```blocks
 
 input.onButtonPressed(Button.A, function () {
-    ContinuousServo.spin_one_way_with_speed(AnalogPin.P13, 50)
-})
-
-```
-
-## Étape 3
-
-Ajoute le bloc ``||continuousservo:spin one way||`` (trad. : tourner dans un sens) sous le bloc ``||continuousservo:spin one way||``.
-
-Remplace la valeur ``||continuousservo:P0||`` par ``||continuousservo:P14||``.
-
-La valeur ``||continuousservo:0||`` demeure la même.
-
-```blocks
-
-input.onButtonPressed(Button.A, function () {
-    ContinuousServo.spin_one_way_with_speed(AnalogPin.P13, 50)
     ContinuousServo.spin_one_way_with_speed(AnalogPin.P14, 0)
+    ContinuousServo.spin_one_way_with_speed(AnalogPin.P13, 50)
 })
 
 ```
 
 ## Étape 4
 
-Ajoute le bloc ``||basic:pause||`` sous le bloc ``||continuousservo:spin one way||``.
+Ajoute le bloc ``||basic:pause||`` sous le bloc ``||continuousservo:spin other way||``.
 
 Remplace la valeur ``||basic:100||`` par ``||basic:675||``.
 
 ```blocks
 
 input.onButtonPressed(Button.A, function () {
-    ContinuousServo.spin_one_way_with_speed(AnalogPin.P13, 50)
     ContinuousServo.spin_one_way_with_speed(AnalogPin.P14, 0)
+    ContinuousServo.spin_one_way_with_speed(AnalogPin.P13, 50)
     basic.pause(675)
 })
 
@@ -66,11 +66,11 @@ Remplace les valeurs ``||continuousservo:P0||`` par ``||continuousservo:P13||`` 
 ```blocks
 
 input.onButtonPressed(Button.A, function () {
-    ContinuousServo.spin_one_way_with_speed(AnalogPin.P13, 50)
     ContinuousServo.spin_one_way_with_speed(AnalogPin.P14, 0)
+    ContinuousServo.spin_one_way_with_speed(AnalogPin.P13, 50)
     basic.pause(675)
-    ContinuousServo.turn_off_motor(DigitalPin.P13)
     ContinuousServo.turn_off_motor(DigitalPin.P14)
+    ContinuousServo.turn_off_motor(DigitalPin.P13)
 })
 
 
