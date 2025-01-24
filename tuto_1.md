@@ -76,7 +76,6 @@ input.onButtonPressed(Button.A, function () {
     ContinuousServo.turn_off_motor(DigitalPin.P13)
 })
 
-
 ```
 
 ```package
