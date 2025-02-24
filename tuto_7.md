@@ -4,9 +4,6 @@
 
 Programme le Bit Board Rover à l'aide de fonctions déterminées.
 
-Le robot doit pivoter vers la droite.
-
-
 ## Étape 1
 
 Supprime le bloc ``||basic:toujours||``.
@@ -77,12 +74,12 @@ function Demarrage () {
 
 ## Étape 6
 
-Crée une ``||functions: fonction||`` et donne-lui le nom ``||functions:Droite||``. **(Pivoter vers la droite)**
+Crée une ``||functions: fonction||`` et donne-lui le nom ``||functions:Avancer||``. 
 
 ```blocks
 
 let vitesse = 0
-function Droite () {
+function Avancer () {
 	
 }
 function Demarrage () {
@@ -97,17 +94,17 @@ function Demarrage () {
 
 ## Étape 7
 
-Ajoute le bloc ``||basic:montrer LEDs||`` dans le bloc ``||functions:Droite||``.
+Ajoute le bloc ``||basic:montrer LEDs||`` dans le bloc ``||functions:Avancer||``.
 
 ```blocks
 
 let vitesse = 0
-function Droite () {
+function Avancer () {
     basic.showLeds(`
         . . # . .
-        . . . # .
-        # # # # #
-        . . . # .
+        . # # # .
+        # . # . #
+        . . # . .
         . . # . .
         `)
 }
