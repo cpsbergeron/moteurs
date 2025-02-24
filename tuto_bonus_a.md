@@ -4,6 +4,8 @@
 
 Programme le Bit Board Rover pour réaliser les différents parcours.
 
+## Étape 1
+
 Les blocs ont été mélangés.
 
 ```blocks
