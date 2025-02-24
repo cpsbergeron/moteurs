@@ -161,8 +161,6 @@ function Demarrer () {
 
 Ajoute le bloc ``||basic:pause (ms)||`` sous le bloc ``||basic:montrer LEDs||``.
 
-Remplace la valeur ``||basic: 100||`` par la valeur ``||variables: ms ||``. 
-
 Glisse le bloc ``||variables: ms ||`` dans le bloc ``||basic:pause (ms)||``.
 
 ```blocks
