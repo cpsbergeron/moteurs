@@ -68,7 +68,7 @@ input.onButtonPressed(Button.A, function () {
 
 Modifie le bloc ``||radio:send string||``.
 
-Écris le mot ``||radio:1||`` dans le bloc. (1 = Avancer)
+Écris le mot ``||radio:Avancer||`` dans le bloc. 
 
 ```blocks
 
@@ -122,7 +122,7 @@ input.onButtonPressed(Button.B, function () {
 
 ## Étape 9
 
-Modifie la valeur ``||radio:Avancer||`` pour ``||input:Arreter||`` **(sans accent)**.
+Modifie la valeur ``||radio:Avancer||`` pour ``||radio:Arreter||`` **(sans accent)**.
 
 ```blocks
 

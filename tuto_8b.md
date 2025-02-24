@@ -198,7 +198,87 @@ function Arreter () {
 
 ## Étape 14
 
-Glisse le bloc  ``||radio:on radio received||`` (trad. quand une donnée est reçue)
+Glisse le bloc  ``||radio:on radio received||`` (trad. quand une donnée est reçue) dans la zone de programmation.
+
+Ajoute le bloc ``||logic:si alors||`` sous le bloc ``||radio:on radio received||``.
+
+```blocks
+
+radio.onReceivedString(function (receivedString) {
+    if (true) {
+    	
+    }
+})
+
+```
+
+## Étape 15
+
+Modifie le bloc ``||logic:si alors||``.
+
+Remplace la valeur ``||logic:vrai||`` par le bloc ``||logic:" " = " "||``.
+
+```blocks
+
+radio.onReceivedString(function (receivedString) {
+    if ("" == "") {
+    	
+    }
+})
+
+```
+
+## Étape 16
+
+Glisse le bloc ``||variables:receivedString||`` dans l'espace de gauche.
+
+Ajoute la valeur Avancer dans l'espace de droite.
+
+
+```blocks
+
+radio.onReceivedString(function (receivedString) {
+    if (receivedString == "Avancer") {
+    	
+    }
+})
+
+```
+
+## Étape 16
+
+Ajoute le bloc ``||functions:appel Avancer||`` dans le bloc ``||logic:si alors||``.
+
+```blocks
+
+radio.onReceivedString(function (receivedString) {
+    if (receivedString == "Avancer") {
+        Avancer()
+    }
+})
+
+```
+
+## Étape 17
+
+Duplique le bloc ``||logic:si alors||``.
+
+Remplace la valeur Avancer par la valeur Arreter.
+
+Remplace le bloc ``||functions:appel Avancer||`` par le bloc ``||functions:appel Arreter||``.
+
+```blocks
+
+radio.onReceivedString(function (receivedString) {
+    if (receivedString == "Avancer") {
+        Avancer()
+    }
+    if (receivedString == "Arreter") {
+        Arrêter()
+    }
+})
+
+```
 
 ## @showdialog 
 
