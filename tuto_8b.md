@@ -199,6 +199,7 @@ function Arreter () {
 ## Étape 14
 
 Glisse le bloc  ``||radio:on radio received||`` (trad. quand une donnée est reçue)
+
 ## @showdialog 
 
 Félicitations! Tu as terminé de programmer l'émetteur.

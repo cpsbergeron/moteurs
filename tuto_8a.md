@@ -101,7 +101,7 @@ input.onButtonPressed(Button.A, function () {
 
 ## Étape 8
 
-Dupplique le bloc ``||input:lorsque le bouton A est pressé||``.
+Duplique le bloc ``||input:lorsque le bouton A est pressé||``.
 
 Modifie la valeur ``||input:A||`` pour ``||input:B||``.
 
