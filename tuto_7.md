@@ -30,7 +30,7 @@ Remplace les valeurs ``||continuousservo:P0||`` par ``||continuousservo:P14||`` 
 
 function Demarrage () {
     ContinuousServo.turn_off_motor(DigitalPin.P14)
-    ContinuousServo.turn_off_motor(DigitalPin.P143)
+    ContinuousServo.turn_off_motor(DigitalPin.P13)
 }
 
 ```
@@ -44,8 +44,8 @@ Choisis le crochet comme icône.
 ```blocks
 
 function Demarrage () {
-    ContinuousServo.turn_off_motor(DigitalPin.P13)
     ContinuousServo.turn_off_motor(DigitalPin.P14)
+    ContinuousServo.turn_off_motor(DigitalPin.P13)
     basic.showIcon(IconNames.Yes)
 }
 
@@ -63,8 +63,8 @@ Remplace la valeur ``||variables:0||`` par ``||variables:25||``.
 
 let vitesse = 0
 function Demarrage () {
-    ContinuousServo.turn_off_motor(DigitalPin.P13)
     ContinuousServo.turn_off_motor(DigitalPin.P14)
+    ContinuousServo.turn_off_motor(DigitalPin.P13)
     basic.showIcon(IconNames.Yes)
     vitesse = 25
 }
@@ -97,8 +97,8 @@ function Avancer (ms: number) {
     ContinuousServo.spin_one_way_with_speed(AnalogPin.P14, vitesse)
 }
 function Demarrage () {
-    ContinuousServo.turn_off_motor(DigitalPin.P13)
     ContinuousServo.turn_off_motor(DigitalPin.P14)
+    ContinuousServo.turn_off_motor(DigitalPin.P13)
     basic.showIcon(IconNames.Yes)
     vitesse = 25
 }
@@ -121,8 +121,8 @@ function Avancer (ms: number) {
     ContinuousServo.spin_other_way_with_speed(AnalogPin.P13, vitesse)
 }
 function Demarrage () {
-    ContinuousServo.turn_off_motor(DigitalPin.P13)
     ContinuousServo.turn_off_motor(DigitalPin.P14)
+    ContinuousServo.turn_off_motor(DigitalPin.P13)
     basic.showIcon(IconNames.Yes)
     vitesse = 25
 }
@@ -149,8 +149,8 @@ function Avancer (ms: number) {
         `)
 }
 function Demarrage () {
-    ContinuousServo.turn_off_motor(DigitalPin.P13)
     ContinuousServo.turn_off_motor(DigitalPin.P14)
+    ContinuousServo.turn_off_motor(DigitalPin.P13)
     basic.showIcon(IconNames.Yes)
     vitesse = 25
 }
@@ -179,8 +179,8 @@ function Avancer (ms: number) {
     basic.pause(ms)
 }
 function Demarrage () {
-    ContinuousServo.turn_off_motor(DigitalPin.P13)
     ContinuousServo.turn_off_motor(DigitalPin.P14)
+    ContinuousServo.turn_off_motor(DigitalPin.P13)
     basic.showIcon(IconNames.Yes)
     vitesse = 25
 }
