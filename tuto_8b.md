@@ -261,7 +261,7 @@ radio.onReceivedString(function (receivedString) {
 
 ## Étape 17
 
-Duplique le bloc ``||logic:si alors||``.
+Duplique le bloc ``||logic:si alors||`` dans la zone de programmation.
 
 Remplace la valeur Avancer par la valeur Arreter.
 
