@@ -73,7 +73,7 @@ function Demarrer () {
 
 ## Étape 6
 
-Crée une ``||functions: fonction||`` et donne-lui le nom ``||functions:Avancer||`` (onglet Texte) et ajoute l'élément ``||variables:ms||`` (onglet Nombres).
+Crée une ``||functions: fonction||`` et donne-lui le nom ``||functions:Avancer||`` et ajoute l'élément ``||variables:ms||`` (onglet Nombres).
 
 ```blocks
 
