@@ -53,26 +53,6 @@ function Demarrer () {
 
 ## Étape 5
 
-Crée une ``||variables: variable||`` et donne-lui le nom ``||variables:vitesse||``.
-
-Ajoute le bloc ``||variables: définir vitesse ||`` sous le bloc ``||basic:montrer l'icône||``.
-
-Remplace la valeur ``||variables:0||`` par ``||variables:25||``.
-
-```blocks
-
-let vitesse = 0
-function Demarrer () {
-    ContinuousServo.turn_off_motor(DigitalPin.P14)
-    ContinuousServo.turn_off_motor(DigitalPin.P13)
-    basic.showIcon(IconNames.Yes)
-    vitesse = 25
-}
-
-```
-
-## Étape 6
-
 Crée une ``||functions: fonction||`` et donne-lui le nom ``||functions:Avancer||`` et ajoute l'élément ``||variables:ms||`` (onglet Nombres).
 
 ```blocks
@@ -82,53 +62,49 @@ function Avancer (ms: number) {
 
 ```
 
-## Étape 7
+## Étape 6
 
 Ajoute le bloc ``||continuousservo:spin one way||`` (trad. : tourner dans un sens) dans le bloc ``||functions:Avancer||``.
 
 Remplace la valeur ``||continuousservo:P0||`` par ``||continuousservo:P14||``.
 
-Remplace la valeur ``||continuousservo:0||`` par le bloc ``||variables: vitesse ||``.
+Remplace la valeur ``||continuousservo:0||`` par la valeur ``||continuousservo:25||``.
 
 ```blocks
 
-let vitesse = 0
 function Avancer (ms: number) {
-    ContinuousServo.spin_one_way_with_speed(AnalogPin.P14, vitesse)
+    ContinuousServo.spin_one_way_with_speed(AnalogPin.P14, 25)
 }
 function Demarrer () {
     ContinuousServo.turn_off_motor(DigitalPin.P14)
     ContinuousServo.turn_off_motor(DigitalPin.P13)
     basic.showIcon(IconNames.Yes)
-    vitesse = 25
 }
 
 ```
 
-## Étape 8
+## Étape 7
 
 Ajoute le bloc ``||continuousservo:spin the other way||`` (trad. : tourner dans l'autre sens) sous le bloc ``||continuousservo:spin one way||``.
 
 Remplace la valeur ``||continuousservo:P0||`` par ``||continuousservo:P13||``.
 
-Remplace la valeur ``||continuousservo:0||`` par le bloc ``||variables: vitesse ||``.
+Remplace la valeur ``||continuousservo:0||`` par la valeur ``||continuousservo:-25||``.
 
 ```blocks
 
-let vitesse = 0
 function Avancer (ms: number) {
-    ContinuousServo.spin_one_way_with_speed(AnalogPin.P14, vitesse)
-    ContinuousServo.spin_other_way_with_speed(AnalogPin.P13, vitesse)
+    ContinuousServo.spin_one_way_with_speed(AnalogPin.P14, 25)
+    ContinuousServo.spin_other_way_with_speed(AnalogPin.P13, -25)
 }
 function Demarrer () {
     ContinuousServo.turn_off_motor(DigitalPin.P14)
     ContinuousServo.turn_off_motor(DigitalPin.P13)
     basic.showIcon(IconNames.Yes)
-    vitesse = 25
 }
 
 ```
-## Étape 9
+## Étape 8
 
 Ajoute le bloc ``||basic:montrer LEDs||`` sous le bloc ``||continuousservo:spin the other way||``.
 
@@ -136,10 +112,9 @@ Dessine une flèche qui pointe vers le haut.
 
 ```blocks
 
-let vitesse = 0
 function Avancer (ms: number) {
-    ContinuousServo.spin_one_way_with_speed(AnalogPin.P14, vitesse)
-    ContinuousServo.spin_other_way_with_speed(AnalogPin.P13, vitesse)
+    ContinuousServo.spin_one_way_with_speed(AnalogPin.P14, 25)
+    ContinuousServo.spin_other_way_with_speed(AnalogPin.P13, -25)
     basic.showLeds(`
         . . # . .
         . # # # .
@@ -152,12 +127,11 @@ function Demarrer () {
     ContinuousServo.turn_off_motor(DigitalPin.P14)
     ContinuousServo.turn_off_motor(DigitalPin.P13)
     basic.showIcon(IconNames.Yes)
-    vitesse = 25
 }
 
 ```
 
-## Étape 10
+## Étape 9
 
 Ajoute le bloc ``||basic:pause (ms)||`` sous le bloc ``||basic:montrer LEDs||``.
 
@@ -165,10 +139,9 @@ Glisse le bloc ``||variables: ms ||`` dans le bloc ``||basic:pause (ms)||``.
 
 ```blocks
 
-let vitesse = 0
 function Avancer (ms: number) {
-    ContinuousServo.spin_one_way_with_speed(AnalogPin.P14, vitesse)
-    ContinuousServo.spin_other_way_with_speed(AnalogPin.P13, vitesse)
+    ContinuousServo.spin_one_way_with_speed(AnalogPin.P14, 25)
+    ContinuousServo.spin_other_way_with_speed(AnalogPin.P13, -25)
     basic.showLeds(`
         . . # . .
         . # # # .
@@ -182,14 +155,13 @@ function Demarrer () {
     ContinuousServo.turn_off_motor(DigitalPin.P14)
     ContinuousServo.turn_off_motor(DigitalPin.P13)
     basic.showIcon(IconNames.Yes)
-    vitesse = 25
 }
 
 ```
 
-## Étape 11
+## Étape 10
 
-Crée une ``||functions: fonction||`` et donne-lui le nom ``||functions:Arreter||`` ** sans accent **.
+Crée une ``||functions: fonction||`` et donne-lui le nom ``||functions:Arreter||`` (** sans accent **).
 
 ```blocks
 
@@ -199,7 +171,7 @@ function Arreter () {
 
 ```
 
-## Étape 12
+## Étape 11
 
 Ajoute deux blocs ``||continuousservo:turn off motor||`` (trad. : éteindre les moteurs) dans le bloc ``||functions:Arreter||``.
 
@@ -214,7 +186,7 @@ function Arreter () {
 
 ```
 
-## Étape 13
+## Étape 12
 
 Ajoute le bloc ``||basic:montrer l'icône||`` sous le bloc ``||continuousservo:turn off motor||`` (trad. : éteindre les moteurs).
 
@@ -230,7 +202,7 @@ function Arreter () {
 
 ```
 
-## Étape 14
+## Étape 13
 
 Glisse le bloc ``||input:lorsque le bouton A est pressé||`` dans la zone de programmation.
 
@@ -240,15 +212,14 @@ Remplace la valeur ``||functions:1||`` par ``||functions:1000||``.
 
 ```blocks
 
-let vitesse = 0
 input.onButtonPressed(Button.A, function () {
     Demarrage()
     Avancer(1)
     Arreter()
 })
 function Avancer (ms: number) {
-    ContinuousServo.spin_one_way_with_speed(AnalogPin.P14, vitesse)
-    ContinuousServo.spin_other_way_with_speed(AnalogPin.P13, vitesse)
+    ContinuousServo.spin_one_way_with_speed(AnalogPin.P14, 25)
+    ContinuousServo.spin_other_way_with_speed(AnalogPin.P13, -25)
     basic.showLeds(`
         . . # . .
         . # # # .
@@ -262,13 +233,13 @@ function Demarrage () {
     ContinuousServo.turn_off_motor(DigitalPin.P14)
     ContinuousServo.turn_off_motor(DigitalPin.P13)
     basic.showIcon(IconNames.Yes)
-    vitesse = 25
 }
 function Arreter () {
     ContinuousServo.turn_off_motor(DigitalPin.P14)
     ContinuousServo.turn_off_motor(DigitalPin.P13)
     basic.showIcon(IconNames.No)
 }
+
 
 ```
 
