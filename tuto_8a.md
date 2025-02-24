@@ -10,7 +10,7 @@ Supprime le bloc ``||basic:toujours||``.
 
 ## Étape 2
 
-Ajout le bloc ``||radio:radio définir groupe||`` dans le bloc ``||basic:au démarrage||``.
+Ajoute le bloc ``||radio:radio définir groupe||`` dans le bloc ``||basic:au démarrage||``.
 
 ```blocks
 
@@ -38,52 +38,124 @@ Il s'agit de la fréquence radio qui sera utilisée par les deux micro:bit.
 
 ## Étape 4
 
-Ajoute le bloc ``||radio:envoyer la chaîne par radio||`` dans le bloc ``||input:lorsque le bouton A est pressé||``.
+Ajoute le bloc ``||basic:montrer icone||`` sous le bloc ``||radio:radio définir groupe||``.
+
+Sélectionn le crochet comme icone.
 
 ```blocks
 
-input.onButtonPressed(Button.A, function () {
-    radio.sendString("")
+radio.setGroup(1)
+basic.showIcon(IconNames.Yes)
+basic.forever(function () {
+	
 })
 
 ```
 
 ## Étape 5
 
-Modifie le bloc ``||radio:envoyer la chaîne par radio||``.
-
-Ajoute le texte ``||radio:Ouvrir||`` dans le bloc ``||radio:envoyer la chaîne par radio||``.
+Ajoute le bloc ``||radio:send string||`` (trad. : envoyer une ligne) dans le bloc ``||input:lorsque le bouton A est pressé||``.
 
 ```blocks
 
 input.onButtonPressed(Button.A, function () {
-    radio.sendString("Ouvrir")
+    radio.sendString("")
 })
 
 ```
 
 ## Étape 6
 
-Ajoute le bloc ``||radio:envoyer la chaîne par radio||`` dans le bloc ``||input:lorsque le bouton B est pressé||``.
+Modifie le bloc ``||radio:send string||``.
+
+Écris le mot ``||radio:1||`` dans le bloc. (1 = Avancer)
 
 ```blocks
 
-input.onButtonPressed(Button.B, function () {
-    radio.sendString("")
+input.onButtonPressed(Button.A, function () {
+    radio.sendString("Avancer")
 })
 
 ```
 
 ## Étape 7
 
-Modifie le bloc ``||radio:envoyer la chaîne par radio||``.
+Ajoute le bloc ``||basic:montrer LEDs||`` dans sous le bloc ``||radio:send string||``.
 
-Ajoute le texte ``||radio:Fermer||`` dans le bloc ``||radio:envoyer la chaîne par radio||``.
+Dessine une flèche qui pointe vers le haut.
+
+```blocks
+
+input.onButtonPressed(Button.A, function () {
+    radio.sendString("Avancer")
+    basic.showLeds(`
+        . . # . .
+        . # . # .
+        # . # . #
+        . . # . .
+        . . # . .
+        `)
+})
+
+```
+
+## Étape 8
+
+Dupplique le bloc ``||input:lorsque le bouton A est pressé||``.
+
+Modifie la valeur ``||input:A||`` pour ``||input:B||``.
 
 ```blocks
 
 input.onButtonPressed(Button.B, function () {
-    radio.sendString("Fermer")
+    radio.sendString("Avancer")
+    basic.showLeds(`
+        . . # . .
+        . # . # .
+        # . # . #
+        . . # . .
+        . . # . .
+        `)
+})
+
+```
+
+## Étape 9
+
+Modifie la valeur ``||radio:Avancer||`` pour ``||input:Arreter||`` **(sans accent)**.
+
+```blocks
+
+input.onButtonPressed(Button.B, function () {
+    radio.sendString("Arreter")
+    basic.showLeds(`
+        . . # . .
+        . # . # .
+        # . # . #
+        . . # . .
+        . . # . .
+        `)
+})
+
+```
+
+## Étape 10
+
+Modifie le bloc ``||basic:montrer LEDs||``.
+
+Remplace la flèche qui pointe vers le haut par une flèche qui pointe vers le bas.
+
+```blocks
+
+input.onButtonPressed(Button.B, function () {
+    radio.sendString("Arreter")
+    basic.showLeds(`
+        . . # . .
+        . . # . .
+        # . # . #
+        . # # # .
+        . . # . .
+        `)
 })
 
 ```
