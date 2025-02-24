@@ -143,19 +143,15 @@ input.onButtonPressed(Button.B, function () {
 
 Modifie le bloc ``||basic:montrer LEDs||``.
 
-Remplace la flèche qui pointe vers le haut par une flèche qui pointe vers le bas.
+Remplace le bloc ``||basic:montrer LEDs||`` par le bloc ``||basic:montrer icone||``.
+
+Sélectionne le X comme icone.
 
 ```blocks
 
 input.onButtonPressed(Button.B, function () {
     radio.sendString("Arreter")
-    basic.showLeds(`
-        . . # . .
-        . . # . .
-        # . # . #
-        . # # # .
-        . . # . .
-        `)
+    basic.showIcon(IconNames.No)
 })
 
 ```
