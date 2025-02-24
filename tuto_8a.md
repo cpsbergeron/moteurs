@@ -80,7 +80,7 @@ input.onButtonPressed(Button.A, function () {
 
 ## Étape 7
 
-Ajoute le bloc ``||basic:montrer LEDs||`` dans sous le bloc ``||radio:send string||``.
+Ajoute le bloc ``||basic:montrer LEDs||`` sous le bloc ``||radio:send string||``.
 
 Dessine une flèche qui pointe vers le haut.
 
