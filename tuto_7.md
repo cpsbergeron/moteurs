@@ -250,6 +250,21 @@ tinkertanker/pxt-continuous-servo
 
 ## Étape 14
 
+Voici d'autres blocs pour t'aider à créer les nouvelles fonctions.
+
+```blocks
+
+input.onButtonPressed(Button.B, function () {
+    ContinuousServo.spin_other_way_with_speed(AnalogPin.P0, 0)
+    basic.showString("Hello!")
+    basic.showNumber(0)
+    basic.clearScreen()
+})
+
+```
+
+## Étape 15
+
 Bravo !
 
 Tu as terminé le tutoriel. Télécharge et teste le programme.
