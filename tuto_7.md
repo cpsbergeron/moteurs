@@ -85,7 +85,7 @@ function Demarrer () {
 
 ## Étape 7
 
-Ajoute le bloc ``||continuousservo:spin the other way||`` (trad. : tourner dans l'autre sens) sous le bloc ``||continuousservo:spin one way||``.
+Ajoute le bloc ``||continuousservo:spin one way||`` (trad. : tourner dans un sens) sous le bloc ``||continuousservo:spin one way||``.
 
 Remplace la valeur ``||continuousservo:P0||`` par ``||continuousservo:P13||``.
 
@@ -95,7 +95,7 @@ Remplace la valeur ``||continuousservo:0||`` par la valeur ``||continuousservo:-
 
 function Avancer (ms: number) {
     ContinuousServo.spin_one_way_with_speed(AnalogPin.P14, 25)
-    ContinuousServo.spin_other_way_with_speed(AnalogPin.P13, -25)
+    ContinuousServo.spin_one_way_with_speed(AnalogPin.P13, -25)
 }
 function Demarrer () {
     ContinuousServo.turn_off_motor(DigitalPin.P14)
@@ -106,7 +106,7 @@ function Demarrer () {
 ```
 ## Étape 8
 
-Ajoute le bloc ``||basic:montrer LEDs||`` sous le bloc ``||continuousservo:spin the other way||``.
+Ajoute le bloc ``||basic:montrer LEDs||`` sous le bloc ``||continuousservo:spin one way||``.
 
 Dessine une flèche qui pointe vers le haut.
 
@@ -114,7 +114,7 @@ Dessine une flèche qui pointe vers le haut.
 
 function Avancer (ms: number) {
     ContinuousServo.spin_one_way_with_speed(AnalogPin.P14, 25)
-    ContinuousServo.spin_other_way_with_speed(AnalogPin.P13, -25)
+    ContinuousServo.spin_one_way_with_speed(AnalogPin.P13, -25)
     basic.showLeds(`
         . . # . .
         . # # # .
@@ -141,7 +141,7 @@ Glisse le bloc ``||variables: ms ||`` dans le bloc ``||basic:pause (ms)||``.
 
 function Avancer (ms: number) {
     ContinuousServo.spin_one_way_with_speed(AnalogPin.P14, 25)
-    ContinuousServo.spin_other_way_with_speed(AnalogPin.P13, -25)
+    ContinuousServo.spin_one_way_with_speed(AnalogPin.P13, -25)
     basic.showLeds(`
         . . # . .
         . # # # .
@@ -219,7 +219,7 @@ input.onButtonPressed(Button.A, function () {
 })
 function Avancer (ms: number) {
     ContinuousServo.spin_one_way_with_speed(AnalogPin.P14, 25)
-    ContinuousServo.spin_other_way_with_speed(AnalogPin.P13, -25)
+    ContinuousServo.spin_one_way_with_speed(AnalogPin.P13, -25)
     basic.showLeds(`
         . . # . .
         . # # # .
@@ -239,7 +239,6 @@ function Arreter () {
     ContinuousServo.turn_off_motor(DigitalPin.P13)
     basic.showIcon(IconNames.No)
 }
-
 
 ```
 
