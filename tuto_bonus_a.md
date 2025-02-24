@@ -4,11 +4,7 @@
 
 Programme le Bit Board Rover pour réaliser les différents parcours.
 
-## Étape 1
-
-Programme le Bit Board Rover pour réaliser les différents parcours.
-
-Les blocs sont mélangés.
+Les blocs ont été mélangés.
 
 ```blocks
 
