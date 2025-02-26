@@ -10,6 +10,8 @@ Supprime les blocs ``||basic:au démarrage||`` et ``||basic:toujours||``.
 
 ## Étape 2
 
+Glisse le bloc ``||input:lorsque le bouton A est pressé||`` dans la zone de programmation.
+
 Ajoute un bloc ``||continuousservo:spin one way||`` (trad. : tourner dans un sens) dans le bloc ``||input:lorsque le bouton A est pressé||``.
 
 Remplace la valeur ``||continuousservo:P0||`` par ``||continuousservo:P14||``.

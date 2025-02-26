@@ -10,6 +10,18 @@ Supprime les blocs ``||basic:au démarrage||`` et ``||basic:toujours||``.
 
 ## Étape 2
 
+Glisse le bloc ``||input:lorsque le bouton A est pressé||`` dans la zone de programmation.
+
+## Étape 3
+
+```blocks
+
+input.onButtonPressed(Button.A, function () {
+})
+
+```
+## Étape 4
+
 Crée une ``||variables: variable||`` et donne-lui le nom ``||variables:vitesse||``.
 
 Ajoute le bloc ``||variables: définir vitesse ||`` dans le bloc ``||input:lorsque le bouton A est pressé||``.
@@ -25,7 +37,7 @@ input.onButtonPressed(Button.A, function () {
 
 ```
 
-## Étape 3
+## Étape 5
 
 Ajoute le bloc ``||continuousservo:spin one way||`` (trad. : tourner dans un sens) sous le bloc ``||variables: définir vitesse ||``.
 
@@ -43,7 +55,7 @@ input.onButtonPressed(Button.A, function () {
 
 
 ```
-## Étape 4
+## Étape 6
 
 Ajoute le bloc ``||continuousservo:spin other way||`` (trad. : tourner dans un sens) sous le bloc ``||continuousservo: spin one way||``.
 
@@ -62,7 +74,7 @@ input.onButtonPressed(Button.A, function () {
 
 ```
 
-## Étape 5
+## Étape 7
 
 Ajoute le bloc ``||basic:pause||`` sous le bloc ``||continuousservo:spin other way||``.
 
@@ -80,7 +92,7 @@ basic.pause(2000)
 
 ```
 
-## Étape 6
+## Étape 8
 
 Ajoute deux blocs ``||continuousservo:turn off motor||`` (trad. : éteindre les moteurs) sous le bloc ``||basic:pause||``.
 
@@ -101,7 +113,7 @@ ContinuousServo.turn_off_motor(DigitalPin.P13)
 
 
 ```
-## Étape 6
+## Étape 9
 
 Bravo !
 
