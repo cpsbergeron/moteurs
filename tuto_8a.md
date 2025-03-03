@@ -31,7 +31,7 @@ radio.setGroup(1)
 ```
 ## @showdialog 
 
-Le valeur pour l'émetteur et le récepteur doit être la même.
+Le valeur pour l'émetteur et la valeur pour le récepteur doivent être la même.
 
 Il s'agit de la fréquence radio qui sera utilisée par les deux micro:bit.
 
@@ -40,7 +40,7 @@ Il s'agit de la fréquence radio qui sera utilisée par les deux micro:bit.
 
 Ajoute le bloc ``||basic:montrer icone||`` sous le bloc ``||radio:radio définir groupe||``.
 
-Sélectionn le crochet comme icone.
+Sélectionne le crochet comme icone.
 
 ```blocks
 
@@ -54,7 +54,7 @@ basic.forever(function () {
 
 ## Étape 5
 
-Ajoute le bloc ``||radio:send string||`` (trad. : envoyer une ligne) dans le bloc ``||input:lorsque le bouton A est pressé||``.
+Ajoute le bloc ``||radio:envoyer la chaîne||`` (trad. : envoyer une ligne) dans le bloc ``||input:lorsque le bouton A est pressé||``.
 
 ```blocks
 
@@ -66,7 +66,7 @@ input.onButtonPressed(Button.A, function () {
 
 ## Étape 6
 
-Modifie le bloc ``||radio:send string||``.
+Modifie le bloc ``||radio:envoyer la chaîne||``.
 
 Écris le mot ``||radio:Avancer||`` dans le bloc. 
 
@@ -80,7 +80,7 @@ input.onButtonPressed(Button.A, function () {
 
 ## Étape 7
 
-Ajoute le bloc ``||basic:montrer LEDs||`` sous le bloc ``||radio:send string||``.
+Ajoute le bloc ``||basic:montrer LEDs||`` sous le bloc ``||radio:envoyer la chaîne||``.
 
 Dessine une flèche qui pointe vers le haut.
 
