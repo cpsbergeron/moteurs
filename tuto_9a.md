@@ -185,6 +185,33 @@ radio.setGroup(1)
 
 ```
 
+## Étape 12
+
+Des blocs ont été ajoutés au tutoriel pour te permettre de le compléter.
+
+```blocks
+
+input.onGesture(Gesture.LogoUp, function () {
+    radio.sendString("Arreter")
+    basic.showIcon(IconNames.No)
+})
+input.onButtonPressed(Button.A, function () {
+    basic.pause(100)
+})
+input.onGesture(Gesture.ScreenUp, function () {
+    radio.sendString("Avancer")
+    basic.showLeds(`
+        . . # . .
+        . # . # .
+        # . # . #
+        . . # . .
+        . . # . .
+        `)
+})
+radio.setGroup(1)
+basic.showIcon(IconNames.Yes)
+```
+
 ## @showdialog 
 
 Félicitations! Tu as terminé de programmer l'émetteur.
