@@ -67,11 +67,11 @@ ContinuousServo.turn_off_motor(DigitalPin.P14)
 
 ## Étape 6
 
-Crée une ``||functions: fonction||`` et donne-lui le nom ``||functions:Avancer||`` et ajoute l'élément ``||variables:ms||`` (onglet Nombres).
+Crée une ``||functions: fonction||`` et donne-lui le nom ``||functions:Avancer||``
 
 ```blocks
 
-function Avancer (ms: number) {
+function Avancer {
 }
 
 ```
@@ -86,7 +86,7 @@ Remplace la valeur ``||continuousservo:0||`` par la valeur ``||continuousservo:2
 
 ```blocks
 
-function Avancer (ms: number) {
+function Avancer {
     ContinuousServo.spin_one_way_with_speed(AnalogPin.P14, 25)
 }
 
@@ -102,7 +102,7 @@ Remplace la valeur ``||continuousservo:0||`` par la valeur ``||continuousservo:-
 
 ```blocks
 
-function Avancer (ms: number) {
+function Avancer {
     ContinuousServo.spin_one_way_with_speed(AnalogPin.P14, 25)
     ContinuousServo.spin_one_way_with_speed(AnalogPin.P13, -25)
 }
@@ -116,7 +116,7 @@ Dessine une flèche qui pointe vers le haut.
 
 ```blocks
 
-function Avancer (ms: number) {
+function Avancer {
     ContinuousServo.spin_one_way_with_speed(AnalogPin.P14, 25)
     ContinuousServo.spin_one_way_with_speed(AnalogPin.P13, -25)
     basic.showLeds(`
@@ -130,28 +130,6 @@ function Avancer (ms: number) {
 
 ```
 
-## Étape 10
-
-Ajoute le bloc ``||basic:pause (ms)||`` sous le bloc ``||basic:montrer LEDs||``.
-
-Glisse le bloc ``||variables: ms ||`` dans le bloc ``||basic:pause (ms)||``.
-
-```blocks
-
-function Avancer (ms: number) {
-    ContinuousServo.spin_one_way_with_speed(AnalogPin.P14, 25)
-    ContinuousServo.spin_one_way_with_speed(AnalogPin.P13, -25)
-    basic.showLeds(`
-        . . # . .
-        . # # # .
-        # . # . #
-        . . # . .
-        . . # . .
-        `)
-    basic.pause(ms)
-}
-
-```
 
 ## Étape 11
 
@@ -242,7 +220,7 @@ radio.onReceivedString(function (receivedString) {
     	
     }
 })
-function Avancer (ms: number) {
+function Avancer {
     ContinuousServo.spin_one_way_with_speed(AnalogPin.P14, 25)
     ContinuousServo.spin_one_way_with_speed(AnalogPin.P13, -25)
     basic.showLeds(`
@@ -252,7 +230,6 @@ function Avancer (ms: number) {
         . . # . .
         . . # . .
         `)
-    basic.pause(ms)
 }
 function Arreter () {
     ContinuousServo.turn_off_motor(DigitalPin.P14)
@@ -283,7 +260,7 @@ radio.onReceivedString(function (receivedString) {
         Avancer(1)
     }
 })
-function Avancer (ms: number) {
+function Avancer {
     ContinuousServo.spin_one_way_with_speed(AnalogPin.P14, 25)
     ContinuousServo.spin_one_way_with_speed(AnalogPin.P13, -25)
     basic.showLeds(`
@@ -293,7 +270,6 @@ function Avancer (ms: number) {
         . . # . .
         . . # . .
         `)
-    basic.pause(ms)
 }
 function Arreter () {
     ContinuousServo.turn_off_motor(DigitalPin.P14)
@@ -332,7 +308,7 @@ radio.onReceivedString(function (receivedString) {
         Arreter()
     }
 })
-function Avancer (ms: number) {
+function Avancer {
     ContinuousServo.spin_one_way_with_speed(AnalogPin.P14, 25)
     ContinuousServo.spin_one_way_with_speed(AnalogPin.P13, -25)
     basic.showLeds(`
@@ -342,7 +318,6 @@ function Avancer (ms: number) {
         . . # . .
         . . # . .
         `)
-    basic.pause(ms)
 }
 function Arreter () {
     ContinuousServo.turn_off_motor(DigitalPin.P14)
