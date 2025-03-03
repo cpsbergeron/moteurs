@@ -31,7 +31,7 @@ radio.setGroup(1)
 ```
 ## @showdialog 
 
-Le valeur pour l'émetteur et le récepteur doit être la même.
+Le valeur pour l'émetteur et la valeur pour le récepteur doivent être la même.
 
 Il s'agit de la fréquence radio qui sera utilisée par les deux micro:bit.
 
