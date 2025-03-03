@@ -316,7 +316,7 @@ ContinuousServo.turn_off_motor(DigitalPin.P13)
 
 ## Étape 17
 
-Duplique le bloc ``||logic:si alors||`` dans la zone de programmation.
+Duplique le bloc ``||logic:si alors||`` et glisse celui-ci sous le premier bloc ``||logic:si alors||``.
 
 Remplace la valeur ``||logic:Avancer||`` par la valeur Arreter.
 
