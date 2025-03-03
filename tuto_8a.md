@@ -120,7 +120,7 @@ input.onButtonPressed(Button.B, function () {
 
 ## Étape 9
 
-Modifie la valeur ``||radio:Avancer||`` pour ``||radio:Arreter||`` **(sans accent)**.
+Remplace le mot ``||radio:Avancer||`` par le mot ``||radio:Arreter||`` **(sans accent)**.
 
 ```blocks
 
