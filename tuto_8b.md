@@ -1,4 +1,4 @@
-# Tutoriel 8B
+# Tutoriel Récepteur A
 
 ## @showdialog
 
@@ -334,14 +334,6 @@ radio.setGroup(1)
 basic.showIcon(IconNames.Yes)
 ContinuousServo.turn_off_motor(DigitalPin.P14)
 ContinuousServo.turn_off_motor(DigitalPin.P13)
-```
-
-## Étape 18
-
-Modifie le bloc ``||functions:appel Avancer||``.
-
-Remplace la valeur ``||functions:1||`` par ``||functions:1000||``.
-
 ```
 
 ## @showdialog 
