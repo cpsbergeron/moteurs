@@ -198,9 +198,9 @@ function Arreter () {
 
 ## Étape 14
 
-Glisse le bloc  ``||radio:on radio received||`` (trad. quand une donnée est reçue) dans la zone de programmation.
+Glisse le bloc  ``||radio:quand une donnée est reçue||`` dans la zone de programmation.
 
-Ajoute le bloc ``||logic:si alors||`` sous le bloc ``||radio:on radio received||``.
+Ajoute le bloc ``||logic:si alors||`` sous le bloc ``||radio:quand une donnée est reçue||``.
 
 ```blocks
 
@@ -232,7 +232,7 @@ radio.onReceivedString(function (receivedString) {
 
 Glisse le bloc ``||variables:receivedString||`` dans l'espace de gauche.
 
-Ajoute la valeur Avancer dans l'espace de droite.
+Écris la valeur ``||logic:Avancer||`` dans l'espace de droite.
 
 
 ```blocks
@@ -242,6 +242,33 @@ radio.onReceivedString(function (receivedString) {
     	
     }
 })
+function Avancer (ms: number) {
+    ContinuousServo.spin_one_way_with_speed(AnalogPin.P14, 25)
+    ContinuousServo.spin_one_way_with_speed(AnalogPin.P13, -25)
+    basic.showLeds(`
+        . . # . .
+        . # . # .
+        # . # . #
+        . . # . .
+        . . # . .
+        `)
+    basic.pause(ms)
+}
+function Arreter () {
+    ContinuousServo.turn_off_motor(DigitalPin.P14)
+    ContinuousServo.turn_off_motor(DigitalPin.P13)
+    basic.showLeds(`
+        # . . . #
+        . # . # .
+        . . # . .
+        . # . # .
+        # . . . #
+        `)
+}
+radio.setGroup(1)
+basic.showIcon(IconNames.Yes)
+ContinuousServo.turn_off_motor(DigitalPin.P14)
+ContinuousServo.turn_off_motor(DigitalPin.P13)
 
 ```
 
@@ -253,9 +280,37 @@ Ajoute le bloc ``||functions:appel Avancer||`` dans le bloc ``||logic:si alors||
 
 radio.onReceivedString(function (receivedString) {
     if (receivedString == "Avancer") {
-        Avancer()
+        Avancer(1)
     }
 })
+function Avancer (ms: number) {
+    ContinuousServo.spin_one_way_with_speed(AnalogPin.P14, 25)
+    ContinuousServo.spin_one_way_with_speed(AnalogPin.P13, -25)
+    basic.showLeds(`
+        . . # . .
+        . # . # .
+        # . # . #
+        . . # . .
+        . . # . .
+        `)
+    basic.pause(ms)
+}
+function Arreter () {
+    ContinuousServo.turn_off_motor(DigitalPin.P14)
+    ContinuousServo.turn_off_motor(DigitalPin.P13)
+    basic.showLeds(`
+        # . . . #
+        . # . # .
+        . . # . .
+        . # . # .
+        # . . . #
+        `)
+}
+radio.setGroup(1)
+basic.showIcon(IconNames.Yes)
+ContinuousServo.turn_off_motor(DigitalPin.P14)
+ContinuousServo.turn_off_motor(DigitalPin.P13)
+
 
 ```
 
@@ -263,7 +318,7 @@ radio.onReceivedString(function (receivedString) {
 
 Duplique le bloc ``||logic:si alors||`` dans la zone de programmation.
 
-Remplace la valeur Avancer par la valeur Arreter.
+Remplace la valeur ``||logic:Avancer||`` par la valeur Arreter.
 
 Remplace le bloc ``||functions:appel Avancer||`` par le bloc ``||functions:appel Arreter||``.
 
@@ -271,12 +326,46 @@ Remplace le bloc ``||functions:appel Avancer||`` par le bloc ``||functions:appel
 
 radio.onReceivedString(function (receivedString) {
     if (receivedString == "Avancer") {
-        Avancer()
+        Avancer(1)
     }
     if (receivedString == "Arreter") {
-        Arrêter()
+        Arreter()
     }
 })
+function Avancer (ms: number) {
+    ContinuousServo.spin_one_way_with_speed(AnalogPin.P14, 25)
+    ContinuousServo.spin_one_way_with_speed(AnalogPin.P13, -25)
+    basic.showLeds(`
+        . . # . .
+        . # . # .
+        # . # . #
+        . . # . .
+        . . # . .
+        `)
+    basic.pause(ms)
+}
+function Arreter () {
+    ContinuousServo.turn_off_motor(DigitalPin.P14)
+    ContinuousServo.turn_off_motor(DigitalPin.P13)
+    basic.showLeds(`
+        # . . . #
+        . # . # .
+        . . # . .
+        . # . # .
+        # . . . #
+        `)
+}
+radio.setGroup(1)
+basic.showIcon(IconNames.Yes)
+ContinuousServo.turn_off_motor(DigitalPin.P14)
+ContinuousServo.turn_off_motor(DigitalPin.P13)
+
+
+## Étape 18
+
+Modifie le bloc ``||functions:appel Avancer||``.
+
+Remplace la valeur ``||functions:1||`` par ``||functions:1000||``.
 
 ```
 
