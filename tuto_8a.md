@@ -139,8 +139,6 @@ input.onButtonPressed(Button.B, function () {
 
 ## Étape 10
 
-Modifie le bloc ``||basic:montrer LEDs||``.
-
 Remplace le bloc ``||basic:montrer LEDs||`` par le bloc ``||basic:montrer icône||``.
 
 Sélectionne le X comme icône.

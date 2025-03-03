@@ -150,8 +150,6 @@ radio.setGroup(1)
 
 ## Étape 10
 
-Modifie le bloc ``||basic:montrer LEDs||``.
-
 Remplace le bloc ``||basic:montrer LEDs||`` par le bloc ``||basic:montrer icone||``.
 
 Sélectionne le X comme icone.
