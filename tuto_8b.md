@@ -359,7 +359,7 @@ radio.setGroup(1)
 basic.showIcon(IconNames.Yes)
 ContinuousServo.turn_off_motor(DigitalPin.P14)
 ContinuousServo.turn_off_motor(DigitalPin.P13)
-
+```
 
 ## Étape 18
 
