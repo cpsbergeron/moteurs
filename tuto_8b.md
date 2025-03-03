@@ -210,7 +210,7 @@ radio.onReceivedString(function (receivedString) {
 
 Glisse le bloc ``||variables:receivedString||`` dans l'espace de gauche.
 
-Écris la valeur ``||logic:Avancer||`` dans l'espace de droite.
+Écris le mot ``||logic:Avancer||`` dans l'espace de droite.
 
 
 ```blocks
@@ -294,7 +294,7 @@ ContinuousServo.turn_off_motor(DigitalPin.P13)
 
 Duplique le bloc ``||logic:si alors||`` et glisse celui-ci sous le premier bloc ``||logic:si alors||``.
 
-Remplace la valeur ``||logic:Avancer||`` par la valeur Arreter.
+Remplace le mot ``||logic:Avancer||`` par le mot ``||logic:Arreter||`` ** (sans accent) **.
 
 Remplace le bloc ``||functions:appel Avancer||`` par le bloc ``||functions:appel Arreter||``.
 

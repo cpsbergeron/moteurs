@@ -67,11 +67,11 @@ ContinuousServo.turn_off_motor(DigitalPin.P14)
 
 ## Étape 6
 
-Crée une ``||variables: fonction||`` et donne-lui le nom ``||variables:Vitesse||``.
-
-Remplace la valeur ``||variables: 0||`` par ``||variables: 50||``.
+Crée une ``||variables: variable||`` et donne-lui le nom ``||variables:Vitesse||``.
 
 Ajoute le bloc ``||variables: définir Vitesse||`` sous le bloc ``||continuousservo:turn off motor||`` (trad. éteindre les moteurs).
+
+Remplace la valeur ``||variables: 0||`` par ``||variables: 50||``.
 
 ```blocks
 
@@ -119,7 +119,7 @@ Vitesse = 50
 
 ## Étape 9
 
-Ajoute le bloc ``||continuousservo:spin the other way||`` (trad. : tourner dans l'autre sens) sous le bloc ``||continuousservo:spin one way||``.
+Ajoute le bloc ``||continuousservo:spin other way||`` (trad. : tourner dans l'autre sens) sous le bloc ``||continuousservo:spin one way||``.
 
 Remplace la valeur ``||continuousservo:P0||`` par ``||continuousservo:P13||``.
 
@@ -141,7 +141,7 @@ Vitesse = 50
 ```
 ## Étape 10
 
-Ajoute le bloc ``||basic:montrer LEDs||`` sous le bloc ``||continuousservo:spin the other way||`` (trad. : tourner dans l'autre sens).
+Ajoute le bloc ``||basic:montrer LEDs||`` sous le bloc ``||continuousservo:spin other way||`` (trad. : tourner dans l'autre sens).
 
 Dessine une flèche qui pointe vers le haut.
 
@@ -246,7 +246,7 @@ radio.onReceivedString(function (receivedString) {
 
 Glisse le bloc ``||variables:receivedString||`` dans l'espace de gauche.
 
-Écris la valeur ``||logic:Avancer||`` dans l'espace de droite.
+Écris le mot ``||logic:Avancer||`` dans l'espace de droite.
 
 
 ```blocks
@@ -322,7 +322,7 @@ Vitesse = 50
 
 Duplique le bloc ``||logic:si alors||`` et glisse celui-ci sous le premier bloc ``||logic:si alors||``.
 
-Remplace la valeur ``||logic:Avancer||`` par la valeur Arreter.
+Remplace le mot ``||logic:Avancer||`` par le mot ``||logic:Arreter||``.
 
 Remplace le bloc ``||functions:appel Avancer||`` par le bloc ``||functions:appel Arreter||``.
 
