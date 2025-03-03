@@ -54,7 +54,7 @@ basic.forever(function () {
 
 ## Étape 5
 
-Ajoute le bloc ``||radio:envoyer la chaîne||`` (trad. : envoyer une ligne) dans le bloc ``||input:lorsque le bouton A est pressé||``.
+Ajoute le bloc ``||radio:envoyer la chaîne||`` dans le bloc ``||input:lorsque le bouton A est pressé||``.
 
 ```blocks
 

@@ -1,8 +1,8 @@
-# Tutoriel 8A
+# Tutoriel 8B
 
 ## @showdialog
 
-Transforme le micro:bit en émetteur. 
+Transforme le micro:bit en récepteur. 
 
 ## Étape 1
 
