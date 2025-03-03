@@ -108,6 +108,25 @@ radio.setGroup(1)
 
 Duplique le bloc ``||input:lorsque écran vers le haut||``.
 
+```blocks
+
+input.onGesture(Gesture.ScreenUp, function () {
+    radio.sendString("Avancer")
+    basic.showLeds(`
+        . . # . .
+        . # . # .
+        # . # . #
+        . . # . .
+        . . # . .
+        `)
+})
+basic.showIcon(IconNames.Yes)
+radio.setGroup(1)
+
+```
+
+## Étape 9
+
 Modifie la valeur ``||input:lorsque écran vers le haut||`` pour ``||input:logo vers le haut||``.
 
 ```blocks
@@ -127,7 +146,7 @@ radio.setGroup(1)
 
 ```
 
-## Étape 9
+## Étape 10
 
 Modifie la valeur ``||radio:Avancer||`` pour ``||radio:Arreter||`` **(sans accent)**.
 
@@ -148,7 +167,7 @@ radio.setGroup(1)
 
 ```
 
-## Étape 10
+## Étape 11
 
 Remplace le bloc ``||basic:montrer LEDs||`` par le bloc ``||basic:montrer icone||``.
 
