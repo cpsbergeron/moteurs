@@ -38,17 +38,15 @@ Il s'agit de la fréquence radio qui sera utilisée par les deux micro:bit.
 
 ## Étape 4
 
-Ajoute le bloc ``||basic:montrer icone||`` sous le bloc ``||radio:radio définir groupe||``.
+Ajoute le bloc ``||basic:montrer icône||`` sous le bloc ``||radio:radio définir groupe||``.
 
-Sélectionne le crochet comme icone.
+Sélectionne le crochet comme icône.
 
 ```blocks
 
 radio.setGroup(1)
 basic.showIcon(IconNames.Yes)
-basic.forever(function () {
-	
-})
+
 
 ```
 
@@ -143,9 +141,9 @@ input.onButtonPressed(Button.B, function () {
 
 Modifie le bloc ``||basic:montrer LEDs||``.
 
-Remplace le bloc ``||basic:montrer LEDs||`` par le bloc ``||basic:montrer icone||``.
+Remplace le bloc ``||basic:montrer LEDs||`` par le bloc ``||basic:montrer icône||``.
 
-Sélectionne le X comme icone.
+Sélectionne le X comme icône.
 
 ```blocks
 

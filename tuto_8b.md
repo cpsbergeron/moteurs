@@ -38,9 +38,9 @@ Il s'agit de la fréquence radio qui sera utilisée par les deux micro:bit.
 
 ## Étape 4
 
-Ajoute le bloc ``||basic:montrer icone||`` sous le bloc ``||radio:radio définir groupe||``.
+Ajoute le bloc ``||basic:montrer icône||`` sous le bloc ``||radio:radio définir groupe||``.
 
-Sélectionne le crochet comme icone.
+Sélectionne le crochet comme icône.
 
 ```blocks
 
@@ -52,7 +52,7 @@ basic.showIcon(IconNames.Yes)
 
 ## Étape 5
 
-Ajoute deux blocs ``||continuousservo:turn off motor||`` (trad. : éteindre les moteurs) sous le bloc ``||basic:montrer icone||``.
+Ajoute deux blocs ``||continuousservo:turn off motor||`` (trad. : éteindre les moteurs) sous le bloc ``||basic:montrer icône||``.
 
 Remplace les valeurs ``||continuousservo:P0||`` par ``||continuousservo:P14||`` et ``||continuousservo:P13||``.
 

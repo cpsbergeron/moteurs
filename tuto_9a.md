@@ -38,29 +38,30 @@ Il s'agit de la fréquence radio qui sera utilisée par les deux micro:bit.
 
 ## Étape 4
 
-Ajoute le bloc ``||basic:montrer icone||`` sous le bloc ``||radio:radio définir groupe||``.
+Ajoute le bloc ``||basic:montrer icône||`` sous le bloc ``||radio:radio définir groupe||``.
 
-Sélectionne le crochet comme icone.
+Sélectionne le crochet comme icône.
 
 ```blocks
 
 radio.setGroup(1)
 basic.showIcon(IconNames.Yes)
-basic.forever(function () {
-	
-})
+
 
 ```
 
 ## Étape 5
 
-Ajoute le bloc ``||radio:envoyer la chaîne||`` dans le bloc ``||input:||``.
+Ajoute le bloc ``||radio:envoyer la chaîne||`` dans le bloc ``||input: écran vers le haut||``.
+
 
 ```blocks
 
-input.onButtonPressed(Button.A, function () {
+input.onGesture(Gesture.ScreenUp, function () {
     radio.sendString("")
 })
+basic.showIcon(IconNames.Yes)
+radio.setGroup(1)
 
 ```
 
@@ -72,9 +73,11 @@ Modifie le bloc ``||radio:envoyer la chaîne||``.
 
 ```blocks
 
-input.onButtonPressed(Button.A, function () {
+input.onGesture(Gesture.ScreenUp, function () {
     radio.sendString("Avancer")
 })
+basic.showIcon(IconNames.Yes)
+radio.setGroup(1)
 
 ```
 
@@ -86,7 +89,7 @@ Dessine une flèche qui pointe vers le haut.
 
 ```blocks
 
-input.onButtonPressed(Button.A, function () {
+input.onGesture(Gesture.ScreenUp, function () {
     radio.sendString("Avancer")
     basic.showLeds(`
         . . # . .
@@ -96,18 +99,20 @@ input.onButtonPressed(Button.A, function () {
         . . # . .
         `)
 })
+basic.showIcon(IconNames.Yes)
+radio.setGroup(1)
 
 ```
 
 ## Étape 8
 
-Duplique le bloc ``||input:lorsque le bouton A est pressé||``.
+Duplique le bloc ``||input:lorsque écran vers le haut||``.
 
-Modifie la valeur ``||input:A||`` pour ``||input:B||``.
+Modifie la valeur ``||input:lorsque écran vers le haut||`` pour ``||input:logo vers le haut||``.
 
 ```blocks
 
-input.onButtonPressed(Button.B, function () {
+input.onGesture(Gesture.LogoUp, function () {
     radio.sendString("Avancer")
     basic.showLeds(`
         . . # . .
@@ -117,6 +122,8 @@ input.onButtonPressed(Button.B, function () {
         . . # . .
         `)
 })
+basic.showIcon(IconNames.Yes)
+radio.setGroup(1)
 
 ```
 
@@ -126,7 +133,7 @@ Modifie la valeur ``||radio:Avancer||`` pour ``||radio:Arreter||`` **(sans accen
 
 ```blocks
 
-input.onButtonPressed(Button.B, function () {
+input.onGesture(Gesture.LogoUp, function () {
     radio.sendString("Arreter")
     basic.showLeds(`
         . . # . .
@@ -136,6 +143,8 @@ input.onButtonPressed(Button.B, function () {
         . . # . .
         `)
 })
+basic.showIcon(IconNames.Yes)
+radio.setGroup(1)
 
 ```
 
@@ -149,10 +158,13 @@ Sélectionne le X comme icone.
 
 ```blocks
 
-input.onButtonPressed(Button.B, function () {
+input.onGesture(Gesture.LogoUp, function () {
     radio.sendString("Arreter")
     basic.showIcon(IconNames.No)
 })
+basic.showIcon(IconNames.Yes)
+radio.setGroup(1)
+
 
 ```
 
