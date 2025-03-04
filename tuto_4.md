@@ -12,6 +12,15 @@ Supprime les blocs ``||basic:au démarrage||`` et ``||basic:toujours||``.
 
 Glisse le bloc ``||input:lorsque le bouton A est pressé||`` dans la zone de programmation.
 
+```blocks
+
+input.onButtonPressed(Button.A, function () {
+})
+
+```
+
+## Étape 3
+
 Ajoute un bloc ``||continuousservo:spin one way||`` (trad. : tourner dans un sens) dans le bloc ``||input:lorsque le bouton A est pressé||``.
 
 Remplace la valeur ``||continuousservo:P0||`` par ``||continuousservo:P14||``.

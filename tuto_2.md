@@ -8,10 +8,18 @@ Programme le Bit Board Rover.
 
 Supprime les blocs ``||basic:au démarrage||`` et ``||basic:toujours||``.
 
-
 ## Étape 2
 
 Glisse le bloc ``||input:lorsque le bouton A est pressé||`` dans la zone de programmation.
+
+```blocks
+
+input.onButtonPressed(Button.A, function () {
+})
+
+```
+
+## Étape 3
 
 Ajoute un bloc ``||continuousservo:spin one way||`` (trad. : tourner dans un sens) dans le bloc ``||input:lorsque le bouton A est pressé||``.
 
@@ -27,7 +35,7 @@ input.onButtonPressed(Button.A, function () {
 
 ```
 
-## Étape 3
+## Étape 4
 
 Ajoute un bloc ``||continuousservo:spin one way||`` (trad. : tourner dans un sens) sous le bloc ``||continuousservo:spin one way||``.
 
@@ -42,10 +50,9 @@ input.onButtonPressed(Button.A, function () {
     ContinuousServo.spin_one_way_with_speed(AnalogPin.P13, 25)
 })
 
-
 ```
 
-## Étape 4
+## Étape 5
 
 Ajoute le bloc ``||basic:pause||`` sous le bloc ``||continuousservo:spin one way||``.
 
@@ -59,10 +66,9 @@ input.onButtonPressed(Button.A, function () {
     basic.pause(2000)
 })
 
-
 ```
 
-## Étape 5
+## Étape 6
 
 Ajoute deux blocs ``||continuousservo:turn off motor||`` (trad. : éteindre les moteurs) sous le bloc ``||basic:pause||``.
 
@@ -77,7 +83,6 @@ input.onButtonPressed(Button.A, function () {
     ContinuousServo.turn_off_motor(DigitalPin.P14)
     ContinuousServo.turn_off_motor(DigitalPin.P13)
 })
-
 
 ```
 
