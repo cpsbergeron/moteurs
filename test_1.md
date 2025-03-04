@@ -1,7 +1,10 @@
-# Tutoriel 1
+# Test
 
-```javascript
-basic.showString("Hello!")
+```blockconfig.global
+input.onButtonPressed(Button.A, function () {
+    basic.showString("Hello!")
+})
+basic.showIcon(IconNames.Heart)
 ```
 
 ## @showdialog
@@ -28,3 +31,8 @@ input.onButtonPressed(Button.A, function () {
 
 ```
 
+```package
+
+tinkertanker/pxt-continuous-servo
+
+```
