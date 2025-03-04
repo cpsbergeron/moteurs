@@ -1,5 +1,14 @@
 # Tutoriel 1
 
+## @codeStart
+// Code de départ pour le Bit Board Rover
+
+```blocks
+basic.showString("Hello!")
+```
+
+## @codeEnd
+
 ## @showdialog
 
 Programme le Bit Board Rover.
@@ -24,7 +33,3 @@ input.onButtonPressed(Button.A, function () {
 
 ```
 
-## @codeStart
-// Code de départ pour le Bit Board Rover
-basic.showString("Hello!")
-## @codeEnd
