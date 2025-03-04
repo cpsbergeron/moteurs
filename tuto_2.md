@@ -25,12 +25,12 @@ Ajoute un bloc ``||continuousservo:spin one way||`` (trad. : tourner dans un sen
 
 Remplace la valeur ``||continuousservo:P0||`` par ``||continuousservo:P14||``.
 
-Remplace la valeur ``||continuousservo:0||`` par ``||continuousservo:-25||``.
+Remplace la valeur ``||continuousservo:0||`` par ``||continuousservo:-50||``.
 
 ```blocks
 
 input.onButtonPressed(Button.A, function () {
-    ContinuousServo.spin_one_way_with_speed(AnalogPin.P14, -25)
+    ContinuousServo.spin_one_way_with_speed(AnalogPin.P14, -50)
 })
 
 ```
@@ -41,13 +41,13 @@ Ajoute un bloc ``||continuousservo:spin one way||`` (trad. : tourner dans un sen
 
 Remplace la valeur ``||continuousservo:P0||`` par ``||continuousservo:P13||``.
 
-Remplace la valeur ``||continuousservo:0||`` par ``||continuousservo:25||``.
+Remplace la valeur ``||continuousservo:0||`` par ``||continuousservo:50||``.
 
 ```blocks
 
 input.onButtonPressed(Button.A, function () {
-    ContinuousServo.spin_one_way_with_speed(AnalogPin.P14, -25)
-    ContinuousServo.spin_one_way_with_speed(AnalogPin.P13, 25)
+    ContinuousServo.spin_one_way_with_speed(AnalogPin.P14, -50)
+    ContinuousServo.spin_one_way_with_speed(AnalogPin.P13, 50)
 })
 
 ```
@@ -61,8 +61,8 @@ Remplace la valeur ``||basic:100||`` par ``||basic:2000||``.
 ```blocks
 
 input.onButtonPressed(Button.A, function () {
-    ContinuousServo.spin_one_way_with_speed(AnalogPin.P14, -25)
-    ContinuousServo.spin_one_way_with_speed(AnalogPin.P13, 25)
+    ContinuousServo.spin_one_way_with_speed(AnalogPin.P14, -50)
+    ContinuousServo.spin_one_way_with_speed(AnalogPin.P13, 50)
     basic.pause(2000)
 })
 
@@ -77,8 +77,8 @@ Remplace les valeurs ``||continuousservo:P0||`` par ``||continuousservo:P14||`` 
 ```blocks
 
 input.onButtonPressed(Button.A, function () {
-    ContinuousServo.spin_one_way_with_speed(AnalogPin.P14, -25)
-    ContinuousServo.spin_one_way_with_speed(AnalogPin.P13, 25)
+    ContinuousServo.spin_one_way_with_speed(AnalogPin.P14, -50)
+    ContinuousServo.spin_one_way_with_speed(AnalogPin.P13, 50)
     basic.pause(2000)
     ContinuousServo.turn_off_motor(DigitalPin.P14)
     ContinuousServo.turn_off_motor(DigitalPin.P13)

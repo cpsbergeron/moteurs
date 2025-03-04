@@ -1,19 +1,13 @@
-# Test
+# Mon Tutoriel
 
-@code
+## Étape 1 : Introduction
+
+Ajoutons un message sur l'écran LED.
+
+```blocks
 basic.showString("Hello!")
-
-## @showdialog
-
-Programme le Bit Board Rover.
-
-## Étape 1
-
-Supprime les blocs ``||basic:au démarrage||`` et ``||basic:toujours||``.
-
-
-```package
-
-tinkertanker/pxt-continuous-servo
-
 ```
+
+@codeStart
+basic.showString("Hello!")
+@codeEnd
