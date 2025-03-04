@@ -12,15 +12,13 @@ Supprime les blocs ``||basic:au démarrage||`` et ``||basic:toujours||``.
 
 Glisse le bloc ``||input:lorsque le bouton A est pressé||`` dans la zone de programmation.
 
-## Étape 3
-
 ```blocks
 
 input.onButtonPressed(Button.A, function () {
 })
 
 ```
-## Étape 4
+## Étape 3
 
 Crée une ``||variables: variable||`` et donne-lui le nom ``||variables:vitesse||``.
 
@@ -37,7 +35,7 @@ input.onButtonPressed(Button.A, function () {
 
 ```
 
-## Étape 5
+## Étape 4
 
 Ajoute le bloc ``||continuousservo:spin one way||`` (trad. : tourner dans un sens) sous le bloc ``||variables: définir vitesse ||``.
 
@@ -47,7 +45,6 @@ Remplace la valeur ``||continuousservo:0||`` par le bloc ``||variables: vitesse 
 
 ```blocks
 
-let vitesse = 0
 input.onButtonPressed(Button.A, function () {
     vitesse = 25
     ContinuousServo.spin_one_way_with_speed(AnalogPin.P14, vitesse)
@@ -55,7 +52,7 @@ input.onButtonPressed(Button.A, function () {
 
 
 ```
-## Étape 6
+## Étape 5
 
 Ajoute le bloc ``||continuousservo:spin other way||`` (trad. : tourner dans un sens) sous le bloc ``||continuousservo: spin one way||``.
 
@@ -65,7 +62,6 @@ Remplace la valeur ``||continuousservo:0||`` par le bloc ``||variables: vitesse 
 
 ```blocks
 
-let vitesse = 0
 input.onButtonPressed(Button.A, function () {
     vitesse = 25
     ContinuousServo.spin_one_way_with_speed(AnalogPin.P14, vitesse)
@@ -74,7 +70,7 @@ input.onButtonPressed(Button.A, function () {
 
 ```
 
-## Étape 7
+## Étape 6
 
 Ajoute le bloc ``||basic:pause||`` sous le bloc ``||continuousservo:spin other way||``.
 
@@ -82,7 +78,6 @@ Remplace la valeur ``||basic:100||`` par ``||basic:2000||``.
 
 ```blocks
 
-let vitesse = 0
 input.onButtonPressed(Button.A, function () {
     vitesse = 25
     ContinuousServo.spin_one_way_with_speed(AnalogPin.P14, vitesse)
@@ -92,7 +87,7 @@ basic.pause(2000)
 
 ```
 
-## Étape 8
+## Étape 7
 
 Ajoute deux blocs ``||continuousservo:turn off motor||`` (trad. : éteindre les moteurs) sous le bloc ``||basic:pause||``.
 
@@ -100,7 +95,6 @@ Remplace les valeurs ``||continuousservo:P0||`` par ``||continuousservo:P14||`` 
 
 ```blocks
 
-let vitesse = 0
 input.onButtonPressed(Button.A, function () {
     vitesse = 25
     ContinuousServo.spin_one_way_with_speed(AnalogPin.P14, vitesse)
@@ -113,7 +107,7 @@ ContinuousServo.turn_off_motor(DigitalPin.P13)
 
 
 ```
-## Étape 9
+## Étape 8
 
 Bravo !
 
