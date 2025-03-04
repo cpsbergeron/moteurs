@@ -1,13 +1,8 @@
 # Tutoriel 1
 
-## @codeStart
-// Code de départ pour le Bit Board Rover
-
-```blocks
+```javascript
 basic.showString("Hello!")
 ```
-
-## @codeEnd
 
 ## @showdialog
 
