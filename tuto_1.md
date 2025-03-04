@@ -8,7 +8,6 @@ Programme le Bit Board Rover.
 
 Supprime les blocs ``||basic:au démarrage||`` et ``||basic:toujours||``.
 
-
 ## Étape 2
 
 Glisse le bloc ``||input:lorsque le bouton A est pressé||`` dans la zone de programmation.
