@@ -46,7 +46,7 @@ function Demarrer () {
 
 Ajoute le bloc ``||basic:montrer l'icône||`` sous le bloc ``||continuousservo:turn off motor||`` (trad. : éteindre les moteurs).
 
-Choisis le crochet comme icône.
+Choisis ``||basic:le crochet||`` comme icône.
 
 ```blocks
 
@@ -168,7 +168,7 @@ function Demarrer () {
 
 ## Étape 10
 
-Crée une ``||functions: fonction||`` et donne-lui le nom ``||functions:Arreter||`` (** sans accent **).
+Crée une ``||functions: fonction||`` et donne-lui le nom ``||functions:Arreter||`` (** sans accent **) et ajoute l'élément ``||variables:ms||`` (onglet Nombres).
 
 ```blocks
 
@@ -197,11 +197,11 @@ function Arreter () {
 
 Ajoute le bloc ``||basic:montrer l'icône||`` sous le bloc ``||continuousservo:turn off motor||`` (trad. : éteindre les moteurs).
 
-Choisis le X comme icône.
+Choisis ``||basic:le X||`` comme icône.
 
 ```blocks
 
-function Arreter () {
+function Arreter (ms: number) {
     ContinuousServo.turn_off_motor(DigitalPin.P14)
     ContinuousServo.turn_off_motor(DigitalPin.P13)
     basic.showIcon(IconNames.No)
