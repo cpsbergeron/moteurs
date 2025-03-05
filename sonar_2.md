@@ -247,9 +247,9 @@ basic.forever(function () {
 
 ## Étape 15
 
-Modifie le bloc ``||sonar: sonde de distance|||``.
+Modifie le bloc ``||sonar:sonde de distance|||``.
 
-La valeur ``||sonar.ping:P0||`` pour ``||sonar:ping trig||`` demeure la même.
+La valeur ``||sonar:P0||`` pour ``||sonar:ping trig||`` demeure la même.
 
 Remplace la valeur ``||sonar:P0||`` de ``||sonar:echo||`` pour ``||sonar:P1||``.
 
@@ -271,7 +271,7 @@ basic.forever(function () {
 
 ## Étape 16
 
-Ajoute le bloc ``||logic:si alors sinon||`` sous le bloc ``||sonar: sonde de distance|||``.
+Ajoute le bloc ``||logic:si alors sinon||`` sous le bloc ``||sonar:sonde de distance|||``.
 
 ```blocks
 
