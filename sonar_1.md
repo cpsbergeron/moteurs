@@ -1,4 +1,4 @@
-# Tutoriel 6
+# Sonde 1
 
 ## @showdialog
 
@@ -44,7 +44,7 @@ basic.forever(function () {
 
 Modifie le bloc ``||sonar: sonde de distance|||``.
 
-La valeur ``||sonar:P0||`` pour ``||sonar:ping trig||`` demeure la même.
+La valeur ``||sonar.ping:P0||`` pour ``||sonar:ping trig||`` demeure la même.
 
 Remplace la valeur ``||sonar:P0||`` de ``||sonar:echo||`` pour ``||sonar:P1||``.
 
@@ -63,11 +63,140 @@ basic.forever(function () {
 
 ```
 
-```package
 
-pxt-continuous-servo
-pxt-sonar
+## Étape 3
+
+Ajoute le bloc ``||logic:si alors sinon||`` sous le bloc ``||sonar: sonde de distance|||``.
+
+```blocks
+
+let distance = 0
+basic.forever(function () {
+    distance = sonar.ping(
+    DigitalPin.P0,
+    DigitalPin.P1,
+    PingUnit.Centimeters
+    )
+    if (true) {
+    	
+    } else {
+    	
+    }
+})
 
 ```
 
+## Étape 4
+
+Modifie le bloc ``||logic:si alors sinon||``.
+
+Remplace la valeur ``||logic:vrai||`` par le bloc ``||logic:0 < 0||``.
+
+```blocks
+
+let distance = 0
+basic.forever(function () {
+    distance = sonar.ping(
+    DigitalPin.P0,
+    DigitalPin.P1,
+    PingUnit.Centimeters
+    )
+    if (0 < 0) {
+    	
+    } else {
+    	
+    }
+})
+
+```
+
+## Étape 5
+
+Modifie le bloc ``||logic:0 < 0||``.
+
+Remplace la valeur ``||logic:0||`` de gauche par le bloc ``||variables: distance||``.
+
+Remplace la valeur ``||logic:0||`` de droite par la valeur ``||logic: 15||``.
+
+```blocks
+
+let distance = 0
+basic.forever(function () {
+    distance = sonar.ping(
+    DigitalPin.P0,
+    DigitalPin.P1,
+    PingUnit.Centimeters
+    )
+    if (distance < 15) {
+    	
+    } else {
+    	
+    }
+})
+
+```
+
+## Étape 6
+
+Modifie le bloc ``||logic:si alors sinon||``.
+
+Ajoute le bloc ``||basic:montrer l'icône||`` sous le bloc ``||logic:si alors ||``.
+
+Choisis ``||basic:le crochet||`` comme icône.
+
+```blocks
+
+let distance = 0
+basic.forever(function () {
+    distance = sonar.ping(
+    DigitalPin.P0,
+    DigitalPin.P1,
+    PingUnit.Centimeters
+    )
+    if (distance < 15) {
+        basic.showIcon(IconNames.Yes)
+    } else {
+    	
+    }
+})
+
+```
+
+## Étape 7
+
+Modifie le bloc ``||logic:si alors sinon||``.
+
+Ajoute le bloc ``||basic:montrer l'icône||`` sous le bloc ``||logic:sinon||``.
+
+Choisis ``||basic:le X||`` comme icône.
+
+```blocks
+
+let distance = 0
+basic.forever(function () {
+    distance = sonar.ping(
+    DigitalPin.P0,
+    DigitalPin.P1,
+    PingUnit.Centimeters
+    )
+    if (distance < 15) {
+        basic.showIcon(IconNames.Yes)
+    } else {
+        basic.showIcon(IconNames.No)
+    }
+})
+
+```
+
+## Étape 8
+
+Bravo !
+
+Tu as terminé le tutoriel. Télécharge et teste le programme.
+
+```package
+
+dstemps=github:microsoft/pxt-sonar
+
+```
 
