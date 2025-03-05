@@ -65,8 +65,8 @@ basic.forever(function () {
 
 ```package
 
-tinkertanker/pxt-continuous-servo
-microsoft/pxt-sonar
+pxt-continuous-servo
+pxt-sonar
 
 ```
 
