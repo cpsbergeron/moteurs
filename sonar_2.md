@@ -399,7 +399,7 @@ Tu as terminé le tutoriel. Télécharge et teste le programme.
 
 ```package
 
-dstemp=github:tinkertanker/pxt-continuous-servo
+tinkertanker/pxt-continuous-servo
 dstemps=github:microsoft/pxt-sonar
 
 ```
