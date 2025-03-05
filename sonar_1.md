@@ -8,7 +8,7 @@ Programme le capteur de distance.
 
 Crée une ``||variables: variable||`` et donne-lui le nom ``||variables:distance||``.
 
-Ajoute le bloc ``||variables: définir vitesse ||`` dans le bloc ``||basic:toujours||``.
+Ajoute le bloc ``||variables: définir distance ||`` dans le bloc ``||basic:toujours||``.
 
 
 ```blocks
