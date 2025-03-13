@@ -32,6 +32,11 @@ input.onButtonPressed(Button.B, function () {
 
 ```blocks
 
+let vitesse = 0
+ContinuousServo.turn_off_motor(DigitalPin.P14)
+ContinuousServo.turn_off_motor(DigitalPin.P13)
+basic.clearScreen()
+
 input.onButtonPressed(Button.A, function () {
     basic.showLeds(`
         . . . . .
@@ -39,13 +44,10 @@ input.onButtonPressed(Button.A, function () {
         . . . . .
         . . . . .
         . . . . .
-        `)
+    `)
     vitesse = 50
 })
-let vitesse = 0
-ContinuousServo.turn_off_motor(DigitalPin.P14)
-ContinuousServo.turn_off_motor(DigitalPin.P13)
-basic.clearScreen()
+
 basic.forever(function () {
     basic.pause(100)
     ContinuousServo.spin_one_way_with_speed(AnalogPin.P14, vitesse)
@@ -57,7 +59,7 @@ basic.forever(function () {
         . . . . .
         . . . . .
         . . . . .
-        `)
+    `)
 })
 
 
