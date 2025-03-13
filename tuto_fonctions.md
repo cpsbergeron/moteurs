@@ -210,25 +210,25 @@ function Arreter () {
 ## Étape 13
 
 Crée la fonction ``||functions:Reculer||``.
-
+Tu peux dupliquer la fonction ``||functions:Avancer||`` et modifier les valeurs.
 Ajoute également une flèche pour indiquer la direction.
 
 ## Étape 14
 
 Crée la fonction ``||functions:Pivoter vers la gauche||``.
-
+Regarde la programmation dans ton cahier.
 Ajoute également une flèche pour indiquer la direction.
 
 ## Étape 15
 
 Crée la fonction ``||functions:Pivoter vers la droite||``.
-
+Regarde la programmation dans ton cahier.
 Ajoute également une flèche pour indiquer la direction.
 
 ## Étape 16
 
 Crée la fonction ``||functions:Pivoter sur lui-même||``.
-
+Regarde la programmation dans ton cahier.
 Ajoute également une flèche pour indiquer la direction.
 
 ## Étape 17
