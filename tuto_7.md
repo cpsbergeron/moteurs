@@ -257,6 +257,13 @@ Les fonctions ``||functions:appel Avancer||`` et ``||functions:appel Reculer||``
 
 Pour un déplacement plus fluide du bolide, il est recommendé d'ajouter le bloc ``||basic:pause 500 (ms)||`` entre chaque action.
 
+## @showdialog
+
+Regarde attentivement l'animation pour créer une séquence de programmation avec les fonctions.
+
+![MicroSeb](https://github.com/cpsbergeron/moteurs/blob/master/bolide_fonction.gif?raw=true)
+
+
 ## Étape 18
 
 Voici d'autres blocs pour t'aider à créer les nouvelles fonctions.
@@ -272,11 +279,9 @@ input.onButtonPressed(Button.B, function () {
 
 ```
 
-## Étape 15
+## Étape 19
 
-Bravo !
-
-Tu as terminé le tutoriel. Télécharge et teste le programme.
+Crée maintenant les séquences demandées à l'aide des fonctions.
 
 ```package
 
