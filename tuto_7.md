@@ -52,7 +52,9 @@ function Demarrer () {
 ```
 ## @showdialog
 
+Regarde attentivement l'animation pour créer la prochaine fonction du bolide.
 
+![MicroSeb](https://github.com/cpsbergeron/moteurs/blob/master/fonction_avancer.gif?raw=true)
 
 ## Étape 5
 
@@ -71,12 +73,12 @@ Ajoute le bloc ``||continuousservo:spin one way||`` (trad. : tourner dans un sen
 
 Remplace la valeur ``||continuousservo:P0||`` par ``||continuousservo:P14||``.
 
-Remplace la valeur ``||continuousservo:0||`` par la valeur ``||continuousservo:25||``.
+Remplace la valeur ``||continuousservo:0||`` par la valeur ``||continuousservo:50||``.
 
 ```blocks
 
 function Avancer (ms: number) {
-    ContinuousServo.spin_one_way_with_speed(AnalogPin.P14, 25)
+    ContinuousServo.spin_one_way_with_speed(AnalogPin.P14, 50)
 }
 function Demarrer () {
     ContinuousServo.turn_off_motor(DigitalPin.P14)
@@ -92,13 +94,13 @@ Ajoute le bloc ``||continuousservo:spin one way||`` (trad. : tourner dans un sen
 
 Remplace la valeur ``||continuousservo:P0||`` par ``||continuousservo:P13||``.
 
-Remplace la valeur ``||continuousservo:0||`` par la valeur ``||continuousservo:-25||``.
+Remplace la valeur ``||continuousservo:0||`` par la valeur ``||continuousservo:-50||``.
 
 ```blocks
 
 function Avancer (ms: number) {
-    ContinuousServo.spin_one_way_with_speed(AnalogPin.P14, 25)
-    ContinuousServo.spin_one_way_with_speed(AnalogPin.P13, -25)
+    ContinuousServo.spin_one_way_with_speed(AnalogPin.P14, 50)
+    ContinuousServo.spin_one_way_with_speed(AnalogPin.P13, -50)
 }
 function Demarrer () {
     ContinuousServo.turn_off_motor(DigitalPin.P14)
@@ -116,8 +118,8 @@ Dessine une flèche qui pointe vers le haut.
 ```blocks
 
 function Avancer (ms: number) {
-    ContinuousServo.spin_one_way_with_speed(AnalogPin.P14, 25)
-    ContinuousServo.spin_one_way_with_speed(AnalogPin.P13, -25)
+    ContinuousServo.spin_one_way_with_speed(AnalogPin.P14, 50)
+    ContinuousServo.spin_one_way_with_speed(AnalogPin.P13, -50)
     basic.showLeds(`
         . . # . .
         . # # # .
@@ -143,8 +145,8 @@ Glisse le bloc ``||variables: ms ||`` dans le bloc ``||basic:pause (ms)||``.
 ```blocks
 
 function Avancer (ms: number) {
-    ContinuousServo.spin_one_way_with_speed(AnalogPin.P14, 25)
-    ContinuousServo.spin_one_way_with_speed(AnalogPin.P13, -25)
+    ContinuousServo.spin_one_way_with_speed(AnalogPin.P14, 50)
+    ContinuousServo.spin_one_way_with_speed(AnalogPin.P13, -50)
     basic.showLeds(`
         . . # . .
         . # # # .
@@ -207,51 +209,55 @@ function Arreter () {
 
 ## Étape 13
 
-Glisse le bloc ``||input:lorsque le bouton A est pressé||`` dans la zone de programmation.
+Crée la fonction ``||functions:Reculer||``.
 
-Ajoute les blocs ``||functions:Demarrer||``, ``||functions:Avancer||`` et ``||functions:Arreter||`` dans le bloc ``||input:lorsque le bouton A est pressé||``.
+Ajoute également une flèche pour indiquer la direction.
 
-Remplace la valeur ``||functions:1||`` par ``||functions:1000||``.
+## Étape 14
+
+Crée la fonction ``||functions:Pivoter vers la gauche||``.
+
+Ajoute également une flèche pour indiquer la direction.
+
+## Étape 15
+
+Crée la fonction ``||functions:Pivoter vers la droite||``.
+
+Ajoute également une flèche pour indiquer la direction.
+
+## Étape 16
+
+Crée la fonction ``||functions:Pivoter sur lui-même||``.
+
+Ajoute également une flèche pour indiquer la direction.
+
+## Étape 17
+
+Glisse les blocs ``||input:lorsque le bouton A est pressé||``, ``||input:lorsque le bouton B est pressé||`` et ``||input:lorsque le bouton A+B est pressé||`` dans la zone de programmation.
 
 ```blocks
 
 input.onButtonPressed(Button.A, function () {
-    Demarrage()
-    Avancer(1)
-    Arreter()
+	
 })
-function Avancer (ms: number) {
-    ContinuousServo.spin_one_way_with_speed(AnalogPin.P14, 25)
-    ContinuousServo.spin_one_way_with_speed(AnalogPin.P13, -25)
-    basic.showLeds(`
-        . . # . .
-        . # # # .
-        # . # . #
-        . . # . .
-        . . # . .
-        `)
-    basic.pause(ms)
-}
-function Demarrage () {
-    ContinuousServo.turn_off_motor(DigitalPin.P14)
-    ContinuousServo.turn_off_motor(DigitalPin.P13)
-    basic.showIcon(IconNames.Yes)
-}
-function Arreter () {
-    ContinuousServo.turn_off_motor(DigitalPin.P14)
-    ContinuousServo.turn_off_motor(DigitalPin.P13)
-    basic.showIcon(IconNames.No)
-}
+input.onButtonPressed(Button.B, function () {
+	
+})
+input.onButtonPressed(Button.AB, function () {
+	
+})
 
 ```
 
-```package
+## @showdialog
 
-tinkertanker/pxt-continuous-servo
+Chaque séquence doit contenir le bloc ``||functions:appel Demarrer||`` suivi des autres actions à réaliser.
 
-```
+Les fonctions ``||functions:appel Avancer||`` et ``||functions:appel Reculer||`` doivent être suivies du bloc ``||functions:appel Arreter||`` pour permettre au robot de s'arrêter.
 
-## Étape 14
+Pour un déplacement plus fluide du bolide, il est recommendé d'ajouter le bloc ``||basic:pause 500 (ms)||`` entre chaque action.
+
+## Étape 18
 
 Voici d'autres blocs pour t'aider à créer les nouvelles fonctions.
 
@@ -272,4 +278,8 @@ Bravo !
 
 Tu as terminé le tutoriel. Télécharge et teste le programme.
 
+```package
 
+tinkertanker/pxt-continuous-servo
+
+```
