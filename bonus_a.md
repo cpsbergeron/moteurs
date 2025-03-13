@@ -2,7 +2,7 @@
 
 ## @showdialog
 
-Programme le Bit Board Rover pour qu'il réalise un parcours au sol.
+Programme le Bit Board Rover pour qu'il réalise le trajet demandé.
 
 ## Étape 1
 

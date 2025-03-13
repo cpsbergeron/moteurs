@@ -2,11 +2,33 @@
 
 ## @showdialog
 
-Programme le Bit Board Rover pour réaliser les différents parcours.
+Programme le Bit Board Rover pour réaliser les différents trajets demandés.
 
 ## Étape 1
 
-Les blocs ont été mélangés.
+Reproduis la programmation du **Bolide A**.
+
+```blocks
+
+input.onButtonPressed(Button.A, function () {
+
+})
+
+```
+
+## Étape 2
+
+Reproduis la programmation du **Bolide B**.
+
+```blocks
+
+input.onButtonPressed(Button.B, function () {
+
+})
+
+```
+
+## Étape 3
 
 ```blocks
 
@@ -41,7 +63,7 @@ basic.forever(function () {
 
 ```
 
-## Étape 2
+## Étape 4
 
 Bravo !
 
