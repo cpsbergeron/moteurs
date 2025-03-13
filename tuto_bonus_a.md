@@ -30,37 +30,7 @@ input.onButtonPressed(Button.B, function () {
 
 ## Étape 3
 
-```blocks
-
-input.onButtonPressed(Button.A, function () {
-    basic.showLeds(`
-        . . . . .
-        . . . . .
-        . . . . .
-        . . . . .
-        . . . . .
-        `)
-    vitesse = 50
-})
-let vitesse = 0
-ContinuousServo.turn_off_motor(DigitalPin.P14)
-ContinuousServo.turn_off_motor(DigitalPin.P13)
-basic.clearScreen()
-basic.forever(function () {
-    basic.pause(100)
-    ContinuousServo.spin_one_way_with_speed(AnalogPin.P14, vitesse)
-    ContinuousServo.spin_other_way_with_speed(AnalogPin.P13, vitesse)
-    basic.showString("Hello!")
-    basic.showLeds(`
-        . . . . .
-        . . . . .
-        . . . . .
-        . . . . .
-        . . . . .
-        `)
-})
-
-```
+test
 
 ## Étape 4
 
