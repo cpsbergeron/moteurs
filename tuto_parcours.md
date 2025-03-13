@@ -30,6 +30,8 @@ input.onButtonPressed(Button.B, function () {
 
 ## Étape 3
 
+Voici d'autres blocs de programmation pour améliorer ton code.
+
 ```blocks
 
 let vitesse = 0
