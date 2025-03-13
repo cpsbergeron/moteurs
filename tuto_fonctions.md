@@ -52,7 +52,7 @@ function Demarrer () {
 ```
 ## @showdialog
 
-Regarde attentivement l'animation pour créer la prochaine fonction du bolide.
+Regarde attentivement l'animation pour créer la fonction ``||functions: Avancer||`` du bolide.
 
 ![MicroSeb](https://github.com/cpsbergeron/moteurs/blob/master/fonction_avancer.gif?raw=true)
 
