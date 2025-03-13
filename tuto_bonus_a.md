@@ -60,7 +60,6 @@ basic.forever(function () {
         `)
 })
 
-
 ```
 
 ## Étape 4
