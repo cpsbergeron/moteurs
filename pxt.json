@@ -27,7 +27,8 @@
         "tuto_9b.md",
         "sonar_1.md",
         "main.py",
-        "sonar_2.md"
+        "sonar_2.md",
+        "tuto_parcours.md"
     ],
     "testFiles": [
         "test.ts"
