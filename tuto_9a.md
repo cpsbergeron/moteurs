@@ -127,11 +127,11 @@ radio.setGroup(1)
 
 ## Étape 9
 
-Modifie la valeur ``||input:lorsque écran vers le haut||`` pour ``||input:logo vers le haut||``.
+Modifie la valeur ``||input:lorsque écran vers le haut||`` pour ``||input:lorsque secouer||``.
 
 ```blocks
 
-input.onGesture(Gesture.LogoUp, function () {
+input.onGesture(Gesture.Shake, function () {
     radio.sendString("Avancer")
     basic.showLeds(`
         . . # . .
@@ -152,7 +152,7 @@ Modifie la valeur ``||radio:Avancer||`` pour ``||radio:Arreter||`` **(sans accen
 
 ```blocks
 
-input.onGesture(Gesture.LogoUp, function () {
+input.onGesture(Gesture.Shake, function () {
     radio.sendString("Arreter")
     basic.showLeds(`
         . . # . .
@@ -175,7 +175,7 @@ Sélectionne le X comme icone.
 
 ```blocks
 
-input.onGesture(Gesture.LogoUp, function () {
+input.onGesture(Gesture.Shake, function () {
     radio.sendString("Arreter")
     basic.showIcon(IconNames.No)
 })
@@ -191,7 +191,7 @@ Des blocs ont été ajoutés au tutoriel pour te permettre de le compléter.
 
 ```blocks
 
-input.onGesture(Gesture.LogoUp, function () {
+input.onGesture(Gesture.Shake, function () {
     radio.sendString("Arreter")
     basic.showIcon(IconNames.No)
 })
