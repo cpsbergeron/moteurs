@@ -302,7 +302,7 @@ Remplace le bloc ``||functions:appel Avancer||`` par le bloc ``||functions:appel
 
 radio.onReceivedString(function (receivedString) {
     if (receivedString == "Avancer") {
-        Avancer(1)
+        Avancer()
     }
     if (receivedString == "Arreter") {
         Arreter()
