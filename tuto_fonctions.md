@@ -10,11 +10,11 @@ Supprime les blocs ``||basic:toujours||`` et ``||basic:au démarrage||``.
 
 ## Étape 2
 
-Crée une ``||functions: fonction||`` et donne-lui le nom ``||functions:Demarrer||`` ** (sans accent) **.
+Crée une ``||functions: fonction||`` et donne-lui le nom ``||functions:Démarrer||``.
 
 ```blocks
 
-function Demarrer () {
+function Démarrer () {
 	
 }
 
@@ -22,13 +22,13 @@ function Demarrer () {
 
 ## Étape 3
 
-Ajoute deux blocs ``||continuousservo:turn off motor||`` (trad. : éteindre les moteurs) dans le bloc ``||functions:Demarrer||``.
+Ajoute deux blocs ``||continuousservo:turn off motor||`` (trad. : éteindre les moteurs) dans le bloc ``||functions:Démarrer||``.
 
 Remplace les valeurs ``||continuousservo:P0||`` par ``||continuousservo:P14||`` et ``||continuousservo:P13||``.
 
 ```blocks
 
-function Demarrer () {
+function Démarrer () {
     ContinuousServo.turn_off_motor(DigitalPin.P14)
     ContinuousServo.turn_off_motor(DigitalPin.P13)
 }
@@ -38,16 +38,20 @@ function Demarrer () {
 ## Étape 4
 
 Ajoute le bloc ``||basic:montrer l'icône||`` sous le bloc ``||continuousservo:turn off motor||`` (trad. : éteindre les moteurs).
-
 Choisis le crochet comme icône.
+
+Ajoute le bloc ``||basic:pause (ms)||`` sous le bloc ``||basic:montrer l'icône||``.
+Remplace ``||basic:100||`` par ``||basic:1000||``.
 
 ```blocks
 
-function Demarrer () {
+function Démarrer () {
     ContinuousServo.turn_off_motor(DigitalPin.P14)
     ContinuousServo.turn_off_motor(DigitalPin.P13)
     basic.showIcon(IconNames.Yes)
+    basic.pause(1000)
 }
+
 
 ```
 ## @showdialog
@@ -80,7 +84,7 @@ Remplace la valeur ``||continuousservo:0||`` par la valeur ``||continuousservo:1
 function Avancer (ms: number) {
     ContinuousServo.spin_one_way_with_speed(AnalogPin.P14, 100)
 }
-function Demarrer () {
+function Démarrer () {
     ContinuousServo.turn_off_motor(DigitalPin.P14)
     ContinuousServo.turn_off_motor(DigitalPin.P13)
     basic.showIcon(IconNames.Yes)
@@ -102,7 +106,7 @@ function Avancer (ms: number) {
     ContinuousServo.spin_one_way_with_speed(AnalogPin.P14, 100)
     ContinuousServo.spin_other_way_with_speed(AnalogPin.P13, 100)
 }
-function Demarrer () {
+function Démarrer () {
     ContinuousServo.turn_off_motor(DigitalPin.P14)
     ContinuousServo.turn_off_motor(DigitalPin.P13)
     basic.showIcon(IconNames.Yes)
@@ -128,7 +132,7 @@ function Avancer (ms: number) {
         . . # . .
         `)
 }
-function Demarrer () {
+function Démarrer () {
     ContinuousServo.turn_off_motor(DigitalPin.P14)
     ContinuousServo.turn_off_motor(DigitalPin.P13)
     basic.showIcon(IconNames.Yes)
@@ -156,7 +160,7 @@ function Avancer (ms: number) {
         `)
     basic.pause(ms)
 }
-function Demarrer () {
+function Démarrer () {
     ContinuousServo.turn_off_motor(DigitalPin.P14)
     ContinuousServo.turn_off_motor(DigitalPin.P13)
     basic.showIcon(IconNames.Yes)
@@ -166,11 +170,11 @@ function Demarrer () {
 
 ## Étape 10
 
-Crée une ``||functions: fonction||`` et donne-lui le nom ``||functions:Arreter||`` (** sans accent **).
+Crée une ``||functions: fonction||`` et donne-lui le nom ``||functions:Arrêter||``.
 
 ```blocks
 
-function Arreter () {
+function Arrêter () {
 	
 }
 
@@ -178,13 +182,13 @@ function Arreter () {
 
 ## Étape 11
 
-Ajoute deux blocs ``||continuousservo:turn off motor||`` (trad. : éteindre les moteurs) dans le bloc ``||functions:Arreter||``.
+Ajoute deux blocs ``||continuousservo:turn off motor||`` (trad. : éteindre les moteurs) dans le bloc ``||functions:Arrêter||``.
 
 Remplace les valeurs ``||continuousservo:P0||`` par ``||continuousservo:P14||`` et ``||continuousservo:P13||``.
 
 ```blocks
 
-function Arreter () {
+function Arrêter () {
     ContinuousServo.turn_off_motor(DigitalPin.P14)
     ContinuousServo.turn_off_motor(DigitalPin.P13)
 }
@@ -199,7 +203,7 @@ Choisis le X comme icône.
 
 ```blocks
 
-function Arreter () {
+function Arrêter () {
     ContinuousServo.turn_off_motor(DigitalPin.P14)
     ContinuousServo.turn_off_motor(DigitalPin.P13)
     basic.showIcon(IconNames.No)
@@ -245,9 +249,9 @@ input.onButtonPressed(Button.AB, function () {
 
 ## @showdialog
 
-Chaque séquence doit contenir le bloc ``||functions:appel Demarrer||`` suivi des autres actions à réaliser.
+Chaque séquence doit contenir le bloc ``||functions:appel Démarrer||`` suivi des autres actions à réaliser.
 
-Les fonctions ``||functions:appel Avancer||`` et ``||functions:appel Reculer||`` doivent être suivies du bloc ``||functions:appel Arreter||`` pour permettre au robot de s'arrêter avant de réaliser une autre action.
+Les fonctions ``||functions:appel Avancer||`` et ``||functions:appel Reculer||`` doivent être suivies du bloc ``||functions:appel Arrêter||`` pour permettre au robot de s'arrêter avant de réaliser une autre action.
 
 Pour un déplacement plus fluide du bolide, il est recommendé d'ajouter le bloc ``||basic:pause 500 (ms)||`` entre chaque action.
 
