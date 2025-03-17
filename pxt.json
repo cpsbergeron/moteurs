@@ -1,6 +1,6 @@
 {
     "name": "moteurs",
-    "version": "1.0.86",
+    "version": "1.0.87",
     "description": "",
     "dependencies": {
         "core": "*",
