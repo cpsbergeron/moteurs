@@ -54,7 +54,7 @@ input.onButtonPressed(Button.A, function () {
 
 ## Étape 5
 
-Ajoute le bloc ``||basic:pause||`` sous le bloc ``||continuousservo:spin one way||``.
+Ajoute le bloc ``||basic:pause||`` sous le bloc ``||continuousservo:spin other way||``.
 
 Remplace la valeur ``||basic:-100||`` par ``||basic:2000||``.
 
