@@ -24,12 +24,12 @@ function Message () {
 
 Ajoute le bloc ``||basic: afficher texte||`` dans le bloc ``||functions:Message||``.
 
-Remplace le mot ``||basic: Hello!||`` par ``||basic: Bolide||``.
+Remplace le mot ``||basic: Hello!||`` par ``||basic: Rover||``.
 
 ```blocks
 
 function Message () {
-    basic.showString("Bolide")
+    basic.showString("Rover")
 }
 
 ```
@@ -41,7 +41,7 @@ Glisse le bloc ``||input: lorsque le bouton A est pressé||`` dans la zone de pr
 ```blocks
 
 function Message () {
-    basic.showString("Bolide")
+    basic.showString("Rover")
 }
 input.onButtonPressed(Button.A, function () {
 	
@@ -56,7 +56,7 @@ Ajoute le bloc ``||functions: appel Message||`` dans le bloc ``||input: lorsque 
 ```blocks
 
 function Message () {
-    basic.showString("Bolide")
+    basic.showString("Rover")
 }
 input.onButtonPressed(Button.A, function () {
     Message()
@@ -73,7 +73,7 @@ Remplace la valeur ``||basic: 100||`` par ``||basic: pause 1000||``.
 ```blocks
 
 function Message () {
-    basic.showString("Bolide")
+    basic.showString("Rover")
 }
 input.onButtonPressed(Button.A, function () {
     Message()
@@ -89,7 +89,7 @@ Ajoute le bloc ``||basic: effacer l'écran||`` sous le bloc ``||basic: pause (ms
 ```blocks
 
 function Message () {
-    basic.showString("Bolide")
+    basic.showString("Rover")
 }
 input.onButtonPressed(Button.A, function () {
     Message()

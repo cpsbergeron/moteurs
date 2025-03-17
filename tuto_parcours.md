@@ -1,4 +1,4 @@
-# Tutoriel Parcours
+# Tutoriel - Parcours
 
 ## @showdialog
 

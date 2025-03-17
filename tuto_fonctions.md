@@ -1,4 +1,4 @@
-# Tutoriel 7
+# Tutoriel  - Fonctions
 
 ## @showdialog
 
@@ -6,50 +6,31 @@ Programme le Bit Board Rover à l'aide de fonctions déterminées.
 
 ## Étape 1
 
-Supprime les blocs ``||basic:toujours||`` et ``||basic:au démarrage||``.
+Supprime le bloc ``||basic:toujours||``.
 
 ## Étape 2
 
-Crée une ``||functions: fonction||`` et donne-lui le nom ``||functions:Démarrer||``.
-
-```blocks
-
-function Démarrer () {
-	
-}
-
-```
-
-## Étape 3
-
-Ajoute deux blocs ``||continuousservo:turn off motor||`` (trad. : éteindre les moteurs) dans le bloc ``||functions:Démarrer||``.
+Ajoute deux blocs ``||continuousservo:turn off motor||`` (trad. : éteindre les moteurs) dans le bloc ``||basic:au démarrage||``.
 
 Remplace les valeurs ``||continuousservo:P0||`` par ``||continuousservo:P14||`` et ``||continuousservo:P13||``.
 
 ```blocks
 
-function Démarrer () {
-    ContinuousServo.turn_off_motor(DigitalPin.P14)
-    ContinuousServo.turn_off_motor(DigitalPin.P13)
-}
+ContinuousServo.turn_off_motor(DigitalPin.P14)
+ContinuousServo.turn_off_motor(DigitalPin.P13)
 
 ```
 
-## Étape 4
+## Étape 3
 
 Ajoute le bloc ``||basic:montrer l'icône||`` sous le bloc ``||continuousservo:turn off motor||`` (trad. : éteindre les moteurs).
 Choisis le crochet comme icône.
 
-Ajoute le bloc ``||basic:pause (ms)||`` sous le bloc ``||basic:montrer l'icône||``.
-Remplace ``||basic:100||`` par ``||basic:1000||``.
-
 ```blocks
 
-function Démarrer () {
-    ContinuousServo.turn_off_motor(DigitalPin.P14)
-    ContinuousServo.turn_off_motor(DigitalPin.P13)
-    basic.showIcon(IconNames.Yes)
-    basic.pause(1000)
+ContinuousServo.turn_off_motor(DigitalPin.P14)
+ContinuousServo.turn_off_motor(DigitalPin.P13)
+basic.showIcon(IconNames.Yes)
 }
 
 
@@ -60,7 +41,7 @@ Regarde attentivement l'animation pour créer la fonction ``||functions: Avancer
 
 ![MicroSeb](https://github.com/cpsbergeron/moteurs/blob/master/fonction_avancer.gif?raw=true)
 
-## Étape 5
+## Étape 4
 
 Crée une ``||functions: fonction||`` et donne-lui le nom ``||functions:Avancer||`` et ajoute l'élément ``||variables:ms||`` (onglet Nombres).
 
@@ -71,7 +52,7 @@ function Avancer (ms: number) {
 
 ```
 
-## Étape 6
+## Étape 5
 
 Ajoute le bloc ``||continuousservo:spin one way||`` (trad. : tourner dans un sens) dans le bloc ``||functions:Avancer||``.
 
@@ -84,15 +65,10 @@ Remplace la valeur ``||continuousservo:0||`` par la valeur ``||continuousservo:1
 function Avancer (ms: number) {
     ContinuousServo.spin_one_way_with_speed(AnalogPin.P14, 100)
 }
-function Démarrer () {
-    ContinuousServo.turn_off_motor(DigitalPin.P14)
-    ContinuousServo.turn_off_motor(DigitalPin.P13)
-    basic.showIcon(IconNames.Yes)
-}
 
 ```
 
-## Étape 7
+## Étape 6
 
 Ajoute un bloc ``||continuousservo:spin other way||`` (trad. : tourner dans l'autre sens) sous le bloc ``||continuousservo:spin one way||``.
 
@@ -106,14 +82,9 @@ function Avancer (ms: number) {
     ContinuousServo.spin_one_way_with_speed(AnalogPin.P14, 100)
     ContinuousServo.spin_other_way_with_speed(AnalogPin.P13, 100)
 }
-function Démarrer () {
-    ContinuousServo.turn_off_motor(DigitalPin.P14)
-    ContinuousServo.turn_off_motor(DigitalPin.P13)
-    basic.showIcon(IconNames.Yes)
-}
 
 ```
-## Étape 8
+## Étape 7
 
 Ajoute le bloc ``||basic:montrer LEDs||`` sous le bloc ``||continuousservo:spin one way||``.
 
@@ -132,15 +103,10 @@ function Avancer (ms: number) {
         . . # . .
         `)
 }
-function Démarrer () {
-    ContinuousServo.turn_off_motor(DigitalPin.P14)
-    ContinuousServo.turn_off_motor(DigitalPin.P13)
-    basic.showIcon(IconNames.Yes)
-}
 
 ```
 
-## Étape 9
+## Étape 8
 
 Ajoute le bloc ``||basic:pause (ms)||`` sous le bloc ``||basic:montrer LEDs||``.
 
@@ -160,15 +126,10 @@ function Avancer (ms: number) {
         `)
     basic.pause(ms)
 }
-function Démarrer () {
-    ContinuousServo.turn_off_motor(DigitalPin.P14)
-    ContinuousServo.turn_off_motor(DigitalPin.P13)
-    basic.showIcon(IconNames.Yes)
-}
 
 ```
 
-## Étape 10
+## Étape 9
 
 Crée une ``||functions: fonction||`` et donne-lui le nom ``||functions:Arrêter||``.
 
@@ -180,7 +141,7 @@ function Arrêter () {
 
 ```
 
-## Étape 11
+## Étape 10
 
 Ajoute deux blocs ``||continuousservo:turn off motor||`` (trad. : éteindre les moteurs) dans le bloc ``||functions:Arrêter||``.
 
@@ -195,7 +156,7 @@ function Arrêter () {
 
 ```
 
-## Étape 12
+## Étape 11
 
 Ajoute le bloc ``||basic:montrer l'icône||`` sous le bloc ``||continuousservo:turn off motor||`` (trad. : éteindre les moteurs).
 
@@ -211,7 +172,7 @@ function Arrêter () {
 
 ```
 
-## Étape 13
+## Étape 12
 
 Duplique la fonction ``||functions:Avancer||``.
 
@@ -219,7 +180,7 @@ Renomme celle-ci ``||functions:Reculer||``.
 
 Apporte les modifications nécessaires pour permettre au bolide de reculer.
 
-## Étape 14
+## Étape 13
 
 Crée la fonction ``||functions:Gauche||``.
 
@@ -227,7 +188,7 @@ Regarde la programmation dans ton cahier.
 
 Ajoute également une flèche pour indiquer la direction.
 
-## Étape 15
+## Étape 14
 
 Duplique la fonction ``||functions:Gauche||``.
 
@@ -235,7 +196,7 @@ Renomme celle-ci ``||functions:Droite||``.
 
 Apporte les modifications nécessaires pour permettre au bolide de pivoter vers la droite.
 
-## Étape 16
+## Étape 15
 
 Glisse les blocs ``||input:lorsque le bouton A est pressé||``, ``||input:lorsque le bouton B est pressé||`` et ``||input:lorsque le bouton A+B est pressé||`` dans la zone de programmation.
 
@@ -268,7 +229,7 @@ Regarde attentivement l'animation pour créer une séquence de programmation ave
 ![MicroSeb](https://github.com/cpsbergeron/moteurs/blob/master/bolide_fonction.gif?raw=true)
 
 
-## Étape 18
+## Étape 16
 
 Voici d'autres blocs pour t'aider à créer les nouvelles fonctions.
 
@@ -285,12 +246,8 @@ input.onButtonPressed(Button.B, function () {
     }
 })
 
-
 ```
 
-## Étape 19
-
-Crée maintenant les séquences demandées à l'aide des fonctions.
 
 ```package
 
