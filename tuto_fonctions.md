@@ -279,8 +279,10 @@ input.onButtonPressed(Button.B, function () {
     vitesse = 100
     basic.pause(100)
     basic.showString("Hello!")
-    basic.showNumber(0)
     basic.clearScreen()
+    for (let index = 0; index < 4; index++) {
+        basic.showNumber(randint(0, 10))
+    }
 })
 
 
