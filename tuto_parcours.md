@@ -27,8 +27,13 @@ input.onButtonPressed(Button.B, function () {
 })
 
 ```
-
 ## Étape 3
+
+Bravo !
+
+Tu as terminé le tutoriel. Télécharge et teste le programme.
+
+## Étape 4
 
 Ne fais pas cette étape ! :)
 
@@ -48,13 +53,6 @@ basic.forever(function () {
 
 
 ```
-
-## Étape 4
-
-Bravo !
-
-Tu as terminé le tutoriel. Télécharge et teste le programme.
-
 
 ```package
 

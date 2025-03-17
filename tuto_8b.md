@@ -1,4 +1,4 @@
-# Tutoriel Récepteur A
+# Tutoriel - Récepteur A
 
 ## @showdialog
 

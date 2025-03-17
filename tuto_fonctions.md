@@ -230,7 +230,11 @@ Regarde attentivement l'animation pour créer une séquence de programmation ave
 
 ## Étape 16
 
-Voici d'autres blocs pour t'aider à créer les nouvelles fonctions.
+Crée les séquences demandées.
+
+## Étape 17
+
+Ne fais pas cette étape ! ;)
 
 ```blocks
 

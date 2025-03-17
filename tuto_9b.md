@@ -1,4 +1,4 @@
-# Tutoriel Récepteur B
+# Tutoriel - Récepteur B
 
 ## @showdialog
 
@@ -209,7 +209,7 @@ radio.onReceivedString(function (receivedString) {
 
 Glisse le bloc ``||variables:receivedString||`` dans l'espace de gauche.
 
-Écris le mot ``||logic:Avancer||`` dans l'espace de droite.
+Écris le mot ``||text:Avancer||`` dans l'espace de droite.
 
 
 ```blocks
@@ -251,7 +251,7 @@ function Avancer () {
 
 Duplique le bloc ``||logic:si alors||`` et glisse celui-ci sous le premier bloc ``||logic:si alors||``.
 
-Remplace le mot ``||logic:Avancer||`` par le mot ``||logic:Arrêter||``.
+Remplace le mot ``||text:Avancer||`` par le mot ``||text:Arrêter||``.
 
 Remplace le bloc ``||functions:appel Avancer||`` par le bloc ``||functions:appel Arrêter||``.
 
@@ -291,8 +291,24 @@ function Arrêter () {
 ```
 
 
-## @showdialog 
+## Étape 18
 
 Félicitations! Tu as terminé de programmer l'émetteur.
 
 Pour tester, télécharge la programmation dans le micro:bit.
+
+## Étape 19
+
+Ne fais pas cette étape ! ;)
+
+```blocks
+
+let vitesse = 0
+basic.forever(function () {
+    vitesse = 0
+    basic.showString("Hello!")
+    basic.clearScreen()
+    basic.pause(100)
+})
+
+```

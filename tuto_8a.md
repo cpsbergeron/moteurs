@@ -1,4 +1,4 @@
-# Tutoriel Émetteur A
+# Tutoriel - Émetteur A
 
 ## @showdialog
 

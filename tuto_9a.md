@@ -1,4 +1,4 @@
-# Tutoriel Émetteur B
+# Tutoriel - Émetteur B
 
 ## @showdialog
 
@@ -186,10 +186,15 @@ radio.setGroup(1)
 
 
 ```
-
 ## Étape 12
 
-Des blocs ont été ajoutés au tutoriel pour te permettre de créer les autres fonctions.
+Félicitations! Tu as terminé de programmer l'émetteur.
+
+Pour tester, télécharge la programmation dans le micro:bit.
+
+## Étape 13
+
+Ne fais pas cette étape ! ;)
 
 ```blocks
 
@@ -214,8 +219,3 @@ radio.setGroup(1)
 basic.showIcon(IconNames.Yes)
 ```
 
-## @showdialog 
-
-Félicitations! Tu as terminé de programmer l'émetteur.
-
-Pour tester, télécharge la programmation dans le micro:bit.
