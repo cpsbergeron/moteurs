@@ -1,4 +1,4 @@
-# Tutoriel 3
+# Tutoriel - 3
 
 ## @showdialog
 
@@ -25,12 +25,12 @@ Ajoute un bloc ``||continuousservo:spin one way||`` (trad. : tourner dans un sen
 
 Remplace la valeur ``||continuousservo:P0||`` par ``||continuousservo:P14||``.
 
-La valeur ``||continuousservo:0||`` demeure la même.
+Remplace la valeur ``||continuousservo:0||`` par ``||continuousservo:-100||``.
 
 ```blocks
 
 input.onButtonPressed(Button.A, function () {
-    ContinuousServo.spin_one_way_with_speed(AnalogPin.P14, 0)
+    ContinuousServo.spin_one_way_with_speed(AnalogPin.P14, -100)
 })
 
 ```
@@ -41,13 +41,13 @@ Ajoute le bloc ``||continuousservo:spin other way||`` (trad. : tourner dans un a
 
 Remplace la valeur ``||continuousservo:P0||`` par ``||continuousservo:P13||``.
 
-Remplace la valeur ``||continuousservo:0||`` par ``||continuousservo:50||``.
+Remplace la valeur ``||continuousservo:0||`` par ``||continuousservo:100||``.
 
 ```blocks
 
 input.onButtonPressed(Button.A, function () {
-    ContinuousServo.spin_one_way_with_speed(AnalogPin.P14, 0)
-    ContinuousServo.spin_other_way_with_speed(AnalogPin.P13, 50)
+    ContinuousServo.spin_one_way_with_speed(AnalogPin.P14, -100)
+    ContinuousServo.spin_other_way_with_speed(AnalogPin.P13, 100)
 })
 
 ```
@@ -56,14 +56,14 @@ input.onButtonPressed(Button.A, function () {
 
 Ajoute le bloc ``||basic:pause||`` sous le bloc ``||continuousservo:spin other way||``.
 
-Remplace la valeur ``||basic:100||`` par ``||basic:1250||``.
+Remplace la valeur ``||basic:100||`` par ``||basic:350||``.
 
 ```blocks
 
 input.onButtonPressed(Button.A, function () {
-    ContinuousServo.spin_one_way_with_speed(AnalogPin.P14, 0)
-    ContinuousServo.spin_other_way_with_speed(AnalogPin.P13, 50)
-    basic.pause(1250)
+    ContinuousServo.spin_one_way_with_speed(AnalogPin.P14, -100)
+    ContinuousServo.spin_other_way_with_speed(AnalogPin.P13, 100)
+    basic.pause(350)
 })
 
 ```
@@ -77,9 +77,9 @@ Remplace les valeurs ``||continuousservo:P0||`` par ``||continuousservo:P14||`` 
 ```blocks
 
 input.onButtonPressed(Button.A, function () {
-    ContinuousServo.spin_one_way_with_speed(AnalogPin.P14, 0)
-    ContinuousServo.spin_other_way_with_speed(AnalogPin.P13, 50)
-    basic.pause(1250)
+    ContinuousServo.spin_one_way_with_speed(AnalogPin.P14, -100)
+    ContinuousServo.spin_other_way_with_speed(AnalogPin.P13, 100)
+    basic.pause(350)
     ContinuousServo.turn_off_motor(DigitalPin.P14)
     ContinuousServo.turn_off_motor(DigitalPin.P13)
 })
