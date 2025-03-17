@@ -1,7 +1,8 @@
 # Tutoriel - 2
+
 ## @showdialog
 
-Réalise un essai routier avec le Bit Board Rover !
+Programme le Bit Board Rover.
 
 ## Étape 1
 
