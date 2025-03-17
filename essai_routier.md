@@ -41,7 +41,7 @@ Ajoute un bloc ``||continuousservo:spin other way||`` (trad. : tourner dans l'au
 
 Remplace la valeur ``||continuousservo:P0||`` par ``||continuousservo:P13||``.
 
-Remplace la valeur ``||continuousservo:0||`` par ``||continuousservo:100100||``.
+Remplace la valeur ``||continuousservo:0||`` par ``||continuousservo:100||``.
 
 ```blocks
 
