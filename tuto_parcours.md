@@ -2,7 +2,7 @@
 
 ## @showdialog
 
-Programme le Bit Board Rover pour réaliser les différents trajets demandés.
+Programme le Bit Board Rover pour réaliser les différents parcours demandés.
 
 ## Étape 1
 
@@ -30,38 +30,20 @@ input.onButtonPressed(Button.B, function () {
 
 ## Étape 3
 
-Voici d'autres blocs de programmation pour améliorer ton code.
+Ne fais pas cette étape ! :)
 
 ```blocks
 
-let vitesse = 0
-ContinuousServo.turn_off_motor(DigitalPin.P14)
-ContinuousServo.turn_off_motor(DigitalPin.P13)
-basic.clearScreen()
-
 input.onButtonPressed(Button.A, function () {
-    basic.showLeds(`
-        . . . . .
-        . . . . .
-        . . . . .
-        . . . . .
-        . . . . .
-    `)
-    vitesse = 50
+    ContinuousServo.spin_one_way_with_speed(AnalogPin.P0, 0)
+    ContinuousServo.spin_other_way_with_speed(AnalogPin.P0, 0)
 })
-
+input.onButtonPressed(Button.B, function () {
+    basic.pause(0)
+})
+ContinuousServo.turn_off_motor(DigitalPin.P0)
 basic.forever(function () {
-    basic.pause(100)
-    ContinuousServo.spin_one_way_with_speed(AnalogPin.P14, vitesse)
-    ContinuousServo.spin_other_way_with_speed(AnalogPin.P13, vitesse)
-    basic.showString("Hello!")
-    basic.showLeds(`
-        . . . . .
-        . . . . .
-        . . . . .
-        . . . . .
-        . . . . .
-    `)
+    ContinuousServo.turn_off_motor(DigitalPin.P0)
 })
 
 

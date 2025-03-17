@@ -66,6 +66,41 @@ input.onButtonPressed(Button.A, function () {
 
 ## Étape 6
 
+Ajoute le bloc ``||basic: pause (ms)||`` sous le bloc ``||functions: appel Message||``.
+
+Remplace la valeur ``||basic: 100||`` par ``||basic: pause 1000||``. 
+
+```blocks
+
+function Message () {
+    basic.showString("Bolide")
+}
+input.onButtonPressed(Button.A, function () {
+    Message()
+    basic.pause(1000)
+})
+
+
+```
+## Étape 7
+
+Ajoute le bloc ``||basic: effacer l'écran||`` sous le bloc ``||basic: pause (ms)||``.
+
+```blocks
+
+function Message () {
+    basic.showString("Bolide")
+}
+input.onButtonPressed(Button.A, function () {
+    Message()
+    basic.pause(1000)
+    basic.clearScreen()
+})
+
+```
+
+## Étape 8
+
 Bravo !
 
 Tu as terminé le tutoriel. Télécharge et teste le programme.
