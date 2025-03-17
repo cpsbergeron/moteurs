@@ -73,12 +73,12 @@ Ajoute le bloc ``||continuousservo:spin one way||`` (trad. : tourner dans un sen
 
 Remplace la valeur ``||continuousservo:P0||`` par ``||continuousservo:P14||``.
 
-Remplace la valeur ``||continuousservo:0||`` par la valeur ``||continuousservo:50||``.
+Remplace la valeur ``||continuousservo:0||`` par la valeur ``||continuousservo:100||``.
 
 ```blocks
 
 function Avancer (ms: number) {
-    ContinuousServo.spin_one_way_with_speed(AnalogPin.P14, 50)
+    ContinuousServo.spin_one_way_with_speed(AnalogPin.P14, 100)
 }
 function Demarrer () {
     ContinuousServo.turn_off_motor(DigitalPin.P14)
@@ -90,17 +90,17 @@ function Demarrer () {
 
 ## Étape 7
 
-Ajoute le bloc ``||continuousservo:spin one way||`` (trad. : tourner dans un sens) sous le bloc ``||continuousservo:spin one way||``.
+Ajoute un bloc ``||continuousservo:spin other way||`` (trad. : tourner dans l'autre sens) sous le bloc ``||continuousservo:spin one way||``.
 
 Remplace la valeur ``||continuousservo:P0||`` par ``||continuousservo:P13||``.
 
-Remplace la valeur ``||continuousservo:0||`` par la valeur ``||continuousservo:-50||``.
+Remplace la valeur ``||continuousservo:0||`` par ``||continuousservo:100||``.
 
 ```blocks
 
 function Avancer (ms: number) {
-    ContinuousServo.spin_one_way_with_speed(AnalogPin.P14, 50)
-    ContinuousServo.spin_one_way_with_speed(AnalogPin.P13, -50)
+    ContinuousServo.spin_one_way_with_speed(AnalogPin.P14, 100)
+    ContinuousServo.spin_other_way_with_speed(AnalogPin.P13, 100)
 }
 function Demarrer () {
     ContinuousServo.turn_off_motor(DigitalPin.P14)
@@ -118,8 +118,8 @@ Dessine une flèche qui pointe vers le haut.
 ```blocks
 
 function Avancer (ms: number) {
-    ContinuousServo.spin_one_way_with_speed(AnalogPin.P14, 50)
-    ContinuousServo.spin_one_way_with_speed(AnalogPin.P13, -50)
+    ContinuousServo.spin_one_way_with_speed(AnalogPin.P14, 100)
+    ContinuousServo.spin_other_way_with_speed(AnalogPin.P13, 100)
     basic.showLeds(`
         . . # . .
         . # # # .
@@ -207,26 +207,25 @@ function Arreter () {
 
 ```
 
+## Étape 13
+
+Duplique la fonction ``||functions:Avancer||``.
+Renomme celle-ci ``||functions:Reculer||``.
+Apporte les modifications nécessaires.
+
 ## Étape 14
 
-Crée la fonction ``||functions:Pivoter vers la gauche||``.
+Crée la fonction ``||functions:Gauche||``.
 Regarde la programmation dans ton cahier.
 Ajoute également une flèche pour indiquer la direction.
 
 ## Étape 15
 
-Duplique la fonction ``||functions:Pivoter vers la gauche||``.
-Programme la fonction ``||functions:Pivoter vers la droite||``.
-Regarde la programmation dans ton cahier.
-Ajoute également une flèche pour indiquer la direction.
+Duplique la fonction ``||functions:Gauche||``.
+Renomme celle-ci ``||functions:Droite||``.
+Apporte les modifications nécessaires.
 
 ## Étape 16
-
-Crée la fonction ``||functions:Pivoter sur lui-même||``.
-Regarde la programmation dans ton cahier.
-Ajoute également une flèche pour indiquer la direction.
-
-## Étape 17
 
 Glisse les blocs ``||input:lorsque le bouton A est pressé||``, ``||input:lorsque le bouton B est pressé||`` et ``||input:lorsque le bouton A+B est pressé||`` dans la zone de programmation.
 
@@ -248,7 +247,7 @@ input.onButtonPressed(Button.AB, function () {
 
 Chaque séquence doit contenir le bloc ``||functions:appel Demarrer||`` suivi des autres actions à réaliser.
 
-Les fonctions ``||functions:appel Avancer||`` et ``||functions:appel Reculer||`` doivent être suivies du bloc ``||functions:appel Arreter||`` pour permettre au robot de s'arrêter.
+Les fonctions ``||functions:appel Avancer||`` et ``||functions:appel Reculer||`` doivent être suivies du bloc ``||functions:appel Arreter||`` pour permettre au robot de s'arrêter avant de réaliser une autre action.
 
 Pour un déplacement plus fluide du bolide, il est recommendé d'ajouter le bloc ``||basic:pause 500 (ms)||`` entre chaque action.
 
@@ -265,12 +264,15 @@ Voici d'autres blocs pour t'aider à créer les nouvelles fonctions.
 
 ```blocks
 
+let vitesse = 0
 input.onButtonPressed(Button.B, function () {
-    ContinuousServo.spin_other_way_with_speed(AnalogPin.P0, 0)
+    vitesse = 100
+    basic.pause(100)
     basic.showString("Hello!")
     basic.showNumber(0)
     basic.clearScreen()
 })
+
 
 ```
 
