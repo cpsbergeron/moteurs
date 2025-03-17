@@ -29,7 +29,8 @@
         "main.py",
         "sonar_2.md",
         "tuto_parcours.md",
-        "tuto_fonctions.md"
+        "tuto_fonctions.md",
+        "essai_routier.md"
     ],
     "testFiles": [
         "test.ts"
