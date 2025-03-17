@@ -214,20 +214,26 @@ function Arrêter () {
 ## Étape 13
 
 Duplique la fonction ``||functions:Avancer||``.
+
 Renomme celle-ci ``||functions:Reculer||``.
-Apporte les modifications nécessaires.
+
+Apporte les modifications nécessaires pour permettre au bolide de reculer.
 
 ## Étape 14
 
 Crée la fonction ``||functions:Gauche||``.
+
 Regarde la programmation dans ton cahier.
+
 Ajoute également une flèche pour indiquer la direction.
 
 ## Étape 15
 
 Duplique la fonction ``||functions:Gauche||``.
+
 Renomme celle-ci ``||functions:Droite||``.
-Apporte les modifications nécessaires.
+
+Apporte les modifications nécessaires pour permettre au bolide de pivoter vers la droite.
 
 ## Étape 16
 
