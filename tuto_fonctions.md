@@ -24,6 +24,7 @@ ContinuousServo.turn_off_motor(DigitalPin.P13)
 ## Étape 3
 
 Ajoute le bloc ``||basic:montrer l'icône||`` sous le bloc ``||continuousservo:turn off motor||`` (trad. : éteindre les moteurs).
+
 Choisis le crochet comme icône.
 
 ```blocks
@@ -215,8 +216,6 @@ input.onButtonPressed(Button.AB, function () {
 ```
 
 ## @showdialog
-
-Chaque séquence doit contenir le bloc ``||functions:appel Démarrer||`` suivi des autres actions à réaliser.
 
 Les fonctions ``||functions:appel Avancer||`` et ``||functions:appel Reculer||`` doivent être suivies du bloc ``||functions:appel Arrêter||`` pour permettre au robot de s'arrêter avant de réaliser une autre action.
 

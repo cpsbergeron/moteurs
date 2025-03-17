@@ -49,8 +49,19 @@ basic.showIcon(IconNames.Yes)
 
 
 ```
-
 ## Étape 5
+
+Glisse le bloc ``||input:lorsque le bouton A est pressé||`` dans la zone de programmation. 
+
+```blocks
+
+input.onButtonPressed(Button.A, function () {
+    
+})
+
+```
+
+## Étape 6
 
 Ajoute le bloc ``||radio:envoyer la chaîne||`` dans le bloc ``||input:lorsque le bouton A est pressé||``.
 
@@ -62,7 +73,7 @@ input.onButtonPressed(Button.A, function () {
 
 ```
 
-## Étape 6
+## Étape 7
 
 Modifie le bloc ``||radio:envoyer la chaîne||``.
 
@@ -76,7 +87,7 @@ input.onButtonPressed(Button.A, function () {
 
 ```
 
-## Étape 7
+## Étape 8
 
 Ajoute le bloc ``||basic:montrer LEDs||`` sous le bloc ``||radio:envoyer la chaîne||``.
 
@@ -97,7 +108,7 @@ input.onButtonPressed(Button.A, function () {
 
 ```
 
-## Étape 8
+## Étape 9
 
 Duplique le bloc ``||input:lorsque le bouton A est pressé||``.
 
@@ -118,7 +129,7 @@ input.onButtonPressed(Button.B, function () {
 
 ```
 
-## Étape 9
+## Étape 10
 
 Remplace le mot ``||radio:Avancer||`` par le mot ``||radio:Arrêter||``.
 
@@ -137,7 +148,7 @@ input.onButtonPressed(Button.B, function () {
 
 ```
 
-## Étape 10
+## Étape 11
 
 Remplace le bloc ``||basic:montrer LEDs||`` par le bloc ``||basic:montrer l'icône||``.
 

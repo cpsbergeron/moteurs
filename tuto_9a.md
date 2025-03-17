@@ -52,6 +52,8 @@ basic.showIcon(IconNames.Yes)
 
 ## Étape 5
 
+Glisse le bloc ``||input: écran vers le haut||`` dans la zone de programmation.
+
 Ajoute le bloc ``||radio:envoyer la chaîne||`` dans le bloc ``||input: écran vers le haut||``.
 
 
