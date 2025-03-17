@@ -38,7 +38,7 @@ Il s'agit de la fréquence radio qui sera utilisée par les deux micro:bit.
 
 ## Étape 4
 
-Ajoute le bloc ``||basic:montrer icône||`` sous le bloc ``||radio:radio définir groupe||``.
+Ajoute le bloc ``||basic:montrer l'icône||`` sous le bloc ``||radio:radio définir groupe||``.
 
 Sélectionne le crochet comme icône.
 
@@ -60,30 +60,12 @@ Remplace les valeurs ``||continuousservo:P0||`` par ``||continuousservo:P14||`` 
 
 radio.setGroup(1)
 basic.showIcon(IconNames.Yes)
-ContinuousServo.turn_off_motor(DigitalPin.P13)
 ContinuousServo.turn_off_motor(DigitalPin.P14)
+ContinuousServo.turn_off_motor(DigitalPin.P13)
 
 ```
 
 ## Étape 6
-
-Crée une ``||variables: variable||`` et donne-lui le nom ``||variables:Vitesse||``.
-
-Ajoute le bloc ``||variables: définir Vitesse||`` sous le bloc ``||continuousservo:turn off motor||`` (trad. éteindre les moteurs).
-
-Remplace la valeur ``||variables: 0||`` par ``||variables: 50||``.
-
-```blocks
-
-basic.showIcon(IconNames.Yes)
-radio.setGroup(1)
-ContinuousServo.turn_off_motor(DigitalPin.P14)
-ContinuousServo.turn_off_motor(DigitalPin.P13)
-let Vitesse = 50
-
-```
-
-## Étape 7
 
 Crée une ``||functions: fonction||`` et donne-lui le nom ``||functions:Avancer||``
 
@@ -94,52 +76,39 @@ function Avancer {
 
 ```
 
-## Étape 8
+## Étape 7
 
 Ajoute le bloc ``||continuousservo:spin one way||`` (trad. : tourner dans un sens) dans le bloc ``||functions:Avancer||``.
 
 Remplace la valeur ``||continuousservo:P0||`` par ``||continuousservo:P14||``.
 
-Remplace la valeur ``||continuousservo:0||`` par le bloc ``||variables:Vitesse||``.
+Remplace la valeur ``||continuousservo:0||`` par  ``||continuousservo:100||``.
 
 ```blocks
 
 function Avancer () {
-    ContinuousServo.spin_one_way_with_speed(AnalogPin.P14, Vitesse)
+    ContinuousServo.spin_one_way_with_speed(AnalogPin.P14, 100)
 }
-
-let Vitesse = 0
-basic.showIcon(IconNames.Yes)
-radio.setGroup(1)
-ContinuousServo.turn_off_motor(DigitalPin.P14)
-ContinuousServo.turn_off_motor(DigitalPin.P13)
-Vitesse = 50
 
 ```
 
-## Étape 9
+## Étape 8
 
 Ajoute le bloc ``||continuousservo:spin other way||`` (trad. : tourner dans l'autre sens) sous le bloc ``||continuousservo:spin one way||``.
 
 Remplace la valeur ``||continuousservo:P0||`` par ``||continuousservo:P13||``.
 
-Remplace la valeur ``||continuousservo:0||`` par le bloc ``||variables:Vitesse||``.
+Remplace la valeur ``||continuousservo:0||`` par le bloc ``||continuousservo:100||``.
 
 ```blocks
 
 function Avancer () {
-    ContinuousServo.spin_one_way_with_speed(AnalogPin.P14, Vitesse)
-    ContinuousServo.spin_other_way_with_speed(AnalogPin.P13, Vitesse)
+    ContinuousServo.spin_one_way_with_speed(AnalogPin.P14, 100)
+    ContinuousServo.spin_other_way_with_speed(AnalogPin.P13, 100)
 }
-let Vitesse = 0
-basic.showIcon(IconNames.Yes)
-radio.setGroup(1)
-ContinuousServo.turn_off_motor(DigitalPin.P14)
-ContinuousServo.turn_off_motor(DigitalPin.P13)
-Vitesse = 50
 
 ```
-## Étape 10
+## Étape 9
 
 Ajoute le bloc ``||basic:montrer LEDs||`` sous le bloc ``||continuousservo:spin other way||`` (trad. : tourner dans l'autre sens).
 
@@ -148,8 +117,8 @@ Dessine une flèche qui pointe vers le haut.
 ```blocks
 
 function Avancer () {
-    ContinuousServo.spin_one_way_with_speed(AnalogPin.P14, Vitesse)
-    ContinuousServo.spin_other_way_with_speed(AnalogPin.P13, Vitesse)
+    ContinuousServo.spin_one_way_with_speed(AnalogPin.P14, 100)
+    ContinuousServo.spin_other_way_with_speed(AnalogPin.P13, 100)
     basic.showLeds(`
         . . # . .
         . # . # .
@@ -158,36 +127,30 @@ function Avancer () {
         . . # . .
         `)
 }
-let Vitesse = 0
-basic.showIcon(IconNames.Yes)
-radio.setGroup(1)
-ContinuousServo.turn_off_motor(DigitalPin.P14)
-ContinuousServo.turn_off_motor(DigitalPin.P13)
-Vitesse = 50
 
 ```
 
-## Étape 11
+## Étape 10
 
-Crée une ``||functions: fonction||`` et donne-lui le nom ``||functions:Arreter||`` (** sans accent **).
+Crée une ``||functions: fonction||`` et donne-lui le nom ``||functions:Arrêter||``.
 
 ```blocks
 
-function Arreter () {
+function Arrêter () {
 	
 }
 
 ```
 
-## Étape 12
+## Étape 11
 
-Ajoute deux blocs ``||continuousservo:turn off motor||`` (trad. : éteindre les moteurs) dans le bloc ``||functions:Arreter||``.
+Ajoute deux blocs ``||continuousservo:turn off motor||`` (trad. : éteindre les moteurs) dans le bloc ``||functions:Arrêter||``.
 
 Remplace les valeurs ``||continuousservo:P0||`` par ``||continuousservo:P14||`` et ``||continuousservo:P13||``.
 
 ```blocks
 
-function Arreter () {
+function Arrêter () {
     ContinuousServo.turn_off_motor(DigitalPin.P14)
     ContinuousServo.turn_off_motor(DigitalPin.P13)
 }
@@ -202,7 +165,7 @@ Choisis le X comme icône.
 
 ```blocks
 
-function Arreter () {
+function Arrêter () {
     ContinuousServo.turn_off_motor(DigitalPin.P14)
     ContinuousServo.turn_off_motor(DigitalPin.P13)
     basic.showIcon(IconNames.No)
@@ -256,29 +219,6 @@ radio.onReceivedString(function (receivedString) {
     	
     }
 })
-function Avancer () {
-    ContinuousServo.spin_one_way_with_speed(AnalogPin.P14, Vitesse)
-    ContinuousServo.spin_other_way_with_speed(AnalogPin.P13, Vitesse)
-    basic.showLeds(`
-        . . # . .
-        . # . # .
-        # . # . #
-        . . # . .
-        . . # . .
-        `)
-}
-function Arreter () {
-    ContinuousServo.turn_off_motor(DigitalPin.P14)
-    ContinuousServo.turn_off_motor(DigitalPin.P13)
-    basic.showIcon(IconNames.No)
-}
-let Vitesse = 0
-basic.showIcon(IconNames.Yes)
-radio.setGroup(1)
-ContinuousServo.turn_off_motor(DigitalPin.P14)
-ContinuousServo.turn_off_motor(DigitalPin.P13)
-Vitesse = 50
-
 
 ```
 
@@ -294,8 +234,8 @@ radio.onReceivedString(function (receivedString) {
     }
 })
 function Avancer () {
-    ContinuousServo.spin_one_way_with_speed(AnalogPin.P14, Vitesse)
-    ContinuousServo.spin_other_way_with_speed(AnalogPin.P13, Vitesse)
+    ContinuousServo.spin_one_way_with_speed(AnalogPin.P14, 100)
+    ContinuousServo.spin_other_way_with_speed(AnalogPin.P13, 100)
     basic.showLeds(`
         . . # . .
         . # . # .
@@ -304,17 +244,6 @@ function Avancer () {
         . . # . .
         `)
 }
-function Arreter () {
-    ContinuousServo.turn_off_motor(DigitalPin.P14)
-    ContinuousServo.turn_off_motor(DigitalPin.P13)
-    basic.showIcon(IconNames.No)
-}
-let Vitesse = 0
-basic.showIcon(IconNames.Yes)
-radio.setGroup(1)
-ContinuousServo.turn_off_motor(DigitalPin.P14)
-ContinuousServo.turn_off_motor(DigitalPin.P13)
-Vitesse = 50
 
 ```
 
@@ -322,9 +251,9 @@ Vitesse = 50
 
 Duplique le bloc ``||logic:si alors||`` et glisse celui-ci sous le premier bloc ``||logic:si alors||``.
 
-Remplace le mot ``||logic:Avancer||`` par le mot ``||logic:Arreter||``.
+Remplace le mot ``||logic:Avancer||`` par le mot ``||logic:Arrêter||``.
 
-Remplace le bloc ``||functions:appel Avancer||`` par le bloc ``||functions:appel Arreter||``.
+Remplace le bloc ``||functions:appel Avancer||`` par le bloc ``||functions:appel Arrêter||``.
 
 ```blocks
 
@@ -332,13 +261,13 @@ radio.onReceivedString(function (receivedString) {
     if (receivedString == "Avancer") {
         Avancer()
     }
-    if (receivedString == "Arreter") {
-        Arreter()
+    if (receivedString == "Avancer") {
+        Arrêter()
     }
 })
 function Avancer () {
-    ContinuousServo.spin_one_way_with_speed(AnalogPin.P14, Vitesse)
-    ContinuousServo.spin_other_way_with_speed(AnalogPin.P13, Vitesse)
+    ContinuousServo.spin_one_way_with_speed(AnalogPin.P14, 100)
+    ContinuousServo.spin_other_way_with_speed(AnalogPin.P13, 100)
     basic.showLeds(`
         . . # . .
         . # . # .
@@ -347,17 +276,17 @@ function Avancer () {
         . . # . .
         `)
 }
-function Arreter () {
+function Arrêter () {
     ContinuousServo.turn_off_motor(DigitalPin.P14)
     ContinuousServo.turn_off_motor(DigitalPin.P13)
-    basic.showIcon(IconNames.No)
+    basic.showLeds(`
+        # . . . #
+        . # . # .
+        . . # . .
+        . # . # .
+        # . . . #
+        `)
 }
-let Vitesse = 0
-basic.showIcon(IconNames.Yes)
-radio.setGroup(1)
-ContinuousServo.turn_off_motor(DigitalPin.P14)
-ContinuousServo.turn_off_motor(DigitalPin.P13)
-Vitesse = 50
 
 ```
 

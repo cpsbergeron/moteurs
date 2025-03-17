@@ -38,7 +38,7 @@ Il s'agit de la fréquence radio qui sera utilisée par les deux micro:bit.
 
 ## Étape 4
 
-Ajoute le bloc ``||basic:montrer icône||`` sous le bloc ``||radio:radio définir groupe||``.
+Ajoute le bloc ``||basic:montrer l'icône||`` sous le bloc ``||radio:radio définir groupe||``.
 
 Sélectionne le crochet comme icône.
 
@@ -120,12 +120,12 @@ input.onButtonPressed(Button.B, function () {
 
 ## Étape 9
 
-Remplace le mot ``||radio:Avancer||`` par le mot ``||radio:Arreter||`` **(sans accent)**.
+Remplace le mot ``||radio:Avancer||`` par le mot ``||radio:Arrêter||``.
 
 ```blocks
 
 input.onButtonPressed(Button.B, function () {
-    radio.sendString("Arreter")
+    radio.sendString("Arrêter")
     basic.showLeds(`
         . . # . .
         . # . # .
@@ -139,18 +139,26 @@ input.onButtonPressed(Button.B, function () {
 
 ## Étape 10
 
-Remplace le bloc ``||basic:montrer LEDs||`` par le bloc ``||basic:montrer icône||``.
+Remplace le bloc ``||basic:montrer LEDs||`` par le bloc ``||basic:montrer l'icône||``.
 
 Sélectionne le X comme icône.
 
 ```blocks
 
 input.onButtonPressed(Button.B, function () {
-    radio.sendString("Arreter")
+    radio.sendString("Arrêter")
     basic.showIcon(IconNames.No)
 })
 
 ```
+
+## @showdialog 
+
+Les fonctions de l'émetteur et du récepteur doivent être orthographiées de la même façon.
+
+Même accent. Même majuscule. 
+
+Les appellations doivent être identiques.
 
 ## @showdialog 
 

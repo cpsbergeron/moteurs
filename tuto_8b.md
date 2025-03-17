@@ -82,43 +82,46 @@ Ajoute le bloc ``||continuousservo:spin one way||`` (trad. : tourner dans un sen
 
 Remplace la valeur ``||continuousservo:P0||`` par ``||continuousservo:P14||``.
 
-Remplace la valeur ``||continuousservo:0||`` par la valeur ``||continuousservo:25||``.
+Remplace la valeur ``||continuousservo:0||`` par la valeur ``||continuousservo:100||``.
 
 ```blocks
 
 function Avancer {
-    ContinuousServo.spin_one_way_with_speed(AnalogPin.P14, 25)
+    ContinuousServo.spin_one_way_with_speed(AnalogPin.P14, 100)
 }
 
 ```
 
 ## Étape 8
 
-Ajoute le bloc ``||continuousservo:spin one way||`` (trad. : tourner dans un sens) sous le bloc ``||continuousservo:spin one way||``.
+Ajoute un bloc ``||continuousservo:spin other way||`` (trad. : tourner dans l'autre sens) sous le bloc ``||continuousservo:spin one way||``.
 
 Remplace la valeur ``||continuousservo:P0||`` par ``||continuousservo:P13||``.
 
-Remplace la valeur ``||continuousservo:0||`` par la valeur ``||continuousservo:-25||``.
+Remplace la valeur ``||continuousservo:0||`` par ``||continuousservo:100||``.
 
 ```blocks
 
 function Avancer {
-    ContinuousServo.spin_one_way_with_speed(AnalogPin.P14, 25)
-    ContinuousServo.spin_one_way_with_speed(AnalogPin.P13, -25)
+    ContinuousServo.spin_one_way_with_speed(AnalogPin.P14, 100)
+    ContinuousServo.spin_other_way_with_speed(AnalogPin.P13, 100)
 }
 
+
 ```
+
+
 ## Étape 9
 
-Ajoute le bloc ``||basic:montrer LEDs||`` sous le bloc ``||continuousservo:spin one way||``.
+Ajoute le bloc ``||basic:montrer LEDs||`` sous le bloc ``||continuousservo:spin other way||``.
 
 Dessine une flèche qui pointe vers le haut.
 
 ```blocks
 
 function Avancer {
-    ContinuousServo.spin_one_way_with_speed(AnalogPin.P14, 25)
-    ContinuousServo.spin_one_way_with_speed(AnalogPin.P13, -25)
+    ContinuousServo.spin_one_way_with_speed(AnalogPin.P14, 100)
+    ContinuousServo.spin_other_way_with_speed(AnalogPin.P13, 100)
     basic.showLeds(`
         . . # . .
         . # # # .
@@ -133,11 +136,11 @@ function Avancer {
 
 ## Étape 11
 
-Crée une ``||functions: fonction||`` et donne-lui le nom ``||functions:Arreter||`` (** sans accent **).
+Crée une ``||functions: fonction||`` et donne-lui le nom ``||functions:Arrêter||``.
 
 ```blocks
 
-function Arreter () {
+function Arrêter () {
 	
 }
 
@@ -145,13 +148,13 @@ function Arreter () {
 
 ## Étape 12
 
-Ajoute deux blocs ``||continuousservo:turn off motor||`` (trad. : éteindre les moteurs) dans le bloc ``||functions:Arreter||``.
+Ajoute deux blocs ``||continuousservo:turn off motor||`` (trad. : éteindre les moteurs) dans le bloc ``||functions:Arrêter||``.
 
 Remplace les valeurs ``||continuousservo:P0||`` par ``||continuousservo:P14||`` et ``||continuousservo:P13||``.
 
 ```blocks
 
-function Arreter () {
+function Arrêter () {
     ContinuousServo.turn_off_motor(DigitalPin.P14)
     ContinuousServo.turn_off_motor(DigitalPin.P13)
 }
@@ -166,7 +169,7 @@ Choisis le X comme icône.
 
 ```blocks
 
-function Arreter () {
+function Arrêter () {
     ContinuousServo.turn_off_motor(DigitalPin.P14)
     ContinuousServo.turn_off_motor(DigitalPin.P13)
     basic.showIcon(IconNames.No)
@@ -220,32 +223,6 @@ radio.onReceivedString(function (receivedString) {
     	
     }
 })
-function Avancer {
-    ContinuousServo.spin_one_way_with_speed(AnalogPin.P14, 25)
-    ContinuousServo.spin_one_way_with_speed(AnalogPin.P13, -25)
-    basic.showLeds(`
-        . . # . .
-        . # . # .
-        # . # . #
-        . . # . .
-        . . # . .
-        `)
-}
-function Arreter () {
-    ContinuousServo.turn_off_motor(DigitalPin.P14)
-    ContinuousServo.turn_off_motor(DigitalPin.P13)
-    basic.showLeds(`
-        # . . . #
-        . # . # .
-        . . # . .
-        . # . # .
-        # . . . #
-        `)
-}
-radio.setGroup(1)
-basic.showIcon(IconNames.Yes)
-ContinuousServo.turn_off_motor(DigitalPin.P14)
-ContinuousServo.turn_off_motor(DigitalPin.P13)
 
 ```
 
@@ -257,29 +234,18 @@ Ajoute le bloc ``||functions:appel Avancer||`` dans le bloc ``||logic:si alors||
 
 radio.onReceivedString(function (receivedString) {
     if (receivedString == "Avancer") {
-        Avancer(1)
+        Avancer()
     }
 })
 function Avancer {
-    ContinuousServo.spin_one_way_with_speed(AnalogPin.P14, 25)
-    ContinuousServo.spin_one_way_with_speed(AnalogPin.P13, -25)
+    ContinuousServo.spin_one_way_with_speed(AnalogPin.P14, 100)
+    ContinuousServo.spin_other_way_with_speed(AnalogPin.P13, 100)
     basic.showLeds(`
         . . # . .
         . # . # .
         # . # . #
         . . # . .
         . . # . .
-        `)
-}
-function Arreter () {
-    ContinuousServo.turn_off_motor(DigitalPin.P14)
-    ContinuousServo.turn_off_motor(DigitalPin.P13)
-    basic.showLeds(`
-        # . . . #
-        . # . # .
-        . . # . .
-        . # . # .
-        # . . . #
         `)
 }
 radio.setGroup(1)
@@ -294,9 +260,9 @@ ContinuousServo.turn_off_motor(DigitalPin.P13)
 
 Duplique le bloc ``||logic:si alors||`` et glisse celui-ci sous le premier bloc ``||logic:si alors||``.
 
-Remplace le mot ``||logic:Avancer||`` par le mot ``||logic:Arreter||`` ** (sans accent) **.
+Remplace le mot ``||logic:Avancer||`` par le mot ``||logic:Arrêter||``.
 
-Remplace le bloc ``||functions:appel Avancer||`` par le bloc ``||functions:appel Arreter||``.
+Remplace le bloc ``||functions:appel Avancer||`` par le bloc ``||functions:appel Arrêter||``.
 
 ```blocks
 
@@ -304,8 +270,8 @@ radio.onReceivedString(function (receivedString) {
     if (receivedString == "Avancer") {
         Avancer()
     }
-    if (receivedString == "Arreter") {
-        Arreter()
+    if (receivedString == "Arrêter") {
+        Arrêter()
     }
 })
 function Avancer {
@@ -319,7 +285,7 @@ function Avancer {
         . . # . .
         `)
 }
-function Arreter () {
+function Arrêter () {
     ContinuousServo.turn_off_motor(DigitalPin.P14)
     ContinuousServo.turn_off_motor(DigitalPin.P13)
     basic.showLeds(`

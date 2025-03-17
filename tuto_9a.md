@@ -38,7 +38,7 @@ Il s'agit de la fréquence radio qui sera utilisée par les deux micro:bit.
 
 ## Étape 4
 
-Ajoute le bloc ``||basic:montrer icône||`` sous le bloc ``||radio:radio définir groupe||``.
+Ajoute le bloc ``||basic:montrer l'icône||`` sous le bloc ``||radio:radio définir groupe||``.
 
 Sélectionne le crochet comme icône.
 
@@ -148,12 +148,12 @@ radio.setGroup(1)
 
 ## Étape 10
 
-Modifie la valeur ``||radio:Avancer||`` pour ``||radio:Arreter||`` **(sans accent)**.
+Modifie la valeur ``||radio:Avancer||`` pour ``||radio:Arrêter||``.
 
 ```blocks
 
 input.onGesture(Gesture.Shake, function () {
-    radio.sendString("Arreter")
+    radio.sendString("Arrêter")
     basic.showLeds(`
         . . # . .
         . # . # .
@@ -169,14 +169,14 @@ radio.setGroup(1)
 
 ## Étape 11
 
-Remplace le bloc ``||basic:montrer LEDs||`` par le bloc ``||basic:montrer icone||``.
+Remplace le bloc ``||basic:montrer LEDs||`` par le bloc ``||basic:montrer l'icône||``.
 
-Sélectionne le X comme icone.
+Sélectionne le X comme icône.
 
 ```blocks
 
 input.onGesture(Gesture.Shake, function () {
-    radio.sendString("Arreter")
+    radio.sendString("Arrêter")
     basic.showIcon(IconNames.No)
 })
 basic.showIcon(IconNames.Yes)
@@ -187,12 +187,12 @@ radio.setGroup(1)
 
 ## Étape 12
 
-Des blocs ont été ajoutés au tutoriel pour te permettre de le compléter.
+Des blocs ont été ajoutés au tutoriel pour te permettre de créer les autres fonctions.
 
 ```blocks
 
 input.onGesture(Gesture.Shake, function () {
-    radio.sendString("Arreter")
+    radio.sendString("Arrêter")
     basic.showIcon(IconNames.No)
 })
 input.onButtonPressed(Button.A, function () {
