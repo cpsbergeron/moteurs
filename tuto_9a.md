@@ -71,7 +71,7 @@ radio.setGroup(1)
 
 Modifie le bloc ``||radio:envoyer la chaîne||``.
 
-Écris le mot ``||radio:Avancer||`` dans le bloc. 
+Écris le mot ``||text:Avancer||`` dans le bloc. 
 
 ```blocks
 
@@ -129,11 +129,11 @@ radio.setGroup(1)
 
 ## Étape 9
 
-Modifie la valeur ``||input:lorsque écran vers le haut||`` pour ``||input:lorsque secouer||``.
+Remplace le bloc ``||input:lorsque écran vers le haut||`` par le bloc ``||input:lorsque le bouton A+B est pressé||``.
 
 ```blocks
 
-input.onGesture(Gesture.Shake, function () {
+input.onButtonPressed(Button.AB, function () {
     radio.sendString("Avancer")
     basic.showLeds(`
         . . # . .
@@ -150,11 +150,11 @@ radio.setGroup(1)
 
 ## Étape 10
 
-Modifie la valeur ``||radio:Avancer||`` pour ``||radio:Arrêter||``.
+Modifie le mot ``||text:Avancer||`` par le mot ``||text:Arrêter||``.
 
 ```blocks
 
-input.onGesture(Gesture.Shake, function () {
+input.onButtonPressed(Button.AB, function () {
     radio.sendString("Arrêter")
     basic.showLeds(`
         . . # . .
@@ -167,6 +167,7 @@ input.onGesture(Gesture.Shake, function () {
 basic.showIcon(IconNames.Yes)
 radio.setGroup(1)
 
+
 ```
 
 ## Étape 11
@@ -177,7 +178,7 @@ Sélectionne le X comme icône.
 
 ```blocks
 
-input.onGesture(Gesture.Shake, function () {
+input.onButtonPressed(Button.AB, function () {
     radio.sendString("Arrêter")
     basic.showIcon(IconNames.No)
 })
