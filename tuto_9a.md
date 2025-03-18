@@ -218,5 +218,6 @@ input.onGesture(Gesture.ScreenUp, function () {
 })
 radio.setGroup(1)
 basic.showIcon(IconNames.Yes)
+
 ```
 
