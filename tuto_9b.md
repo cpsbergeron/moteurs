@@ -82,12 +82,12 @@ Ajoute le bloc ``||continuousservo:spin one way||`` (trad. : tourner dans un sen
 
 Remplace la valeur ``||continuousservo:P0||`` par ``||continuousservo:P14||``.
 
-Remplace la valeur ``||continuousservo:0||`` par  ``||continuousservo:100||``.
+Remplace la valeur ``||continuousservo:0||`` par  ``||continuousservo:50||``.
 
 ```blocks
 
 function Avancer () {
-    ContinuousServo.spin_one_way_with_speed(AnalogPin.P14, 100)
+    ContinuousServo.spin_one_way_with_speed(AnalogPin.P14, 50)
 }
 
 ```
@@ -98,13 +98,13 @@ Ajoute le bloc ``||continuousservo:spin other way||`` (trad. : tourner dans l'au
 
 Remplace la valeur ``||continuousservo:P0||`` par ``||continuousservo:P13||``.
 
-Remplace la valeur ``||continuousservo:0||`` par le bloc ``||continuousservo:100||``.
+Remplace la valeur ``||continuousservo:0||`` par le bloc ``||continuousservo:50||``.
 
 ```blocks
 
 function Avancer () {
-    ContinuousServo.spin_one_way_with_speed(AnalogPin.P14, 100)
-    ContinuousServo.spin_other_way_with_speed(AnalogPin.P13, 100)
+    ContinuousServo.spin_one_way_with_speed(AnalogPin.P14, 50)
+    ContinuousServo.spin_other_way_with_speed(AnalogPin.P13, 50)
 }
 
 ```
@@ -117,8 +117,8 @@ Dessine une flèche qui pointe vers le haut.
 ```blocks
 
 function Avancer () {
-    ContinuousServo.spin_one_way_with_speed(AnalogPin.P14, 100)
-    ContinuousServo.spin_other_way_with_speed(AnalogPin.P13, 100)
+    ContinuousServo.spin_one_way_with_speed(AnalogPin.P14, 50)
+    ContinuousServo.spin_other_way_with_speed(AnalogPin.P13, 50)
     basic.showLeds(`
         . . # . .
         . # . # .
@@ -234,8 +234,8 @@ radio.onReceivedString(function (receivedString) {
     }
 })
 function Avancer () {
-    ContinuousServo.spin_one_way_with_speed(AnalogPin.P14, 100)
-    ContinuousServo.spin_other_way_with_speed(AnalogPin.P13, 100)
+    ContinuousServo.spin_one_way_with_speed(AnalogPin.P14, 50)
+    ContinuousServo.spin_other_way_with_speed(AnalogPin.P13, 50)
     basic.showLeds(`
         . . # . .
         . # . # .
@@ -266,8 +266,8 @@ radio.onReceivedString(function (receivedString) {
     }
 })
 function Avancer () {
-    ContinuousServo.spin_one_way_with_speed(AnalogPin.P14, 100)
-    ContinuousServo.spin_other_way_with_speed(AnalogPin.P13, 100)
+    ContinuousServo.spin_one_way_with_speed(AnalogPin.P14, 50)
+    ContinuousServo.spin_other_way_with_speed(AnalogPin.P13, 50)
     basic.showLeds(`
         . . # . .
         . # . # .
@@ -308,7 +308,7 @@ basic.forever(function () {
     vitesse = 0
     basic.showString("Hello!")
     basic.clearScreen()
-    basic.pause(100)
+    basic.pause(50)
 })
 
 ```

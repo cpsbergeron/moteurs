@@ -24,13 +24,13 @@ Crée une ``||variables: variable||`` et donne-lui le nom ``||variables:P14||``.
 
 Ajoute le bloc ``||variables: définir P14 ||`` dans le bloc ``||input:lorsque le bouton A est pressé||``.
 
-Remplace la valeur ``||variables:0||`` par ``||variables:100||``.
+Remplace la valeur ``||variables:0||`` par ``||variables:50||``.
 
 ```blocks
 
 let P14 = 0
 input.onButtonPressed(Button.A, function () {
-    P14 = 100
+    P14 = 50
 })
 
 
@@ -42,15 +42,15 @@ Crée une ``||variables: variable||`` et donne-lui le nom ``||variables:P13||``.
 
 Ajoute le bloc ``||variables: définir P13 ||`` sous le bloc ``||variables: définir P14 ||``.
 
-Remplace la valeur ``||variables:0||`` par ``||variables:100||``.
+Remplace la valeur ``||variables:0||`` par ``||variables:50||``.
 
 ```blocks
 
 let P14 = 0
 let P13 = 0
 input.onButtonPressed(Button.A, function () {
-    P14 = 100
-    P13 = 100
+    P14 = 50
+    P13 = 50
 })
 
 ```
@@ -68,8 +68,8 @@ Remplace la valeur ``||continuousservo:0||`` par le bloc ``||variables: P14 ||``
 let P14 = 0
 let P13 = 0
 input.onButtonPressed(Button.A, function () {
-    P14 = 100
-    P13 = 100
+    P14 = 50
+    P13 = 50
     ContinuousServo.spin_one_way_with_speed(AnalogPin.P14, P14)
 })
 
@@ -87,8 +87,8 @@ Remplace la valeur ``||continuousservo:0||`` par le bloc ``||variables: P13 ||``
 let P14 = 0
 let P13 = 0
 input.onButtonPressed(Button.A, function () {
-    P14 = 100
-    P13 = 100
+    P14 = 50
+    P13 = 50
     ContinuousServo.spin_one_way_with_speed(AnalogPin.P14, P14)
     ContinuousServo.spin_other_way_with_speed(AnalogPin.P13, P13)
 })
@@ -100,15 +100,15 @@ input.onButtonPressed(Button.A, function () {
 
 Ajoute le bloc ``||basic:pause||`` sous le bloc ``||continuousservo:spin other way||``.
 
-Remplace la valeur ``||basic:100||`` par ``||basic:2000||``.
+Remplace la valeur ``||basic:50||`` par ``||basic:2000||``.
 
 ```blocks
 
 let P14 = 0
 let P13 = 0
 input.onButtonPressed(Button.A, function () {
-    P14 = 100
-    P13 = 100
+    P14 = 50
+    P13 = 50
     ContinuousServo.spin_one_way_with_speed(AnalogPin.P14, P14)
     ContinuousServo.spin_other_way_with_speed(AnalogPin.P13, P13)
     basic.pause(2000)
@@ -127,8 +127,8 @@ Remplace les valeurs ``||continuousservo:P0||`` par ``||continuousservo:P14||`` 
 let P14 = 0
 let P13 = 0
 input.onButtonPressed(Button.A, function () {
-    P14 = 100
-    P13 = 100
+    P14 = 50
+    P13 = 50
     ContinuousServo.spin_one_way_with_speed(AnalogPin.P14, P14)
     ContinuousServo.spin_other_way_with_speed(AnalogPin.P13, P13)
     basic.pause(2000)
