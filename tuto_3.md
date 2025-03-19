@@ -56,14 +56,14 @@ input.onButtonPressed(Button.A, function () {
 
 Ajoute le bloc ``||basic:pause||`` sous le bloc ``||continuousservo:spin other way||``.
 
-Remplace la valeur ``||basic:50||`` par ``||basic:350||``.
+Remplace la valeur ``||basic:50||`` par ``||basic:400||``.
 
 ```blocks
 
 input.onButtonPressed(Button.A, function () {
     ContinuousServo.spin_one_way_with_speed(AnalogPin.P14, -50)
     ContinuousServo.spin_other_way_with_speed(AnalogPin.P13, 50)
-    basic.pause(350)
+    basic.pause(400)
 })
 
 ```
@@ -79,7 +79,7 @@ Remplace les valeurs ``||continuousservo:P0||`` par ``||continuousservo:P14||`` 
 input.onButtonPressed(Button.A, function () {
     ContinuousServo.spin_one_way_with_speed(AnalogPin.P14, -50)
     ContinuousServo.spin_other_way_with_speed(AnalogPin.P13, 50)
-    basic.pause(350)
+    basic.pause(400)
     ContinuousServo.turn_off_motor(DigitalPin.P14)
     ContinuousServo.turn_off_motor(DigitalPin.P13)
 })
