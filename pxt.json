@@ -27,7 +27,11 @@
         "sonar_2.md",
         "tuto_parcours.md",
         "tuto_fonctions.md",
-        "essai_routier.md"
+        "essai_routier.md",
+        "lift_1.md",
+        "lift_2.md",
+        "lift_emetteur.md",
+        "lift_recepteur.md"
     ],
     "testFiles": [
         "test.ts"
