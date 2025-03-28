@@ -122,12 +122,6 @@ function Bas () {
 
 ```
 
-```package
-
-tinkertanker/pxt-continuous-servo
-
-```
-
 ## @showdialog
 
 Assure-toi que la pelle mécanique du Rover Lifter soit à environ 1 poutre de hauteur du sol.
@@ -136,9 +130,30 @@ Il est possible que les valeurs ``||pins: 50 ||`` et ``||pins: 150 ||`` ne convi
 
 Apporte les modifications nécessaires.
 
-## Étape 10
+## Étape 11
 
 Bravo !
 
 Tu as terminé le tutoriel. Télécharge et teste le programme.
+
+## Étape 12
+
+Ne fais pas cette étape !
+
+```blocks
+
+basic.forever(function () {
+	
+})
+
+
+```
+
+```package
+
+tinkertanker/pxt-continuous-servo
+
+```
+
+
 
