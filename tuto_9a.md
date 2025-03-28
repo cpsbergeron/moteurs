@@ -189,9 +189,7 @@ radio.setGroup(1)
 ```
 ## Étape 12
 
-Félicitations! Tu as terminé de programmer l'émetteur.
-
-Pour tester, télécharge la programmation dans le micro:bit.
+Ajoute les séquences de programmation manquantes.
 
 ## Étape 13
 
