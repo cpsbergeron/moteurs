@@ -56,7 +56,7 @@ Duplique le bloc ``||functions:Haut||``.
 
 Remplace la valeur ``||functions:Haut2||`` par la valeur ``||functions:Bas||``.
 
-Remplace la valeur ``||pins: 150 ||`` par ``||pins: 50 ||``.
+Remplace la valeur ``||pins: 150 ||`` par ``||pins: 100 ||``.
 
 ```blocks
 
@@ -64,7 +64,7 @@ function Haut () {
     pins.servoWritePin(AnalogPin.P15, 150)
 }
 function Bas () {
-    pins.servoWritePin(AnalogPin.P15, 50)
+    pins.servoWritePin(AnalogPin.P15, 100)
 }
 
 ```
@@ -116,7 +116,7 @@ input.onButtonPressed(Button.B, function () {
     Bas()
 })
 function Bas () {
-    pins.servoWritePin(AnalogPin.P15, 50)
+    pins.servoWritePin(AnalogPin.P15, 100)
 }
 
 
@@ -124,11 +124,11 @@ function Bas () {
 
 ## @showdialog
 
-Assure-toi que la pelle mécanique du Rover Lifter soit à environ 1 poutre de hauteur du sol.
+Assure-toi que la pelle mécanique du Rover Lifter soit à environ 2 poutres de hauteur du sol.
 
-Il est possible que les valeurs ``||pins: 50 ||`` et ``||pins: 150 ||`` ne conviennent pas au Rover Lifter.
+Il est possible que les valeurs ``||pins: 100 ||`` et ``||pins: 150 ||`` ne conviennent pas au Rover Lifter.
 
-Apporte les modifications nécessaires.
+*** Apporte les modifications nécessaires. ***
 
 ## Étape 11
 
