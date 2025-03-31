@@ -44,7 +44,7 @@ basic.forever(function () {
 
 Modifie le bloc ``||sonar: sonde de distance|||``.
 
-La valeur ``||sonar.ping:P0||`` pour ``||sonar:ping trig||`` demeure la même.
+La valeur ``||sonar:P0||`` de ``||sonar:ping trig||`` demeure la même.
 
 Remplace la valeur ``||sonar:P0||`` de ``||sonar:echo||`` pour ``||sonar:P1||``.
 

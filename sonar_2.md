@@ -8,68 +8,40 @@ Programme le capteur de distance et les moteurs.
 
 Ajoute le bloc ``||basic: pause (ms)||`` dans le bloc ``||basic: au démarrage)||``.
 
-Remplace la valeur ``||basic: 100||`` par ``||basic: 2500||``.
+Remplace la valeur ``||basic: 100||`` par ``||basic: 3000||``.
 
 ```blocks
 
-basic.pause(2500)
+basic.pause(3000)
 
 ```
 
 ## Étape 2
 
-Crée une ``||functions: fonction||`` et donne-lui le nom ``||functions:Demarrer||`` ** (sans accent) **.
+Ajoute le bloc ``||basic: montrer l'icône||`` sous le bloc ``||basic: pause (ms)||``.
+
+Sélectionne le crochet comme icône.
 
 ```blocks
 
-function Demarrer () {
-}
+basic.pause(3000)
+basic.showIcon(IconNames.Yes)
 
 ```
 
 ## Étape 3
 
-Ajoute deux blocs ``||continuousservo:turn off motor||`` (trad. : éteindre les moteurs) dans le bloc ``||functions:Demarrer||``.
-
-Remplace les valeurs ``||continuousservo:P0||`` par ``||continuousservo:P14||`` et ``||continuousservo:P13||``.
+Crée une ``||functions: fonction||`` et donne-lui le nom ``||functions:Avancer||``.
 
 ```blocks
 
-function Demarrer () {
-    ContinuousServo.turn_off_motor(DigitalPin.P14)
-    ContinuousServo.turn_off_motor(DigitalPin.P13)
+function Avancer () {
+
 }
 
 ```
 
 ## Étape 4
-
-Ajoute le bloc ``||basic:montrer l'icône||`` sous le bloc ``||continuousservo:turn off motor||`` (trad. : éteindre les moteurs).
-
-Choisis ``||basic:le crochet||`` comme icône.
-
-```blocks
-
-function Demarrer () {
-    ContinuousServo.turn_off_motor(DigitalPin.P14)
-    ContinuousServo.turn_off_motor(DigitalPin.P13)
-    basic.showIcon(IconNames.Yes)
-}
-
-```
-
-## Étape 5
-
-Crée une ``||functions: fonction||`` et donne-lui le nom ``||functions:Avancer||`` et ajoute l'élément ``||variables:ms||`` (onglet Nombres).
-
-```blocks
-
-function Avancer (ms: number) {
-}
-
-```
-
-## Étape 6
 
 Ajoute le bloc ``||continuousservo:spin one way||`` (trad. : tourner dans un sens) dans le bloc ``||functions:Avancer||``.
 
@@ -79,39 +51,29 @@ Remplace la valeur ``||continuousservo:0||`` par la valeur ``||continuousservo:2
 
 ```blocks
 
-function Avancer (ms: number) {
+function Avancer () {
     ContinuousServo.spin_one_way_with_speed(AnalogPin.P14, 25)
-}
-function Demarrer () {
-    ContinuousServo.turn_off_motor(DigitalPin.P14)
-    ContinuousServo.turn_off_motor(DigitalPin.P13)
-    basic.showIcon(IconNames.Yes)
 }
 
 ```
 
-## Étape 7
+## Étape 5
 
-Ajoute le bloc ``||continuousservo:spin one way||`` (trad. : tourner dans un sens) sous le bloc ``||continuousservo:spin one way||``.
+Ajoute le bloc ``||continuousservo:spin other way||`` (trad. : tourner dans l'autre sens) sous le bloc ``||continuousservo:spin one way||``.
 
 Remplace la valeur ``||continuousservo:P0||`` par ``||continuousservo:P13||``.
 
-Remplace la valeur ``||continuousservo:0||`` par la valeur ``||continuousservo:-25||``.
+Remplace la valeur ``||continuousservo:0||`` par la valeur ``||continuousservo:25||``.
 
 ```blocks
 
-function Avancer (ms: number) {
+function Avancer () {
     ContinuousServo.spin_one_way_with_speed(AnalogPin.P14, 25)
-    ContinuousServo.spin_one_way_with_speed(AnalogPin.P13, -25)
-}
-function Demarrer () {
-    ContinuousServo.turn_off_motor(DigitalPin.P14)
-    ContinuousServo.turn_off_motor(DigitalPin.P13)
-    basic.showIcon(IconNames.Yes)
+    ContinuousServo.spin_other_way_with_speed(AnalogPin.P13, 25)
 }
 
 ```
-## Étape 8
+## Étape 6
 
 Ajoute le bloc ``||basic:montrer LEDs||`` sous le bloc ``||continuousservo:spin one way||``.
 
@@ -119,9 +81,9 @@ Dessine une flèche qui pointe vers le haut.
 
 ```blocks
 
-function Avancer (ms: number) {
-    ContinuousServo.spin_one_way_with_speed(AnalogPin.P14, 25)
-    ContinuousServo.spin_one_way_with_speed(AnalogPin.P13, -25)
+function Avancer () {
+    ContinuousServo.spin_one_way_with_speed(AnalogPin.P14, 23)
+    ContinuousServo.spin_other_way_with_speed(AnalogPin.P13, 20)
     basic.showLeds(`
         . . # . .
         . # # # .
@@ -130,46 +92,12 @@ function Avancer (ms: number) {
         . . # . .
         `)
 }
-function Demarrer () {
-    ContinuousServo.turn_off_motor(DigitalPin.P14)
-    ContinuousServo.turn_off_motor(DigitalPin.P13)
-    basic.showIcon(IconNames.Yes)
-}
 
 ```
 
-## Étape 9
+## Étape 7
 
-Ajoute le bloc ``||basic:pause (ms)||`` sous le bloc ``||basic:montrer LEDs||``.
-
-Glisse le bloc ``||variables: ms ||`` dans le bloc ``||basic:pause (ms)||``.
-
-```blocks
-
-function Avancer (ms: number) {
-    ContinuousServo.spin_one_way_with_speed(AnalogPin.P14, 25)
-    ContinuousServo.spin_one_way_with_speed(AnalogPin.P13, -25)
-    basic.showLeds(`
-        . . # . .
-        . # # # .
-        # . # . #
-        . . # . .
-        . . # . .
-        `)
-    basic.pause(ms)
-}
-function Demarrer () {
-    ContinuousServo.turn_off_motor(DigitalPin.P14)
-    ContinuousServo.turn_off_motor(DigitalPin.P13)
-    basic.showIcon(IconNames.Yes)
-}
-
-```
-
-## Étape 10
-
-Crée une ``||functions: fonction||`` et donne-lui le nom ``||functions:Arreter||`` (** sans accent **) et ajoute l'élément ``||variables:ms||`` (onglet Nombres).
-
+Crée une ``||functions: fonction||`` et donne-lui le nom ``||functions:Arreter||``.
 ```blocks
 
 function Arreter () {
@@ -178,7 +106,7 @@ function Arreter () {
 
 ```
 
-## Étape 11
+## Étape 8
 
 Ajoute deux blocs ``||continuousservo:turn off motor||`` (trad. : éteindre les moteurs) dans le bloc ``||functions:Arreter||``.
 
@@ -193,15 +121,15 @@ function Arreter () {
 
 ```
 
-## Étape 12
+## Étape 9
 
 Ajoute le bloc ``||basic:montrer l'icône||`` sous le bloc ``||continuousservo:turn off motor||`` (trad. : éteindre les moteurs).
 
-Choisis ``||basic:le X||`` comme icône.
+Sélectionne ``||basic:le X||`` comme icône.
 
 ```blocks
 
-function Arreter (ms: number) {
+function Arreter () {
     ContinuousServo.turn_off_motor(DigitalPin.P14)
     ContinuousServo.turn_off_motor(DigitalPin.P13)
     basic.showIcon(IconNames.No)
@@ -209,7 +137,7 @@ function Arreter (ms: number) {
 
 ```
 
-## Étape 13
+## Étape 10
 
 Crée une ``||variables: variable||`` et donne-lui le nom ``||variables:distance||``.
 
@@ -225,7 +153,7 @@ basic.forever(function () {
 
 
 ```
-## Étape 14
+## Étape 11
 
 Modifie le bloc ``||variables: définir distance||``.
 
@@ -245,7 +173,7 @@ basic.forever(function () {
 
 ```
 
-## Étape 15
+## Étape 12
 
 Modifie le bloc ``||sonar:sonde de distance|||``.
 
@@ -269,7 +197,7 @@ basic.forever(function () {
 ```
 
 
-## Étape 16
+## Étape 13
 
 Ajoute le bloc ``||logic:si alors sinon||`` sous le bloc ``||sonar:sonde de distance|||``.
 
@@ -291,7 +219,7 @@ basic.forever(function () {
 
 ```
 
-## Étape 17
+## Étape 14
 
 Modifie le bloc ``||logic:si alors sinon||``.
 
@@ -315,7 +243,7 @@ basic.forever(function () {
 
 ```
 
-## Étape 18
+## Étape 15
 
 Modifie le bloc ``||logic:0 < 0||``.
 
@@ -341,16 +269,35 @@ basic.forever(function () {
 
 ```
 
-## Étape 19
+## Étape 16
 
 Modifie le bloc ``||logic:si alors sinon||``.
 
 Ajoute le bloc ``||functions: appel Arreter||`` sous le bloc ``||logic:si alors ||``.
 
-Remplace la valeur ``||functions: 0||`` par ``||functions: 1000||``.
+Ajoute le bloc ``||functions: appel Avancer||`` sous le bloc ``||logic:sinon ||``.
 
 ```blocks
 
+function Avancer () {
+    ContinuousServo.spin_one_way_with_speed(AnalogPin.P14, 23)
+    ContinuousServo.spin_other_way_with_speed(AnalogPin.P13, 20)
+    basic.showLeds(`
+        . . # . .
+        . # # # .
+        # . # . #
+        . . # . .
+        . . # . .
+        `)
+}
+function Arreter () {
+    ContinuousServo.turn_off_motor(DigitalPin.P14)
+    ContinuousServo.turn_off_motor(DigitalPin.P13)
+    basic.showIcon(IconNames.No)
+}
+let distance = 0
+basic.pause(3000)
+basic.showIcon(IconNames.Yes)
 basic.forever(function () {
     distance = sonar.ping(
     DigitalPin.P0,
@@ -358,40 +305,15 @@ basic.forever(function () {
     PingUnit.Centimeters
     )
     if (distance < 15) {
-        Arreter(1000)
+        Arreter()
     } else {
-    	
+        Avancer()
     }
 })
 
 ```
 
-## Étape 20
-
-Modifie le bloc ``||logic:si alors sinon||``.
-
-Ajoute le bloc ``||functions: appel Avancer||`` sous le bloc ``||logic:si alors ||``.
-
-Remplace la valeur ``||functions: 0||`` par ``||functions: 50||``.
-
-```blocks
-
-basic.forever(function () {
-    distance = sonar.ping(
-    DigitalPin.P0,
-    DigitalPin.P1,
-    PingUnit.Centimeters
-    )
-    if (distance < 15) {
-        Arreter(1000)
-    } else {
-        Avancer(50)
-    }
-})
-
-```
-
-## Étape 21
+## Étape 17
 
 Bravo !
 
