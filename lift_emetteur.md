@@ -47,7 +47,6 @@ Sélectionne le crochet comme icône.
 radio.setGroup(1)
 basic.showIcon(IconNames.Yes)
 
-
 ```
 
 ## Étape 5
@@ -108,9 +107,53 @@ radio.setGroup(1)
 
 ## Étape 8
 
-Ajoute les séquences de programmation manquantes.
+Glisse le bloc ``||input: lorsque le bouton A est pressé||`` dans la zone de programmation.
+
+Ajoute le bloc ``||radio:envoyer la chaîne||`` dans le bloc ``||input: écran vers le haut||``.
+
+
+```blocks
+
+input.onButtonPressed(Button.A, function () {
+    radio.sendString("")
+})
+
+```
 
 ## Étape 9
+
+Modifie le bloc ``||radio:envoyer la chaîne||``.
+
+Écris le mot ``||text:Haut||`` dans le bloc. 
+
+```blocks
+
+input.onButtonPressed(Button.A, function () {
+    radio.sendString("Haut")
+})
+
+```
+
+## Étape 10
+
+Ajoute le bloc ``||basic:montrer l'icône||`` sous le bloc ``||radio:envoyer la chaîne||``.
+
+Choisis le carré comme icône.
+
+```blocks
+
+input.onButtonPressed(Button.A, function () {
+    radio.sendString("Haut")
+    basic.showIcon(IconNames.Square)
+})
+
+```
+
+## Étape 11
+
+Ajoute les séquences de programmation manquantes.
+
+## Étape 12
 
 Ne fais pas cette étape ! ;)
 
