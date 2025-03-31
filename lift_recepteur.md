@@ -205,9 +205,100 @@ function Avancer () {
 
 ## Étape 14
 
-Ajoute les séquences de programmation manquantes.
+Crée une ``||functions: fonction||`` et donne-lui le nom ``||functions:Haut||``.
+
+```blocks
+
+function Haut () {
+	
+}
+
+```
 
 ## Étape 15
+
+Ajoute le bloc ``||pins: régler position servo ||`` dans le bloc ``||functions:Haut||``.
+
+```blocks
+
+function Haut () {
+    pins.servoWritePin(AnalogPin.P0, 180)
+}
+
+```
+
+## Étape 16
+
+Modifie le bloc ``||pins: régler position servo ||``.
+
+Remplace la valeur ``||pins: P0 ||`` par ``||pins: P15 ||``.
+
+Remplace la valeur ``||pins: 180 ||`` par ``||pins: 150 ||``.
+
+```blocks
+
+function Haut () {
+    pins.servoWritePin(AnalogPin.P15, 150)
+}
+
+```
+
+## Étape 17
+
+Ajoute le bloc ``||basic: montrer l'icône ||`` sous le bloc ``||pins: régler position servo ||``.
+
+Choisis le carré comme icône.
+
+```blocks
+
+function Haut () {
+    pins.servoWritePin(AnalogPin.P15, 150)
+    basic.showIcon(IconNames.Square)
+}
+
+
+```
+
+## Étape 18
+
+Duplique le bloc ``||logic:si alors||``.
+
+Remplace le mot ``||text:Avancer||`` par le mot ``||text:Haut||``.
+
+Remplace la fonction ``||functions:Avancer||`` par la fonction ``||functions:Haut||``.
+
+```blocks
+
+function Haut () {
+    pins.servoWritePin(AnalogPin.P15, 150)
+    basic.showIcon(IconNames.Square)
+}
+radio.onReceivedString(function (receivedString) {
+    if (receivedString == "Avancer") {
+        Avancer()
+    }
+    if (receivedString == "Haut") {
+        Haut()
+    }
+})
+function Avancer () {
+    ContinuousServo.spin_one_way_with_speed(AnalogPin.P14, 50)
+    ContinuousServo.spin_other_way_with_speed(AnalogPin.P13, 50)
+    basic.showLeds(`
+        . . # . .
+        . # . # .
+        # . # . #
+        . . # . .
+        . . # . .
+        `)
+}
+
+```
+## Étape 19
+
+Ajoute les séquences de programmation manquantes.
+
+## Étape 20
 
 Ne fais pas cette étape ! ;)
 
