@@ -82,8 +82,8 @@ Dessine une flèche qui pointe vers le haut.
 ```blocks
 
 function Avancer () {
-    ContinuousServo.spin_one_way_with_speed(AnalogPin.P14, 23)
-    ContinuousServo.spin_other_way_with_speed(AnalogPin.P13, 20)
+    ContinuousServo.spin_one_way_with_speed(AnalogPin.P14, 25)
+    ContinuousServo.spin_other_way_with_speed(AnalogPin.P13, 25)
     basic.showLeds(`
         . . # . .
         . # # # .
