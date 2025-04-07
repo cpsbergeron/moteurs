@@ -1,4 +1,4 @@
-# Sonde 1
+# Sonar 1
 
 ## @showdialog
 
@@ -190,7 +190,7 @@ basic.forever(function () {
 
 ## Étape 8
 
-Bravo !
+Bravo ! 🎉🎉🎉
 
 Tu as terminé le tutoriel. Télécharge et teste le programme.
 

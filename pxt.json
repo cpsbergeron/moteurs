@@ -29,9 +29,9 @@
         "tuto_fonctions.md",
         "essai_routier.md",
         "lift_1.md",
-        "lift_2.md",
         "lift_emetteur.md",
-        "lift_recepteur.md"
+        "lift_recepteur.md",
+        "sonar_3.md"
     ],
     "testFiles": [
         "test.ts"
