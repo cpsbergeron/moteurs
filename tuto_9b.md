@@ -325,7 +325,11 @@ basic.forever(function () {
     vitesse = 0
     basic.showString("Hello!")
     basic.clearScreen()
-    basic.pause(50)
+    basic.pause(randint(0, 10))
+    pins.servoWritePin(AnalogPin.P0, 180)
+    for (let index = 0; index < 4; index++) {
+    	
+    }
 })
 
 ```
