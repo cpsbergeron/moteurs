@@ -65,6 +65,10 @@ ContinuousServo.turn_off_motor(DigitalPin.P13)
 
 ```
 
+## @showdialog
+
+Pour programmer les déplacements du robot, n'oublie pas d'utiliser les valeurs de correction des servomoteurs.
+
 ## Étape 6
 
 Crée une ``||functions: fonction||`` et donne-lui le nom ``||functions:Avancer||``
@@ -261,7 +265,7 @@ radio.onReceivedString(function (receivedString) {
     if (receivedString == "Avancer") {
         Avancer()
     }
-    if (receivedString == "Avancer") {
+    if (receivedString == "Arrêter") {
         Arrêter()
     }
 })
@@ -290,12 +294,27 @@ function Arrêter () {
 
 ```
 
-
 ## Étape 18
 
-Ajoute les séquences de programmation manquantes.
+Programme la fonction ``||functions:appel Gauche.||``
 
 ## Étape 19
+
+Programme la fonction ``||functions:appel Droite.||``
+
+## Étape 20
+
+Invente une ``||functions:fonction.||`` pour le bloc ``||input:lorsque secouer.||``.
+
+## Étape 21
+
+Félicitations! 🎉🎉🎉
+
+Tu as terminé de programmer le récepteur.
+
+Télécharge et teste ta programmation.
+
+## Étape 22
 
 Ne fais pas cette étape ! ;)
 

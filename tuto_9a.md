@@ -167,7 +167,6 @@ input.onButtonPressed(Button.AB, function () {
 basic.showIcon(IconNames.Yes)
 radio.setGroup(1)
 
-
 ```
 
 ## Étape 11
@@ -185,13 +184,28 @@ input.onButtonPressed(Button.AB, function () {
 basic.showIcon(IconNames.Yes)
 radio.setGroup(1)
 
-
 ```
 ## Étape 12
 
-Ajoute les séquences de programmation manquantes.
+Programme une entrée pour le bloc ``||input:incliner à gauche||``.
 
 ## Étape 13
+
+Programme une entrée pour le bloc ``||input:incliner à droite||``.
+
+## Étape 14
+
+Programme une entrée pour le bloc ``||input:lorsque secouer||``.
+
+## Étape 15
+
+Félicitations! 🎉🎉🎉
+
+Tu as terminé de programmer l'émetteur.
+
+Télécharge et teste ta programmation.
+
+## Étape 16
 
 Ne fais pas cette étape ! ;)
 
