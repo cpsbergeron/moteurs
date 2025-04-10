@@ -6,6 +6,10 @@ Programme le capteur de distance.
 
 ## Étape 1
 
+Supprime le bloc ``||basic:au démarrage||``.
+
+## Étape 2
+
 Crée une ``||variables: variable||`` et donne-lui le nom ``||variables:distance||``.
 
 Ajoute le bloc ``||variables: définir distance ||`` dans le bloc ``||basic:toujours||``.
@@ -20,7 +24,7 @@ basic.forever(function () {
 
 
 ```
-## Étape 2
+## Étape 3
 
 Modifie le bloc ``||variables: définir distance||``.
 
@@ -40,7 +44,7 @@ basic.forever(function () {
 
 ```
 
-## Étape 3
+## Étape 4
 
 Modifie le bloc ``||sonar: sonde de distance|||``.
 
@@ -64,7 +68,7 @@ basic.forever(function () {
 ```
 
 
-## Étape 3
+## Étape 5
 
 Ajoute le bloc ``||logic:si alors sinon||`` sous le bloc ``||sonar: sonde de distance|||``.
 
@@ -86,7 +90,7 @@ basic.forever(function () {
 
 ```
 
-## Étape 4
+## Étape 6
 
 Modifie le bloc ``||logic:si alors sinon||``.
 
@@ -110,7 +114,7 @@ basic.forever(function () {
 
 ```
 
-## Étape 5
+## Étape 7
 
 Modifie le bloc ``||logic:0 < 0||``.
 
@@ -136,13 +140,13 @@ basic.forever(function () {
 
 ```
 
-## Étape 6
+## Étape 8
 
 Modifie le bloc ``||logic:si alors sinon||``.
 
 Ajoute le bloc ``||basic:montrer l'icône||`` sous le bloc ``||logic:si alors ||``.
 
-Choisis ``||basic:le crochet||`` comme icône.
+Choisis le ``||basic:X||`` comme icône.
 
 ```blocks
 
@@ -154,7 +158,7 @@ basic.forever(function () {
     PingUnit.Centimeters
     )
     if (distance < 15) {
-        basic.showIcon(IconNames.Yes)
+        basic.showIcon(IconNames.No)
     } else {
     	
     }
@@ -162,13 +166,13 @@ basic.forever(function () {
 
 ```
 
-## Étape 7
+## Étape 9
 
 Modifie le bloc ``||logic:si alors sinon||``.
 
 Ajoute le bloc ``||basic:montrer l'icône||`` sous le bloc ``||logic:sinon||``.
 
-Choisis ``||basic:le X||`` comme icône.
+Choisis le ``||basic:crochet||`` comme icône.
 
 ```blocks
 
@@ -180,15 +184,15 @@ basic.forever(function () {
     PingUnit.Centimeters
     )
     if (distance < 15) {
-        basic.showIcon(IconNames.Yes)
-    } else {
         basic.showIcon(IconNames.No)
+    } else {
+        basic.showIcon(IconNames.Yes)
     }
 })
 
 ```
 
-## Étape 8
+## Étape 10
 
 Bravo ! 🎉🎉🎉
 

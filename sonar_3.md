@@ -18,9 +18,9 @@ basic.pause(3000)
 
 ## Étape 2
 
-Ajoute le bloc ``||basic: montrer l'icône||`` sous le bloc ``||basic: pause (ms)||``.
+Ajoute le bloc ``||basic:montrer l'icône||`` sous le bloc ``||basic: pause (ms)||``.
 
-Sélectionne le crochet comme icône.
+Sélectionne l'icône ``||basic:du crochet||``.
 
 ```blocks
 
@@ -31,12 +31,11 @@ basic.showIcon(IconNames.Yes)
 
 ## Étape 3
 
-Crée une ``||functions: fonction||`` et donne-lui le nom ``||functions:Avancer||``.
+Crée une ``||functions: fonction||`` et donne-lui le nom ``||functions:Avancer||`` et ajoute l'élément ``||variables:ms||`` (onglet Nombres).
 
 ```blocks
 
-function Avancer () {
-
+function Avancer (ms: number) {
 }
 
 ```
@@ -51,7 +50,7 @@ Remplace la valeur ``||continuousservo:0||`` par la valeur ``||continuousservo:2
 
 ```blocks
 
-function Avancer () {
+function Avancer (ms: number) {
     ContinuousServo.spin_one_way_with_speed(AnalogPin.P14, 25)
 }
 
@@ -67,7 +66,7 @@ Remplace la valeur ``||continuousservo:0||`` par la valeur ``||continuousservo:2
 
 ```blocks
 
-function Avancer () {
+function Avancer (ms: number) {
     ContinuousServo.spin_one_way_with_speed(AnalogPin.P14, 25)
     ContinuousServo.spin_other_way_with_speed(AnalogPin.P13, 25)
 }
@@ -81,7 +80,7 @@ Dessine une flèche qui pointe vers le haut.
 
 ```blocks
 
-function Avancer () {
+function Avancer (ms: number) {
     ContinuousServo.spin_one_way_with_speed(AnalogPin.P14, 25)
     ContinuousServo.spin_other_way_with_speed(AnalogPin.P13, 25)
     basic.showLeds(`
@@ -97,11 +96,11 @@ function Avancer () {
 
 ## Étape 7
 
-Crée une ``||functions: fonction||`` et donne-lui le nom ``||functions:Arreter||``.
+Crée une ``||functions: fonction||`` et donne-lui le nom ``||functions:Arreter||`` et ajoute l'élément ``||variables:ms||`` (onglet Nombres).
+
 ```blocks
 
-function Arreter () {
-	
+function Arreter (ms: number) {
 }
 
 ```
@@ -114,7 +113,7 @@ Remplace les valeurs ``||continuousservo:P0||`` par ``||continuousservo:P14||`` 
 
 ```blocks
 
-function Arreter () {
+function Arreter (ms: number) {
     ContinuousServo.turn_off_motor(DigitalPin.P14)
     ContinuousServo.turn_off_motor(DigitalPin.P13)
 }
@@ -129,7 +128,7 @@ Sélectionne ``||basic:le X||`` comme icône.
 
 ```blocks
 
-function Arreter () {
+function Arreter (ms: number) {
     ContinuousServo.turn_off_motor(DigitalPin.P14)
     ContinuousServo.turn_off_motor(DigitalPin.P13)
     basic.showIcon(IconNames.No)
@@ -279,9 +278,9 @@ Ajoute le bloc ``||functions: appel Avancer||`` sous le bloc ``||logic:sinon ||`
 
 ```blocks
 
-function Avancer () {
-    ContinuousServo.spin_one_way_with_speed(AnalogPin.P14, 23)
-    ContinuousServo.spin_other_way_with_speed(AnalogPin.P13, 20)
+function Avancer (ms: number) {
+    ContinuousServo.spin_one_way_with_speed(AnalogPin.P14, 25)
+    ContinuousServo.spin_other_way_with_speed(AnalogPin.P13, 25)
     basic.showLeds(`
         . . # . .
         . # # # .
@@ -290,7 +289,7 @@ function Avancer () {
         . . # . .
         `)
 }
-function Arreter () {
+function Arreter (ms: number) {
     ContinuousServo.turn_off_motor(DigitalPin.P14)
     ContinuousServo.turn_off_motor(DigitalPin.P13)
     basic.showIcon(IconNames.No)
@@ -305,26 +304,134 @@ basic.forever(function () {
     PingUnit.Centimeters
     )
     if (distance < 15) {
-        Arreter()
+        Arreter(1)
     } else {
-        Avancer()
+        Avancer(1)
     }
 })
 
 ```
+
 ## Étape 17
 
-Crée une ``||functions: fonction||`` et donne-lui le nom ``||functions:Reculer||`` et ajoute l'élément ``||variables:ms||`` (onglet Nombres).
+Modifie le bloc ``||functions: appel Arreter||``.
+
+Remplace la valeur ``||functions: 1||`` par ``||functions: 1000||``.
+
+
+```blocks
+
+function Avancer (ms: number) {
+    ContinuousServo.spin_one_way_with_speed(AnalogPin.P14, 25)
+    ContinuousServo.spin_other_way_with_speed(AnalogPin.P13, 25)
+    basic.showLeds(`
+        . . # . .
+        . # # # .
+        # . # . #
+        . . # . .
+        . . # . .
+        `)
+}
+function Arreter (ms: number) {
+    ContinuousServo.turn_off_motor(DigitalPin.P14)
+    ContinuousServo.turn_off_motor(DigitalPin.P13)
+    basic.showIcon(IconNames.No)
+}
+let distance = 0
+basic.pause(3000)
+basic.showIcon(IconNames.Yes)
+basic.forever(function () {
+    distance = sonar.ping(
+    DigitalPin.P0,
+    DigitalPin.P1,
+    PingUnit.Centimeters
+    )
+    if (distance < 15) {
+        Arreter(1000)
+    } else {
+        Avancer(1)
+    }
+})
+
+```
 
 ## Étape 18
 
-Crée une ``||functions: fonction||`` et donne-lui le nom ``||functions:Droite||``.
+Modifie le bloc ``||functions: appel Avancer||``.
+
+Remplace la valeur ``||functions: 1||`` par ``||functions: 50||``.
+
+
+```blocks
+
+function Avancer (ms: number) {
+    ContinuousServo.spin_one_way_with_speed(AnalogPin.P14, 25)
+    ContinuousServo.spin_other_way_with_speed(AnalogPin.P13, 25)
+    basic.showLeds(`
+        . . # . .
+        . # # # .
+        # . # . #
+        . . # . .
+        . . # . .
+        `)
+}
+function Arreter (ms: number) {
+    ContinuousServo.turn_off_motor(DigitalPin.P14)
+    ContinuousServo.turn_off_motor(DigitalPin.P13)
+    basic.showIcon(IconNames.No)
+}
+let distance = 0
+basic.pause(3000)
+basic.showIcon(IconNames.Yes)
+basic.forever(function () {
+    distance = sonar.ping(
+    DigitalPin.P0,
+    DigitalPin.P1,
+    PingUnit.Centimeters
+    )
+    if (distance < 15) {
+        Arreter(1000)
+    } else {
+        Avancer(50)
+    }
+})
+
+```
+## showdialog
+
+Bravo ! 🎉🎉🎉
+
+Tu as terminé la première partie du tutoriel. Télécharge et teste le programme.
+
+Ensuite, continue les prochaines étapes.
 
 ## Étape 19
 
-Crée une ``||functions: fonction||`` et donne-lui le nom ``||functions:Gauche||``.
+Crée une ``||functions: fonction||`` et donne-lui le nom ``||functions:Reculer||`` et ajoute l'élément ``||variables:ms||`` (onglet Nombres).
+
+Complète les éléments manquants à la fonction.
+
+## Étape 20
+
+Crée une ``||functions: fonction||`` et donne-lui le nom ``||functions:Droite||`` et ajoute l'élément ``||variables:ms||`` (onglet Nombres).
+
+Complète les éléments manquants à la fonction.
 
 ## Étape 21
+
+Crée une ``||functions: fonction||`` et donne-lui le nom ``||functions:Gauche||`` et ajoute l'élément ``||variables:ms||`` (onglet Nombres).
+
+Complète les éléments manquants à la fonction.
+
+## showdialog
+
+Bravo ! 🎉🎉🎉
+
+Tu as terminé le tutoriel. 
+
+Réalise maintenant les défis !
+
+## Étape 22
 
 Ne fais pas cette étape !
 
@@ -337,12 +444,6 @@ input.onButtonPressed(Button.A, function () {
     basic.showNumber(randint(0, 10))
 })
 ```
-
-## Étape 17
-
-Bravo ! 🎉🎉🎉
-
-Tu as terminé le tutoriel. Télécharge et teste le programme.
 
 ```package
 

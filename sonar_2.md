@@ -80,7 +80,7 @@ loops.everyInterval(5000, function () {
 
 Ajoute le bloc ``||basic:montrer nombre||`` sous le bloc ``||variables: définir distance ||``.
 
-Remplace la valeur ``||basic:100||`` par le bloc ``||variables: distance ||``.
+Remplace la valeur ``||basic:0||`` par le bloc ``||variables: distance ||``.
 
 ```blocks
 
